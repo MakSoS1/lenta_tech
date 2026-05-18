@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Архитектура — Lenta Vision Tags</title>
+    <meta name="description" content="Архитектура локальной системы распознавания ценников." />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css?v=20260519a" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="./index.html" aria-label="Lenta Vision Tags">
+          <img src="./assets/lenta-vision-mark.svg" alt="" />
+          <span>Lenta Vision Tags</span>
+        </a>
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a href="./demo.html">Demo</a>
+          <a href="./architecture.html" aria-current="page">Архитектура</a>
+          <a href="./knowledge.html">Исследования</a>
+          <a href="./metrics.html">Метрики</a>
+          <a href="./docs.html">Документация</a>
+        </nav>
+        <div class="header-actions">
+          <a class="icon-link" href="https://github.com/MakSoS1/lenta_tech">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 19c-4 1.5-4-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2-.2 4.1-1 4.1-4.7 0-1-.4-2-1.1-2.7.1-.3.5-1.3-.1-2.7 0 0-.9-.3-3 1.1a10.3 10.3 0 0 0-5.4 0C6.9 5.1 6 5.4 6 5.4c-.6 1.4-.2 2.4-.1 2.7A4 4 0 0 0 4.8 11c0 3.6 2.1 4.4 4.1 4.7-.3.3-.6.8-.6 1.6V21" />
+            </svg>
+            GitHub
+          </a>
+          <a class="button primary" href="./demo.html">
+            Открыть demo
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page layout-illustrated page-enter">
+      <div class="micro-pills">
+        <span class="dot"></span><span>Локально</span>
+        <span class="dot"></span><span>Без облака</span>
+        <span class="dot"></span><span>Полный контроль</span>
+      </div>
+      <section class="page-lead">
+        <h1>Архитектура решения</h1>
+        <p>Локальная воспроизводимая система для распознавания ценников с shelf-video.</p>
+      </section>
+
+      <section class="architecture-layout">
+        <article class="architecture-main">
+          <h3 style="margin: 0">Контур продукта</h3>
+          <div class="flow-cards">
+            <article class="flow-card">
+              <span class="bubble">1</span>
+              <h4>Пользователь</h4>
+              <p>Загружает shelf-video и запускает обработку.</p>
+            </article>
+            <article class="flow-card">
+              <span class="bubble">2</span>
+              <h4>FastAPI / Gradio</h4>
+              <p>Локальный API и веб-интерфейс на устройстве.</p>
+            </article>
+            <article class="flow-card">
+              <span class="bubble">3</span>
+              <h4>CV pipeline</h4>
+              <p>Обнаружение ценников и извлечение полей.</p>
+            </article>
+            <article class="flow-card">
+              <span class="bubble">4</span>
+              <h4>Локальные активы</h4>
+              <p>Каталог товаров, справочники и конфиги.</p>
+            </article>
+            <article class="flow-card">
+              <span class="bubble">5</span>
+              <h4>Demo / Артефакты</h4>
+              <p>CSV с данными, превью, логи и артефакты.</p>
+            </article>
+          </div>
+
+          <h3 style="margin: 20px 0 0">CV pipeline — от видео до структурированных данных</h3>
+          <div class="pipeline-cards">
+            <article class="pipeline-card-item">
+              <span class="bubble">1</span>
+              <h4>Frame sampling</h4>
+              <p>Берем равномерно распределенные кадры из видео.</p>
+            </article>
+            <article class="pipeline-card-item">
+              <span class="bubble">2</span>
+              <h4>Camera undistortion</h4>
+              <p>Опциональная коррекция дисторсии по калибровке камеры.</p>
+            </article>
+            <article class="pipeline-card-item">
+              <span class="bubble">3</span>
+              <h4>Price tag detector</h4>
+              <p>YOLOv8 + HSV fallback на sampled frames.</p>
+            </article>
+            <article class="pipeline-card-item">
+              <span class="bubble">4</span>
+              <h4>Time-aware NMS</h4>
+              <p>Дедупликация по IoU и времени (скользящее окно 5 секунд).</p>
+            </article>
+            <article class="pipeline-card-item">
+              <span class="bubble">5</span>
+              <h4>Best crop selection</h4>
+              <p>Выбор самого резкого кропа по Laplacian variance.</p>
+            </article>
+            <article class="pipeline-card-item">
+              <span class="bubble">6</span>
+              <h4>OCR / VLM</h4>
+              <p>RapidOCR + локальный VLM + правила и парсинг QR.</p>
+            </article>
+            <article class="pipeline-card-item">
+              <span class="bubble">7</span>
+              <h4>Catalog enrichment</h4>
+              <p>Нормализация, матчинг с каталогом и экспорт в CSV.</p>
+            </article>
+          </div>
+        </article>
+
+        <aside class="principles">
+          <h3 style="margin: 0">Принципы решения</h3>
+          <ul class="principle-list" style="margin-top: 12px">
+            <li>
+              <span class="stat-icon"><svg viewBox="0 0 24 24"><path d="m12 21-7-4V7l7-4 7 4v10z" /></svg></span>
+              <div>
+                <h4>Локально</h4>
+                <p>Данные не покидают контур. Полный контроль обработки.</p>
+              </div>
+            </li>
+            <li>
+              <span class="stat-icon"><svg viewBox="0 0 24 24"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3z" /></svg></span>
+              <div>
+                <h4>Воспроизводимо</h4>
+                <p>Фиксированные версии моделей и конфигураций.</p>
+              </div>
+            </li>
+            <li>
+              <span class="stat-icon"><svg viewBox="0 0 24 24"><path d="M12 3a5 5 0 0 1 5 5v3h1v10H6V11h1V8a5 5 0 0 1 5-5z" /></svg></span>
+              <div>
+                <h4>Приватно</h4>
+                <p>Никаких облачных API, внешних сервисов и утечки данных.</p>
+              </div>
+            </li>
+            <li>
+              <span class="stat-icon"><svg viewBox="0 0 24 24"><path d="M4 17V5h16v12M2 19h20" /></svg></span>
+              <div>
+                <h4>Разворачиваемо</h4>
+                <p>Запуск на CPU/GPU, docker-образ и offline-установка.</p>
+              </div>
+            </li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="./assets/lenta-vision-mark.svg" alt="" />
+          <div>
+            <strong>Lenta Vision Tags</strong><br />
+            <span>© 2026 ShelfVision Team</span>
+          </div>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://github.com/MakSoS1/lenta_tech">GitHub</a>
+          <a href="./docs.html">Документация</a>
+          <a href="./architecture.html">Архитектура</a>
+          <a href="./metrics.html">Метрики</a>
+          <a href="./knowledge.html">Исследования</a>
+        </nav>
+        <div class="footer-contact">
+          <strong>Связь с командой</strong><br />
+          <a href="mailto:maks.kostromitin.80@gmail.com">maks.kostromitin.80@gmail.com</a>
+        </div>
+      </div>
+    </footer>
+    <script src="./main.js?v=20260519a"></script>
+  </body>
+</html>

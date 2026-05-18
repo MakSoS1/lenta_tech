@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lenta Vision Tags</title>
+    <meta
+      name="description"
+      content="Локальная система распознавания ценников с shelf-video: от видео робота до структурированного CSV."
+    />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css?v=20260519a" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="./index.html" aria-label="Lenta Vision Tags">
+          <img src="./assets/lenta-vision-mark.svg" alt="" />
+          <span>Lenta Vision Tags</span>
+        </a>
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a href="./demo.html">Demo</a>
+          <a href="./architecture.html">Архитектура</a>
+          <a href="./knowledge.html">Исследования</a>
+          <a href="./metrics.html">Метрики</a>
+          <a href="./docs.html">Документация</a>
+        </nav>
+        <div class="header-actions">
+          <a class="icon-link" href="https://github.com/MakSoS1/lenta_tech">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 19c-4 1.5-4-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2-.2 4.1-1 4.1-4.7 0-1-.4-2-1.1-2.7.1-.3.5-1.3-.1-2.7 0 0-.9-.3-3 1.1a10.3 10.3 0 0 0-5.4 0C6.9 5.1 6 5.4 6 5.4c-.6 1.4-.2 2.4-.1 2.7A4 4 0 0 0 4.8 11c0 3.6 2.1 4.4 4.1 4.7-.3.3-.6.8-.6 1.6V21" />
+            </svg>
+            GitHub
+          </a>
+          <a class="button primary" href="./demo.html">
+            Открыть demo
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page layout-illustrated page-enter">
+      <section class="hero">
+        <div>
+          <div class="micro-pills">
+            <span class="dot"></span><span>Локально</span>
+            <span class="dot"></span><span>Без облака</span>
+            <span class="dot"></span><span>Полный контроль</span>
+          </div>
+          <h1>Локальная система распознавания ценников с shelf-video</h1>
+          <p>
+            Превращаем видео обхода полок роботом в структурированные данные CSV для аналитики,
+            контроля полки и качества retail-данных.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="./demo.html">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+              Запустить demo
+            </a>
+            <a class="button secondary" href="./architecture.html">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M12 4v16" /></svg>
+              Смотреть архитектуру
+            </a>
+          </div>
+        </div>
+
+        <div class="pipeline-card">
+          <div class="pipeline-top">
+            <div class="chip">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+              Видео робота
+            </div>
+            <div class="chip"><span>2</span>Детекция ценников</div>
+            <div class="chip"><span>3</span>Структурированный CSV</div>
+          </div>
+
+          <div class="pipeline-main">
+            <article class="video-mock">
+              <img src="./assets/shelf-montage.jpg" alt="Детекция ценников на полке" />
+              <div class="video-controls">
+                <span>00:12</span>
+                <div class="bar"><span></span></div>
+                <span>00:18</span>
+              </div>
+            </article>
+            <article class="pipeline-steps">
+              <div class="step-row"><span class="n">1</span><span>Обнаружение ценников</span></div>
+              <div class="step-row"><span class="n">2</span><span>OCR текста и чисел</span></div>
+              <div class="step-row"><span class="n">3</span><span>Анализ контекста (VLM)</span></div>
+              <div class="step-row"><span class="n">4</span><span>Валидация и структура</span></div>
+            </article>
+          </div>
+
+          <article class="csv-preview">
+            <header class="csv-head">
+              <span class="tag">CSV</span>
+              <strong>29 полей</strong>
+            </header>
+            <table>
+              <thead>
+                <tr>
+                  <th>id</th>
+                  <th>store</th>
+                  <th>category</th>
+                  <th>price</th>
+                  <th>promo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>781</td><td>781</td><td>Мясо</td><td>219.99</td><td>1</td></tr>
+                <tr><td>782</td><td>781</td><td>Макароны</td><td>129.99</td><td>0</td></tr>
+                <tr><td>783</td><td>781</td><td>Сахар</td><td>74.99</td><td>0</td></tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+
+      <section class="quick-links" aria-label="Разделы проекта">
+        <a class="quick-card" href="./demo.html">
+          <span class="card-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+          </span>
+          <div>
+            <h3>Demo</h3>
+            <p>Попробуйте систему на демо-данных</p>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a class="quick-card" href="./architecture.html">
+          <span class="card-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3z" /></svg>
+          </span>
+          <div>
+            <h3>Архитектура</h3>
+            <p>Как устроена система и ее компоненты</p>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a class="quick-card" href="./knowledge.html">
+          <span class="card-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M12 3v18M5 8h14M7 14h10" /></svg>
+          </span>
+          <div>
+            <h3>Граф исследований</h3>
+            <p>Путь от гипотез до финального решения</p>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a class="quick-card" href="./metrics.html">
+          <span class="card-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 20V9m6 11V4m6 16v-7" /></svg>
+          </span>
+          <div>
+            <h3>Метрики</h3>
+            <p>Ключевые результаты и сравнение подходов</p>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a class="quick-card" href="./docs.html">
+          <span class="card-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h8l4 4v14H7zM15 3v4h4" /></svg>
+          </span>
+          <div>
+            <h3>README / Артефакты</h3>
+            <p>Документация, артефакты и инструкции</p>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+      </section>
+
+      <h2 class="section-title">Что увидит жюри</h2>
+      <section class="jury-wrap">
+        <article class="jury-card">
+          <div class="jury-item">
+            <span class="stat-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 21-7-4V7l7-4 7 4v10zM9 12h6" /></svg>
+            </span>
+            <div>
+              <h4>Local-first</h4>
+              <p>Работает полностью локально, данные не уходят наружу.</p>
+            </div>
+          </div>
+          <div class="jury-item">
+            <span class="stat-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M8 6v12m8-12v12M4 18h16" /></svg>
+            </span>
+            <div>
+              <h4>Reproducible</h4>
+              <p>Пайплайн воспроизводим от видео до финального CSV.</p>
+            </div>
+          </div>
+          <div class="jury-item">
+            <span class="stat-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7zm10-3a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" /></svg>
+            </span>
+            <div>
+              <h4>Визуально прозрачно</h4>
+              <p>Понятные превью, ошибки и объяснимые детекции.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="stats-card">
+          <div class="kpi"><strong>25+</strong><span>гипотез</span></div>
+          <div class="kpi"><strong>5</strong><span>labeled video</span></div>
+          <div class="kpi"><strong>3</strong><span>final CSV</span></div>
+          <div class="kpi"><strong>29</strong><span>полей</span></div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="./assets/lenta-vision-mark.svg" alt="" />
+          <div>
+            <strong>Lenta Vision Tags</strong><br />
+            <span>© 2026 ShelfVision Team</span>
+          </div>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://github.com/MakSoS1/lenta_tech">GitHub</a>
+          <a href="./docs.html">Документация</a>
+          <a href="./architecture.html">Архитектура</a>
+          <a href="./metrics.html">Метрики</a>
+          <a href="./knowledge.html">Исследования</a>
+        </nav>
+        <div class="footer-contact">
+          <strong>Связь с командой</strong><br />
+          <a href="mailto:maks.kostromitin.80@gmail.com">maks.kostromitin.80@gmail.com</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./main.js?v=20260519a"></script>
+  </body>
+</html>

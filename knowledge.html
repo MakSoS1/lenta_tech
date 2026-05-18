@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Исследования — Lenta Vision Tags</title>
+    <meta name="description" content="Граф исследований и гипотез проекта Lenta Vision Tags." />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css?v=20260519a" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="./index.html" aria-label="Lenta Vision Tags">
+          <img src="./assets/lenta-vision-mark.svg" alt="" />
+          <span>Lenta Vision Tags</span>
+        </a>
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a href="./demo.html">Demo</a>
+          <a href="./architecture.html">Архитектура</a>
+          <a href="./knowledge.html" aria-current="page">Исследования</a>
+          <a href="./metrics.html">Метрики</a>
+          <a href="./docs.html">Документация</a>
+        </nav>
+        <div class="header-actions">
+          <a class="icon-link" href="https://github.com/MakSoS1/lenta_tech">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 19c-4 1.5-4-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2-.2 4.1-1 4.1-4.7 0-1-.4-2-1.1-2.7.1-.3.5-1.3-.1-2.7 0 0-.9-.3-3 1.1a10.3 10.3 0 0 0-5.4 0C6.9 5.1 6 5.4 6 5.4c-.6 1.4-.2 2.4-.1 2.7A4 4 0 0 0 4.8 11c0 3.6 2.1 4.4 4.1 4.7-.3.3-.6.8-.6 1.6V21" />
+            </svg>
+            GitHub
+          </a>
+          <a class="button primary" href="./demo.html">
+            Открыть demo
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page page-enter">
+      <div class="breadcrumb">
+        <a href="./index.html">К исследованиям</a>
+      </div>
+      <section class="page-lead">
+        <h1>Граф исследований</h1>
+        <p>От гипотез к устойчивому локальному пайплайну</p>
+      </section>
+
+      <section class="knowledge-shell">
+        <article class="knowledge-head">
+          <div class="cell">
+            <span class="stat-icon"><svg viewBox="0 0 24 24"><path d="M9 3h6M12 3v18M6 20h12" /></svg></span>
+            <div><strong style="font-size: 54px">25+</strong><br /><span>гипотез проверено</span></div>
+          </div>
+          <div class="cell">
+            <span class="stat-icon"><svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z" /></svg></span>
+            <div><strong style="font-size: 30px">Ключевой инсайт</strong><br /><span>Гибридный пайплайн с VLM + OCR + строгими правилами дает лучший баланс качества и скорости.</span></div>
+          </div>
+          <div class="cell">
+            <span class="stat-icon"><svg viewBox="0 0 24 24"><path d="m20 6-11 11-5-5" /></svg></span>
+            <div><strong style="font-size: 54px">5</strong><br /><span>идей принято</span></div>
+          </div>
+        </article>
+
+        <section class="knowledge-main">
+          <article class="board">
+            <div class="legend-row">
+              <span class="legend"><i class="ball accepted"></i>Принято</span>
+              <span class="legend"><i class="ball partial"></i>Частично</span>
+              <span class="legend"><i class="ball rejected"></i>Отклонено</span>
+            </div>
+
+            <div class="node-grid">
+              <button
+                type="button"
+                class="hyp-node"
+                data-title="VLM-only распознавание"
+                data-status="rejected"
+                data-summary="Проверяли чистый VLM без OCR. На сложных кадрах упирается в галлюцинации и нестабильные цены."
+                data-note="Отклонено"
+              >
+                <span class="badge rejected">H1</span>
+                <strong>VLM-only распознавание</strong>
+                <p><span class="badge rejected">Отклонено</span></p>
+              </button>
+              <button
+                type="button"
+                class="hyp-node"
+                data-title="Классический OCR benchmark"
+                data-status="partial"
+                data-summary="Tesseract/EasyOCR/PaddleOCR показали основу, но не закрывают сложные шрифты и блики без контекста."
+                data-note="Частично"
+              >
+                <span class="badge partial">H2</span>
+                <strong>Классический OCR benchmark</strong>
+                <p><span class="badge partial">Частично</span></p>
+              </button>
+              <button
+                type="button"
+                class="hyp-node"
+                data-title="Альтернативные локальные VLM"
+                data-status="accepted"
+                data-summary="Локальные VLM полезны как второй источник для спорных кропов в комбинации с OCR и правилами."
+                data-note="Принято"
+              >
+                <span class="badge accepted">H3</span>
+                <strong>Альтернативные локальные VLM</strong>
+                <p><span class="badge accepted">Принято</span></p>
+              </button>
+            </div>
+
+            <div class="center-slot">
+              <button
+                type="button"
+                class="hyp-node"
+                data-title="Дообучение детектора"
+                data-status="partial"
+                data-summary="Дообучение на части сцен дало прирост, но требует масштабного датасета для стабильного эффекта."
+                data-note="Частично"
+              >
+                <span class="badge partial">H4</span>
+                <strong>Дообучение детектора</strong>
+                <p><span class="badge partial">Частично</span></p>
+              </button>
+              <article class="center-node">
+                <span class="badge accepted">Final</span>
+                <strong>Final hybrid pipeline</strong>
+                <p>VLM + OCR + правила + фильтры</p>
+                <p><span class="badge accepted">Принято</span></p>
+              </article>
+              <button
+                type="button"
+                class="hyp-node"
+                data-title="Time-aware NMS"
+                data-status="accepted"
+                data-summary="NMS с учетом времени, а не только IoU. На видео 25_12-20 выросло с 28% до 95% detection."
+                data-note="Принято"
+              >
+                <span class="badge accepted">H6</span>
+                <strong>Time-aware NMS</strong>
+                <p><span class="badge accepted">Принято</span></p>
+              </button>
+            </div>
+
+            <div class="node-grid" style="margin-top: 16px">
+              <button
+                type="button"
+                class="hyp-node"
+                data-title="HSV fallback"
+                data-status="accepted"
+                data-summary="HSV fallback помог закрыть провалы детектора в отдельных кадрах при плохом свете."
+                data-note="Принято"
+              >
+                <span class="badge accepted">H5</span>
+                <strong>HSV fallback</strong>
+                <p><span class="badge accepted">Принято</span></p>
+              </button>
+              <article class="result-node">
+                <strong>Итоговый результат</strong>
+                <p>mAP50 0.192 → 0.266</p>
+                <p>Detections 25 → 98 | Matches 9 → 20</p>
+              </article>
+              <button
+                type="button"
+                class="hyp-node"
+                data-title="Правила цен и фильтры"
+                data-status="accepted"
+                data-summary="Строгие правила price-consensus и валидации QR резко уменьшили шум в CSV."
+                data-note="Принято"
+              >
+                <span class="badge accepted">H7</span>
+                <strong>Правила цен и фильтры</strong>
+                <p><span class="badge accepted">Принято</span></p>
+              </button>
+            </div>
+          </article>
+
+          <aside class="hypothesis-side">
+            <h3 id="kg-note-title">Time-aware NMS</h3>
+            <span class="badge accepted" id="kg-note-badge">Принято</span>
+            <div class="line"></div>
+            <h4 style="margin: 0">Что проверяли</h4>
+            <p id="kg-note-summary">NMS с учетом времени, а не только IoU. На видео 25_12-20 выросло с 28% до 95% detection.</p>
+            <div class="line"></div>
+            <h4 style="margin: 0">Статус</h4>
+            <p>Добавлено в финальный пайплайн. Дало значимый прирост полноты без потери качества.</p>
+            <a id="kg-note-link" class="button secondary" href="https://github.com/MakSoS1/lenta_tech/blob/main/docs/knowledge/README.md">Смотреть артефакты и логи</a>
+          </aside>
+        </section>
+      </section>
+
+      <svg id="knowledge-graph" viewBox="0 0 1100 720" role="img" aria-label="Knowledge graph hidden"></svg>
+      <div id="knowledge-list"></div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="./assets/lenta-vision-mark.svg" alt="" />
+          <div>
+            <strong>Lenta Vision Tags</strong><br />
+            <span>© 2026 ShelfVision Team</span>
+          </div>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://github.com/MakSoS1/lenta_tech">GitHub</a>
+          <a href="./docs.html">Документация</a>
+          <a href="./architecture.html">Архитектура</a>
+          <a href="./metrics.html">Метрики</a>
+          <a href="./knowledge.html">Исследования</a>
+        </nav>
+        <div class="footer-contact">
+          <strong>Связь с командой</strong><br />
+          <a href="mailto:maks.kostromitin.80@gmail.com">maks.kostromitin.80@gmail.com</a>
+        </div>
+      </div>
+    </footer>
+    <script src="./main.js?v=20260519a"></script>
+  </body>
+</html>

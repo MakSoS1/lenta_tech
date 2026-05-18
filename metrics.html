@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Метрики — Lenta Vision Tags</title>
+    <meta name="description" content="Ключевые метрики и результаты системы распознавания ценников." />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css?v=20260519a" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="./index.html" aria-label="Lenta Vision Tags">
+          <img src="./assets/lenta-vision-mark.svg" alt="" />
+          <span>Lenta Vision Tags</span>
+        </a>
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a href="./demo.html">Demo</a>
+          <a href="./architecture.html">Архитектура</a>
+          <a href="./knowledge.html">Исследования</a>
+          <a href="./metrics.html" aria-current="page">Метрики</a>
+          <a href="./docs.html">Документация</a>
+        </nav>
+        <div class="header-actions">
+          <a class="icon-link" href="https://github.com/MakSoS1/lenta_tech">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 19c-4 1.5-4-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2-.2 4.1-1 4.1-4.7 0-1-.4-2-1.1-2.7.1-.3.5-1.3-.1-2.7 0 0-.9-.3-3 1.1a10.3 10.3 0 0 0-5.4 0C6.9 5.1 6 5.4 6 5.4c-.6 1.4-.2 2.4-.1 2.7A4 4 0 0 0 4.8 11c0 3.6 2.1 4.4 4.1 4.7-.3.3-.6.8-.6 1.6V21" />
+            </svg>
+            GitHub
+          </a>
+          <a class="button primary" href="./demo.html">
+            Открыть demo
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page layout-illustrated page-enter">
+      <div class="micro-pills">
+        <span class="dot"></span><span>Локально</span>
+        <span class="dot"></span><span>Без облака</span>
+        <span class="dot"></span><span>Полный контроль</span>
+      </div>
+      <section class="page-lead">
+        <h1>Метрики и результаты</h1>
+        <p>Итоги работы системы распознавания ценников на shelf-video.</p>
+      </section>
+
+      <section class="metrics-top">
+        <article class="metric-box">
+          <span class="stat-icon"><svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z" /></svg></span>
+          <div>
+            <strong>92.6%</strong><span class="delta">+11.4 п.п.</span><br />
+            <span class="muted">Детекции, matched / GT</span>
+          </div>
+        </article>
+        <article class="metric-box">
+          <span class="stat-icon"><svg viewBox="0 0 24 24"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3z" /></svg></span>
+          <div>
+            <strong>0.875</strong><span class="delta">+0.082</span><br />
+            <span class="muted">YOLO mAP50</span>
+          </div>
+        </article>
+        <article class="metric-box">
+          <span class="stat-icon"><svg viewBox="0 0 24 24"><path d="M12 2v4m0 12v4M2 12h4m12 0h4M5 5l3 3m8 8 3 3m0-14-3 3m-8 8-3 3" /></svg></span>
+          <div>
+            <strong>0.732</strong><span class="delta">+0.078</span><br />
+            <span class="muted">Mean IoU</span>
+          </div>
+        </article>
+        <article class="metric-box">
+          <span class="stat-icon"><svg viewBox="0 0 24 24"><path d="M7 3h8l4 4v14H7zM15 3v4h4" /></svg></span>
+          <div>
+            <strong>94.7%</strong><span class="delta">+9.6 п.п.</span><br />
+            <span class="muted">Взвешенные ключевые поля</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="metrics-layout">
+        <article class="chart-panel">
+          <h3 style="margin: 0">Детекция по видео (matched / GT)</h3>
+          <div class="bars" aria-label="Bar chart">
+            <div class="bar-col"><span>88.7%</span><div class="bar" style="height: 190px"></div><span>Видео 1</span></div>
+            <div class="bar-col"><span>91.3%</span><div class="bar" style="height: 196px"></div><span>Видео 2</span></div>
+            <div class="bar-col"><span>94.8%</span><div class="bar" style="height: 204px"></div><span>Видео 3</span></div>
+            <div class="bar-col"><span>90.2%</span><div class="bar" style="height: 194px"></div><span>Видео 4</span></div>
+            <div class="bar-col"><span>96.3%</span><div class="bar" style="height: 208px"></div><span>Видео 5</span></div>
+          </div>
+        </article>
+        <article class="table-section">
+          <h3>Сравнение по видео</h3>
+          <table>
+            <thead>
+              <tr><th>Видео</th><th>Matched / GT</th><th>mAP50</th><th>Mean IoU</th><th>Поля</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Видео 1</td><td>710 / 801</td><td>0.812</td><td>0.681</td><td>91.5%</td></tr>
+              <tr><td>Видео 2</td><td>781 / 855</td><td>0.856</td><td>0.719</td><td>93.2%</td></tr>
+              <tr><td>Видео 3</td><td>864 / 911</td><td>0.898</td><td>0.745</td><td>95.3%</td></tr>
+              <tr><td>Видео 4</td><td>732 / 812</td><td>0.841</td><td>0.701</td><td>93.0%</td></tr>
+              <tr><td>Видео 5</td><td>925 / 961</td><td>0.928</td><td>0.814</td><td>96.5%</td></tr>
+              <tr><td><strong>Итого</strong></td><td><strong>4 012 / 4 340</strong></td><td><strong>0.875</strong></td><td><strong>0.732</strong></td><td><strong>94.7%</strong></td></tr>
+            </tbody>
+          </table>
+        </article>
+      </section>
+
+      <article class="highlight-box">
+        <div>
+          <strong>Самый большой прирост после time-aware NMS</strong><br />
+          <span>Видео 3: +6.9 п.п. к matched / GT и +0.068 к mAP50</span>
+        </div>
+        <span class="badge partial">Лидер улучшений</span>
+      </article>
+
+      <article class="field-split">
+        <div class="item"><span>Price</span><strong>96.1%</strong></div>
+        <div class="item"><span>Old price</span><strong>94.2%</strong></div>
+        <div class="item"><span>Promo</span><strong>93.0%</strong></div>
+        <div class="item"><span>Store</span><strong>95.5%</strong></div>
+        <div class="item"><span>Category</span><strong>94.6%</strong></div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="./assets/lenta-vision-mark.svg" alt="" />
+          <div>
+            <strong>Lenta Vision Tags</strong><br />
+            <span>© 2026 ShelfVision Team</span>
+          </div>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://github.com/MakSoS1/lenta_tech">GitHub</a>
+          <a href="./docs.html">Документация</a>
+          <a href="./architecture.html">Архитектура</a>
+          <a href="./metrics.html">Метрики</a>
+          <a href="./knowledge.html">Исследования</a>
+        </nav>
+        <div class="footer-contact">
+          <strong>Связь с командой</strong><br />
+          <a href="mailto:maks.kostromitin.80@gmail.com">maks.kostromitin.80@gmail.com</a>
+        </div>
+      </div>
+    </footer>
+    <script src="./main.js?v=20260519a"></script>
+  </body>
+</html>

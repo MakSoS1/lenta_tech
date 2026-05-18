@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Результаты — Lenta Vision Tags</title>
+    <meta name="description" content="Просмотр результатов распознавания ценников и финального CSV." />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css?v=20260519a" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="./index.html" aria-label="Lenta Vision Tags">
+          <img src="./assets/lenta-vision-mark.svg" alt="" />
+          <span>Lenta Vision Tags</span>
+        </a>
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a href="./demo.html">Demo</a>
+          <a href="./architecture.html">Архитектура</a>
+          <a href="./knowledge.html">Исследования</a>
+          <a href="./metrics.html">Метрики</a>
+          <a href="./docs.html">Документация</a>
+        </nav>
+        <div class="header-actions">
+          <a class="icon-link" href="https://github.com/MakSoS1/lenta_tech">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 19c-4 1.5-4-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2-.2 4.1-1 4.1-4.7 0-1-.4-2-1.1-2.7.1-.3.5-1.3-.1-2.7 0 0-.9-.3-3 1.1a10.3 10.3 0 0 0-5.4 0C6.9 5.1 6 5.4 6 5.4c-.6 1.4-.2 2.4-.1 2.7A4 4 0 0 0 4.8 11c0 3.6 2.1 4.4 4.1 4.7-.3.3-.6.8-.6 1.6V21" />
+            </svg>
+            GitHub
+          </a>
+          <a class="button primary" href="./demo.html">
+            Открыть demo
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page page-enter">
+      <div class="micro-pills">
+        <span class="dot"></span><span>Локально</span>
+        <span class="dot"></span><span>Без облака</span>
+        <span class="dot"></span><span>Полный контроль</span>
+      </div>
+      <section class="page-lead">
+        <h1>Результаты анализа</h1>
+        <p>Просмотр и исследование результатов распознавания ценников.</p>
+      </section>
+
+      <div class="results-actions">
+        <a class="button secondary" href="./assets/sample-result.csv" download>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" /></svg>
+          Скачать CSV
+        </a>
+        <a class="button secondary" href="https://github.com/MakSoS1/lenta_tech">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h11" /></svg>
+          Скачать артефакты
+        </a>
+      </div>
+
+      <section class="results-layout">
+        <section>
+          <div class="kpi-row">
+            <article class="kpi-box">
+              <span class="stat-icon"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" /></svg></span>
+              <div><strong>29</strong><span>Уникальных ценников</span></div>
+            </article>
+            <article class="kpi-box">
+              <span class="stat-icon"><svg viewBox="0 0 24 24"><path d="M7 3h8l4 4v14H7zM15 3v4h4" /></svg></span>
+              <div><strong>781</strong><span>Строк в CSV</span></div>
+            </article>
+            <article class="kpi-box">
+              <span class="stat-icon"><svg viewBox="0 0 24 24"><path d="m12 21-7-4V7l7-4 7 4v10z" /></svg></span>
+              <div><strong>99.2%</strong><span>Качество распознавания</span></div>
+            </article>
+          </div>
+
+          <article class="results-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>timestamp</th>
+                  <th>category</th>
+                  <th>price</th>
+                  <th>old_price</th>
+                  <th>promo</th>
+                  <th>shelf</th>
+                  <th>x</th>
+                  <th>y</th>
+                  <th>w</th>
+                  <th>h</th>
+                  <th>quality</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="active"><td>129</td><td>00:17:23.456</td><td>Молочные продукты</td><td>129.99</td><td>179.99</td><td>1</td><td>Полка 2</td><td>813</td><td>342</td><td>182</td><td>96</td><td>99.3%</td></tr>
+                <tr><td>130</td><td>00:17:23.789</td><td>Напитки</td><td>99.99</td><td>129.99</td><td>1</td><td>Полка 2</td><td>612</td><td>445</td><td>160</td><td>88</td><td>98.7%</td></tr>
+                <tr><td>131</td><td>00:17:24.123</td><td>Бакалея</td><td>189.99</td><td>249.99</td><td>1</td><td>Полка 3</td><td>1023</td><td>332</td><td>186</td><td>94</td><td>98.9%</td></tr>
+                <tr><td>132</td><td>00:17:24.456</td><td>Молочные продукты</td><td>59.99</td><td>0.00</td><td>0</td><td>Полка 1</td><td>423</td><td>518</td><td>152</td><td>86</td><td>97.8%</td></tr>
+                <tr><td>133</td><td>00:17:24.789</td><td>Замороженные</td><td>249.99</td><td>329.99</td><td>1</td><td>Полка 4</td><td>915</td><td>624</td><td>188</td><td>96</td><td>98.4%</td></tr>
+                <tr><td>134</td><td>00:17:25.123</td><td>Напитки</td><td>79.99</td><td>99.99</td><td>1</td><td>Полка 2</td><td>305</td><td>412</td><td>158</td><td>86</td><td>97.2%</td></tr>
+              </tbody>
+            </table>
+          </article>
+
+          <div class="gallery-strip">
+            <img src="./assets/shelf-montage.jpg" alt="Пример детекции 1" />
+            <img src="./assets/shelf-montage.jpg" alt="Пример детекции 2" />
+            <img src="./assets/shelf-montage.jpg" alt="Пример детекции 3" />
+          </div>
+        </section>
+
+        <aside class="result-side">
+          <div class="preview">
+            <img src="./assets/shelf-montage.jpg" alt="Ценник #129" />
+          </div>
+          <article class="detail-panel">
+            <h3>Детектированные значения</h3>
+            <ul class="detect-list">
+              <li><span>barcode</span><strong>4601234567890</strong></li>
+              <li><span>product_name</span><strong>Йогурт BIO баланс 1.5% 290г</strong></li>
+              <li><span>price_card</span><strong>129.99</strong></li>
+              <li><span>price_default</span><strong>179.99</strong></li>
+              <li><span>promo</span><strong>Да</strong></li>
+              <li><span>shelf</span><strong>Полка 2</strong></li>
+              <li><span>category</span><strong>Молочные продукты</strong></li>
+              <li><span>timestamp</span><strong>00:17:23.456</strong></li>
+              <li><span>quality</span><strong>99.3%</strong></li>
+            </ul>
+          </article>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="./assets/lenta-vision-mark.svg" alt="" />
+          <div>
+            <strong>Lenta Vision Tags</strong><br />
+            <span>© 2026 ShelfVision Team</span>
+          </div>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://github.com/MakSoS1/lenta_tech">GitHub</a>
+          <a href="./docs.html">Документация</a>
+          <a href="./architecture.html">Архитектура</a>
+          <a href="./metrics.html">Метрики</a>
+          <a href="./knowledge.html">Исследования</a>
+        </nav>
+        <div class="footer-contact">
+          <strong>Связь с командой</strong><br />
+          <a href="mailto:maks.kostromitin.80@gmail.com">maks.kostromitin.80@gmail.com</a>
+        </div>
+      </div>
+    </footer>
+    <script src="./main.js?v=20260519a"></script>
+  </body>
+</html>
