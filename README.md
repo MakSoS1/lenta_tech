@@ -46,12 +46,21 @@ Pipeline:
 
 `catalog` — compatibility alias. Для пяти размеченных train-видео он намеренно не возвращает GT-строки, чтобы локальная метрика не превращалась в переобучение.
 
-## Быстрый запуск
+## Local Run
+
+### 1) Подготовить окружение
+
+Рекомендуем `python3.12` или `python3.13`. На части macOS-конфигураций `python3.14` может ломаться на `ensurepip/pyexpat`.
 
 ```bash
-python -m venv .venv
+python3.12 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+```
+
+### 2) Запустить пайплайн из CLI
+
+```bash
 python run_pipeline.py path/to/video.mp4 --mode general --output-dir outputs
 ```
 
@@ -62,13 +71,22 @@ ollama pull gemma4
 python run_pipeline.py path/to/video.mp4 --mode general --vlm-max-tags 20
 ```
 
-API/UI:
+### 3) Запустить API/UI (то, что будет использовать жюри)
 
 ```bash
 python run_api.py
 ```
 
-Откройте `http://localhost:7860`, загрузите MP4 и скачайте CSV.
+Открыть `http://localhost:7860`, загрузить MP4 и скачать CSV.
+
+### 4) API smoke-test без UI
+
+```bash
+curl -s http://127.0.0.1:7860/api/health
+curl -s -F "file=@/path/to/video.mp4" http://127.0.0.1:7860/api/process
+```
+
+Проверено локально: `2026-05-19` API обработал `/Users/maksos/Downloads/0325.mp4`, вернул `count=40`, CSV сохранен в `outputs/result_7725662e.csv`.
 
 ## Данные и артефакты
 

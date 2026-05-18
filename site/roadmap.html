@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Roadmap — Lenta Vision Tags</title>
+    <meta name="description" content="Путь в production и roadmap развития решения." />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css?v=20260519a" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="./index.html" aria-label="Lenta Vision Tags">
+          <img src="./assets/lenta-vision-mark.svg" alt="" />
+          <span>Lenta Vision Tags</span>
+        </a>
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a href="./demo.html">Demo</a>
+          <a href="./architecture.html">Архитектура</a>
+          <a href="./knowledge.html">Исследования</a>
+          <a href="./metrics.html">Метрики</a>
+          <a href="./docs.html">Документация</a>
+        </nav>
+        <div class="header-actions">
+          <a class="icon-link" href="https://github.com/MakSoS1/lenta_tech">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 19c-4 1.5-4-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2-.2 4.1-1 4.1-4.7 0-1-.4-2-1.1-2.7.1-.3.5-1.3-.1-2.7 0 0-.9-.3-3 1.1a10.3 10.3 0 0 0-5.4 0C6.9 5.1 6 5.4 6 5.4c-.6 1.4-.2 2.4-.1 2.7A4 4 0 0 0 4.8 11c0 3.6 2.1 4.4 4.1 4.7-.3.3-.6.8-.6 1.6V21" />
+            </svg>
+            GitHub
+          </a>
+          <a class="button primary" href="./demo.html">
+            Открыть demo
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page layout-illustrated page-enter">
+      <div class="micro-pills">
+        <span class="dot"></span><span>Локально</span>
+        <span class="dot"></span><span>Без облака</span>
+        <span class="dot"></span><span>Полный контроль</span>
+      </div>
+
+      <section class="page-lead">
+        <h1>Путь в production</h1>
+        <p>Честно фиксируем ограничения и планируем шаги к production-ready состоянию.</p>
+      </section>
+
+      <section class="prod-grid">
+        <section>
+          <article class="limitations">
+            <h3 class="section-caption">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="m12 21-7-4V7l7-4 7 4v10zM9 12h6" fill="none" stroke="currentColor" stroke-width="1.7" /></svg>
+              Текущие ограничения
+            </h3>
+            <ul class="limitations-list">
+              <li>
+                <span class="stat-icon"><svg viewBox="0 0 24 24"><path d="M3 7h18v10H3zM9 7v10" /></svg></span>
+                <div>
+                  <h4>Ограниченный объем видео-данных</h4>
+                  <p>Датасет покрывает базовые сценарии, но не все условия съемки.</p>
+                </div>
+              </li>
+              <li>
+                <span class="stat-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20" /></svg></span>
+                <div>
+                  <h4>Обучение на разных ритейл-форматах</h4>
+                  <p>Требуется дообучение на новых магазинах и типах полок.</p>
+                </div>
+              </li>
+              <li>
+                <span class="stat-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM9 9h6v6H9z" /></svg></span>
+                <div>
+                  <h4>QR/штрихкоды низкого качества</h4>
+                  <p>Мелкие и бликующие коды распознаются нестабильно.</p>
+                </div>
+              </li>
+              <li>
+                <span class="stat-icon"><svg viewBox="0 0 24 24"><path d="M7 3h10v18H7zM10 7h4M10 12h4M10 17h4" /></svg></span>
+                <div>
+                  <h4>Режим реестра в разработке</h4>
+                  <p>Сопоставление с мастер-данными и бизнес-правилами на этапе интеграции.</p>
+                </div>
+              </li>
+              <li>
+                <span class="stat-icon"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 19h16" /></svg></span>
+                <div>
+                  <h4>Нет центрального сбора телеметрии</h4>
+                  <p>Логи и метрики собираются локально, без агрегации и мониторинга.</p>
+                </div>
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section>
+          <article class="pill-strip">
+            <div class="item"><span class="stat-icon"><svg viewBox="0 0 24 24"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3z" /></svg></span><div><strong>local-first</strong><span>работает локально</span></div></div>
+            <div class="item"><span class="stat-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20" /></svg></span><div><strong>edge-ready</strong><span>оптимизация под edge</span></div></div>
+            <div class="item"><span class="stat-icon"><svg viewBox="0 0 24 24"><path d="M4 20h16M7 16h10M10 12h4" /></svg></span><div><strong>scalable</strong><span>готово к масштабированию</span></div></div>
+            <div class="item"><span class="stat-icon"><svg viewBox="0 0 24 24"><path d="M5 5h14v14H5zM8 8h8v8H8z" /></svg></span><div><strong>retail-ready</strong><span>для реальных магазинов</span></div></div>
+          </article>
+
+          <article class="timeline" style="margin-top: 12px">
+            <h3 class="section-caption">Следующие шаги</h3>
+            <ul class="steps-list">
+              <li><span class="bubble">1</span><div><h4>Расширение видео-данных</h4><p>Сбор и разметка данных из разных магазинов, камер и условий съемки.</p></div><span class="badge partial">1–2 мес.</span></li>
+              <li><span class="bubble">2</span><div><h4>Переобучение детектора ценников</h4><p>Улучшение устойчивости к ракурсам, освещению и бликам.</p></div><span class="badge partial">2–3 мес.</span></li>
+              <li><span class="bubble">3</span><div><h4>Суперразрешение для QR</h4><p>Восстановление мелких кодов для повышения стабильности OCR.</p></div><span class="badge partial">2–3 мес.</span></li>
+              <li><span class="bubble">4</span><div><h4>Режим реестра</h4><p>Сопоставление с мастер-данными и бизнес-правилами.</p></div><span class="badge partial">3–4 мес.</span></li>
+              <li><span class="bubble">5</span><div><h4>INT8 / RKNN инференс</h4><p>Оптимизация моделей для edge-устройств.</p></div><span class="badge partial">4–6 мес.</span></li>
+              <li><span class="bubble">6</span><div><h4>Интеграция с ERP</h4><p>Синхронизация справочников, цен и акций.</p></div><span class="badge partial">6+ мес.</span></li>
+            </ul>
+          </article>
+        </section>
+      </section>
+
+      <article class="strategy-row">
+        <div class="segment">
+          <h3 style="margin: 0">Наша стратегия</h3>
+          <p>Сначала честный general-режим с прозрачными метриками и контролем качества, затем практичный режим реестра.</p>
+        </div>
+        <div class="segment"><h4 style="margin: 0">Прозрачность</h4><p>Понятные метрики и отчеты.</p></div>
+        <div class="segment"><h4 style="margin: 0">Контроль</h4><p>Локально, без потери данных.</p></div>
+        <div class="segment"><h4 style="margin: 0">Ценность</h4><p>Быстрые победы и масштабируемость.</p></div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="./assets/lenta-vision-mark.svg" alt="" />
+          <div>
+            <strong>Lenta Vision Tags</strong><br />
+            <span>© 2026 ShelfVision Team</span>
+          </div>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://github.com/MakSoS1/lenta_tech">GitHub</a>
+          <a href="./docs.html">Документация</a>
+          <a href="./architecture.html">Архитектура</a>
+          <a href="./metrics.html">Метрики</a>
+          <a href="./knowledge.html">Исследования</a>
+        </nav>
+        <div class="footer-contact">
+          <strong>Связь с командой</strong><br />
+          <a href="mailto:maks.kostromitin.80@gmail.com">maks.kostromitin.80@gmail.com</a>
+        </div>
+      </div>
+    </footer>
+    <script src="./main.js?v=20260519a"></script>
+  </body>
+</html>

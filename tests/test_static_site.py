@@ -32,8 +32,19 @@ def local_path(ref: str) -> Path | None:
 
 
 class StaticSiteTest(unittest.TestCase):
+    PAGES = [
+        "index.html",
+        "demo.html",
+        "architecture.html",
+        "metrics.html",
+        "docs.html",
+        "roadmap.html",
+        "results.html",
+        "knowledge.html",
+    ]
+
     def test_html_references_exist(self):
-        for page in ["index.html", "knowledge.html"]:
+        for page in self.PAGES:
             parser = AssetParser()
             parser.feed((SITE / page).read_text(encoding="utf-8"))
             for ref in parser.refs:
@@ -43,10 +54,10 @@ class StaticSiteTest(unittest.TestCase):
                 self.assertTrue(path.exists(), f"{page} references missing asset {ref}")
 
     def test_site_has_no_cdn_runtime_dependency(self):
+        html_pages = [(SITE / page).read_text(encoding="utf-8") for page in self.PAGES]
         text = "\n".join(
-            [
-                (SITE / "index.html").read_text(encoding="utf-8"),
-                (SITE / "knowledge.html").read_text(encoding="utf-8"),
+            html_pages
+            + [
                 (SITE / "main.js").read_text(encoding="utf-8"),
                 (SITE / "styles.css").read_text(encoding="utf-8"),
             ]
@@ -59,3 +70,6 @@ class StaticSiteTest(unittest.TestCase):
         self.assertIn('id="knowledge-graph"', html)
         self.assertIn('id="knowledge-list"', html)
         self.assertIn("./assets/knowledge-graph.json", (SITE / "main.js").read_text(encoding="utf-8"))
+
+    def test_brand_logo_exists(self):
+        self.assertTrue((SITE / "assets" / "lenta-vision-mark.svg").exists())
