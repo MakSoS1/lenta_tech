@@ -1,0 +1,15 @@
+---
+type: canvas
+---
+```json
+{
+  "elements": [
+    {"id":"overview","type":"text","x":0,"y":0,"width":400,"height":200,"text":"# Lenta Hack\nDetection: 26/29 (90%)\nKey fields: 20.1%\nTarget: >95%"},
+    {"id":"detection","type":"text","x":-300,"y":300,"width":300,"height":100,"text":"## Detection\n[[D5 Current Best Detection]]\nYOLO+Multi-frame NMS\n26/29 IoU>=0.3"},
+    {"id":"ocr","type":"text","x":0,"y":300,"width":300,"height":100,"text":"## OCR\n[[RapidOCR]] — prices only\n[[Ollama VLM]] — slow+hallucinate\n[[A4 Tesseract OCR]] — garbage"},
+    {"id":"failed","type":"text","x":300,"y":300,"width":300,"height":100,"text":"## Failed\n[[A6 PaddleOCR]] — crash\n[[A11 Florence-2]] — bug\n[[A9 Fireworks VLM]] — suspended\n[[A10 Qwen2-VL]] — timeout"},
+    {"id":"qr","type":"text","x":0,"y":500,"width":300,"height":100,"text":"## QR\n[[QR Decoding]]\nToo small in video\n0 codes found"},
+    {"id":"next","type":"text","x":-300,"y":500,"width":300,"height":150,"text":"## Next Steps\n1. Fix price_default vs price_card\n2. Retrain YOLO (200 epochs)\n3. Download Qwen2-VL-2B\n4. Multi-frame best OCR\n5. Decimal estimation"}
+  ]
+}
+```

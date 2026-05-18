@@ -2,7 +2,7 @@
 
 Локальное решение для хакатона **Lenta Tech Life Hack**: робот снимает полку на видео, система находит ценники, извлекает поля и возвращает CSV в схеме задания.
 
-[Демо на GitHub Pages](https://maksos1.github.io/lenta_tech/) · [Архитектура](docs/architecture/workspace.c4) · [Примеры CSV](outputs_unlabeled_final)
+[Демо на GitHub Pages](https://maksos1.github.io/lenta_tech/) · [Research graph](https://maksos1.github.io/lenta_tech/knowledge.html) · [Архитектура](docs/architecture/workspace.c4) · [Примеры CSV](outputs_unlabeled_final)
 
 ## Почему это бизнес-решение
 
@@ -31,6 +31,12 @@ Pipeline:
 8. **CSV contract**: порядок и названия колонок совместимы с `sample.csv`.
 
 ![Vision pipeline](docs/assets/pipeline.png)
+
+## Research graph
+
+Исследовательские заметки из Obsidian сохранены в [`docs/knowledge`](docs/knowledge): raw vault, нормализованный `graph.json`, презентационный обзор и интерактивная страница сайта `site/knowledge.html`.
+
+Это удобно использовать в защите: можно показать, какие гипотезы проверялись, почему часть подходов была отброшена и как решение пришло к локальному edge-пайплайну.
 
 ## Режимы работы
 
@@ -92,6 +98,12 @@ python run_api.py
 python validate.py --all --pred-dir outputs_honest_general20
 ```
 
+Быстрые тесты репозитория:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
 Для unlabeled-артефактов:
 
 ```bash
@@ -111,6 +123,7 @@ src/
 data/catalog/           normalized product catalog
 docs/architecture/      LikeC4 DSL
 docs/assets/            rendered architecture screenshots
+docs/knowledge/         Obsidian research graph and raw notes
 site/                   GitHub Pages product demo
 outputs_unlabeled_final sample submission CSVs
 ```

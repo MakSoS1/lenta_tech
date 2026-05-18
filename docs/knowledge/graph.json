@@ -1,0 +1,566 @@
+{
+  "nodes": [
+    {
+      "id": "night-run-master-plan",
+      "title": "Night Run Master Plan",
+      "group": "plan",
+      "status": "done",
+      "summary": "Win Lenta Tech Life Hack hackathon by building a complete local price tag recognition pipeline. 1. **Local only** — no external networks (\"приоритет отдается решениям, которые можно повторить он-прям в контуре Ленты без",
+      "path": "docs/knowledge/raw/docs-wiki/Night%20Run%20Plan.md"
+    },
+    {
+      "id": "a1-vlm-pipeline-kimi-k2-6-vision",
+      "title": "A1: VLM Pipeline (Kimi K2.6 Vision)",
+      "group": "attempt",
+      "status": "failed",
+      "summary": "**Подход**: Полный кадр → Kimi K2.6 Vision (Fireworks API) → все теги за 1 вызов **Результат**: 10-16 тегов на кадр, найдены все поля **Причина отказа**: Облако запрещено правилами хакатона — \"приоритет отдается решениям",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A1%20VLM%20Pipeline.md"
+    },
+    {
+      "id": "a10-qwen2-vl-2b-instruct",
+      "title": "A10: Qwen2-VL-2B-Instruct",
+      "group": "attempt",
+      "status": "failed",
+      "summary": "**Подход**: Локальный VLM Qwen2-VL-2B через transformers **Результат**: Скачивание 4GB модели через HuggingFace слишком медленное (>10 мин timeout) **Qwen2-VL-0.5B**: Требует авторизацию (401 Unauthorized) — gated model",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A10%20Qwen2-VL.md"
+    },
+    {
+      "id": "a11-florence-2-base",
+      "title": "A11: Florence-2-base",
+      "group": "attempt",
+      "status": "failed",
+      "summary": "**Подход**: Microsoft Florence-2 через transformers **Результат**: Загружается (0.9GB VRAM), но generate() падает с: 1. `past_key_values[0][0].shape[2]` — NoneType (патчили)",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A11%20Florence-2.md"
+    },
+    {
+      "id": "a12-improved-price-logic",
+      "title": "A12: Improved Price Logic",
+      "group": "attempt",
+      "status": "done",
+      "summary": "**Проблема**: RapidOCR читает числа с соседних тегов (bbox YOLO захватывает несколько тегов) **Анализ GT matches**: GT[4] pd=652,69 → pred=244,00 (читает цену соседнего тега!)",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A12%20Price%20Logic%20Fix.md"
+    },
+    {
+      "id": "a13-output-format-fix",
+      "title": "A13: Output Format Fix",
+      "group": "attempt",
+      "status": "done",
+      "summary": "**Problem**: Output CSV doesn't match sample.csv format **Findings**: sample.csv uses POINT decimals: 3789.49, 2011.9 Our output uses COMMA: 305,00, 1092 GT CSVs use comma but sample (expected output) uses point",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A13%20Output%20Format.md"
+    },
+    {
+      "id": "a14-sub-crop-vlm-price-name-separate-calls",
+      "title": "A14: Sub-crop VLM (Price + Name separate calls)",
+      "group": "attempt",
+      "status": "failed",
+      "summary": "**Hypothesis**: Sub-crop lower 60% for price, upper 45% for name → less adjacent tag bleed **Result**: FAILED Price sub-crop too small → VLM reads random numbers (15.00, 30.00, 19.00, 14.00)",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A14%20Sub-crop%20VLM.md"
+    },
+    {
+      "id": "a15-results-tiered-vlm",
+      "title": "A15 Results: Tiered VLM",
+      "group": "attempt",
+      "status": "done",
+      "summary": "**Setup**: gemma4 for tags ≥250px, gemma3:4b for tags ≥130px **Result**: price_default: 3.8%, price_card: 7.7%, product_name: 20.8% Detection: 26/29, Mean IoU: 0.446 **Key Finding**: gemma3:4b HALLUCINATES .90 kopecks (3",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A15%20Tiered%20VLM%20Results.md"
+    },
+    {
+      "id": "a15-tiered-vlm-strategy",
+      "title": "A15: Tiered VLM Strategy",
+      "group": "attempt",
+      "status": "done",
+      "summary": "**Problem**: v9 gave 8% price_default, 12% price_card at ±0.5 threshold **Root causes**: 1. VLM reads price_card as price_default (confuses which is which) 2. VLM reads prices from adjacent tags (bbox overlap)",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A15%20Tiered%20VLM.md"
+    },
+    {
+      "id": "a16-multi-frame-vlm-consensus",
+      "title": "A16: Multi-frame VLM consensus",
+      "group": "attempt",
+      "status": "failed",
+      "summary": "**Hypothesis**: Read same tag from 2 frames, take consensus **Result**: FAILED - too slow (1800s for 37/68 tags, would take 60+ min total) **Insight**: Multi-frame VLM doubles time with minimal accuracy gain",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A16%20Multi-frame%20VLM.md"
+    },
+    {
+      "id": "a17-vlm-price-mapping-fix",
+      "title": "A17: VLM price mapping fix",
+      "group": "attempt",
+      "status": "failed",
+      "summary": "**Hypothesis**: VLM reads prominent number as price_default, but it's actually price_card. Fix mapping: VLM→price_card, use OCR for price_default. **Result**: price_card 46.2% (up from 0%), price_default stuck at 3.8%",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A17%20VLM%20price%20mapping.md"
+    },
+    {
+      "id": "yolo-v3-training-on-all-5-videos",
+      "title": "YOLO v3 Training on All 5 Videos",
+      "group": "attempt",
+      "status": "failed",
+      "summary": "**Dataset**: 856 images from all 5 videos (extracted GT bboxes) **Model**: YOLOv8n, 100 epochs, batch=8, workers=0 (Windows fix) **Final mAP50**: 0.056 (stopped at epoch 48 by early stopping)",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A18%20YOLO%20v3%20all%20videos.md"
+    },
+    {
+      "id": "yolo-v3-training-result",
+      "title": "YOLO v3 Training Result",
+      "group": "attempt",
+      "status": "failed",
+      "summary": "**mAP50**: 0.056 (v1 was 0.192) **Detection on 43_15**: 1 tag out of 29 — TERRIBLE, worse than v1 **Cause**: GT bbox timestamps don't align with video frames well; many labels misplaced",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A19%20YOLO%20v3%20result.md"
+    },
+    {
+      "id": "a2-hybrid-pipeline-hsv-detect-vlm-ocr",
+      "title": "A2: Hybrid Pipeline (HSV detect + VLM OCR)",
+      "group": "attempt",
+      "status": "failed",
+      "summary": "**Подход**: HSV детекция цвета → кропы → Kimi Vision OCR **Результат**: HSV даёт слишком много false positives (упаковка тоже красная) **Урок**: HSV без фильтрации не работает, цвет слишком общий признак",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A2%20Hybrid%20Pipeline.md"
+    },
+    {
+      "id": "a20-final-deployable-pipeline",
+      "title": "A20: Final Deployable Pipeline",
+      "group": "attempt",
+      "status": "done",
+      "summary": "**Цель**: Создать чистый класс-пайплайн, пригодный для FastAPI+Gradio деплоя **Файлы**: `src/pipeline/price_tag_pipeline.py` — класс PriceTagPipeline `src/api/app.py` — обновлён для нового пайплайна, Gradio 6.0",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A20%20Final%20Pipeline.md"
+    },
+    {
+      "id": "a21-hsv-color-fallback-for-detection",
+      "title": "A21: HSV Color Fallback for Detection",
+      "group": "attempt",
+      "status": "done",
+      "summary": "**Проблема**: YOLO v1 trained only on 43_15 → fails on other videos (49_5: 9/61 detected) **Решение**: Включить HSV color fallback в TagDetector.detect() — YOLO пробует первым, если 0 результатов → HSV",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A21%20Color%20Fallback.md"
+    },
+    {
+      "id": "a22-price-filters-anti-hallucination",
+      "title": "A22: Price Filters (Anti-Hallucination)",
+      "group": "attempt",
+      "status": "done",
+      "summary": "**Проблема**: VLM галлюцинирует цены — 66.00, 50.00, 230.50, 14.00, 21.00 **Три уровня фильтрации**: Reject prices < 50 рублей Убирает мелкие галлюцинации (14.00, 21.00, 16.00)",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A22%20Price%20Filters.md"
+    },
+    {
+      "id": "a23-yolo-v4-retrained-on-all-5-videos",
+      "title": "A23: YOLO v4 — Retrained on All 5 Videos",
+      "group": "attempt",
+      "status": "failed",
+      "summary": "YOLO v1 was trained only on 43_15 data (mAP50=0.192). YOLO v3 (A18) failed due to timestamp bug in extract_all_training.py. After fixing the timestamp bug (ms→frame conversion), retraining was possible.",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A23%20YOLO%20v4%20all%20videos.md"
+    },
+    {
+      "id": "a24-time-aware-nms",
+      "title": "A24: Time-Aware NMS",
+      "group": "attempt",
+      "status": "done",
+      "summary": "The previous `_time_aware_nms()` was actually doing **global NMS** — it ignored timestamps completely. Two different physical tags at the same pixel position but different times (e.g., t=0s and t=30s) would be merged int",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A24%20Time-aware%20NMS.md"
+    },
+    {
+      "id": "a25-60-frames",
+      "title": "A25: 60 Frames",
+      "group": "attempt",
+      "status": "done",
+      "summary": "Increased `num_frames` from 40 to 60 in `process_video()`. More frames = more opportunities to detect each tag Tags visible for only a few frames might be missed at lower frame rates",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A25%2060%20frames.md"
+    },
+    {
+      "id": "a3-two-stage-pipeline-vlm-detect-vlm-ocr",
+      "title": "A3: Two-Stage Pipeline (VLM detect + VLM OCR)",
+      "group": "attempt",
+      "status": "failed",
+      "summary": "**Подход**: VLM детекция → VLM OCR на кропах **Результат**: 29/29 тегов, но низкая точность полей (7/29 bbox, 0% field match) **Причина отказа**: Облако + низкая точность **Урок**: VLM не точен для bbox координат",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A3%20Two-Stage%20Pipeline.md"
+    },
+    {
+      "id": "a4-tesseract-ocr",
+      "title": "A4: Tesseract OCR",
+      "group": "attempt",
+      "status": "failed",
+      "summary": "**Подход**: YOLO детекция → Tesseract OCR на кропах **Результат**: Полный мусор — одиночные символы, бессмысленный текст **Проблема**: Кропы ценников слишком малы (100-200px), текст нечитаем даже при 4x upscale",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A4%20Tesseract%20OCR.md"
+    },
+    {
+      "id": "a5-easyocr-gpu",
+      "title": "A5: EasyOCR GPU",
+      "group": "attempt",
+      "status": "failed",
+      "summary": "**Подход**: EasyOCR с GPU на 4x upscaled кропах **Результат**: 1 символ на кроп (хуже RapidOCR) **Проблема**: EasyOCR не справляется с мелким текстом даже на GPU **Урок**: EasyOCR хуже RapidOCR для данной задачи",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A5%20EasyOCR%20GPU.md"
+    },
+    {
+      "id": "a6-paddleocr",
+      "title": "A6: PaddleOCR",
+      "group": "attempt",
+      "status": "failed",
+      "summary": "**Подход**: PaddleOCR v5 (server+mobile) **Результат**: Crash на Windows — `(Unimplemented) ConvertPirAttribute2RuntimeAttribute` (OneDNN bug) **Альтернатива**: PaddleOCR v4 тоже не ставится (paddlepaddle==2.6.1 нет для",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A6%20PaddleOCR.md"
+    },
+    {
+      "id": "a7-rapidocr-onnx-paddleocr",
+      "title": "A7: RapidOCR (ONNX PaddleOCR)",
+      "group": "attempt",
+      "status": "partial",
+      "summary": "**Подход**: RapidOCR (ONNX runtime PaddleOCR) на 4x upscaled sharpened кропах **Результат**: Цены: 11/29 (73% на читаемых тегах, w>200px) Имена: 0% — не читает русский Штрихкоды: 0%",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A7%20RapidOCR.md"
+    },
+    {
+      "id": "a8-ollama-vlm-gemma3-4b-gemma4",
+      "title": "A8: Ollama VLM (Gemma3:4b / Gemma4)",
+      "group": "attempt",
+      "status": "partial",
+      "summary": "**Подход**: Ollama Gemma3:4b или Gemma4 через API на 4x кропах **Результат**: Цены: частично (37.9% на GT кропах, но медленно ~30s/tag) Имена: галлюцинирует (\"Мясо\", \"Детское питание\" вместо мёда)",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A8%20Ollama%20VLM.md"
+    },
+    {
+      "id": "a9-fireworks-vlm-kimi-k2p6",
+      "title": "A9: Fireworks VLM (kimi-k2p6)",
+      "group": "attempt",
+      "status": "failed",
+      "summary": "**Подход**: Fireworks API с моделью kimi-k2p6 **Результат**: Account suspended (412 Precondition Failed) — \"monthly spending limit\" **Урок**: Fireworks VLM работал ранее (A1) но аккаунт исчерпан. Нельзя полагаться на обл",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/A9%20Fireworks%20VLM.md"
+    },
+    {
+      "id": "d1-hsv-color-detection",
+      "title": "D1: HSV Color Detection",
+      "group": "attempt",
+      "status": "partial",
+      "summary": "**Подход**: HSV маска (red+yellow) → контуры → bbox **Результат**: 23-28 тегов на кадр, но bbox слишком узкие (только цветная полоска, не весь тег) **Проблема**: HSV детектирует только красную/жёлтую часть ценника, без т",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/D1%20HSV%20Detection.md"
+    },
+    {
+      "id": "d2-bbox-expansion",
+      "title": "D2: Bbox Expansion",
+      "group": "attempt",
+      "status": "failed",
+      "summary": "**Подход**: Расширение HSV bbox вправо на 2x ширины **Результат**: 29 тегов (совпадает с GT!), но IoU всего 0.112 (8/29 match) **Проблема**: Слишком широкие bbox → перекрытие соседних тегов → NMS мёржит разные теги",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/D2%20Bbox%20Expansion.md"
+    },
+    {
+      "id": "d3-yolo-priority-detection",
+      "title": "D3: YOLO Priority Detection",
+      "group": "attempt",
+      "status": "done",
+      "summary": "**Подход**: YOLOv8n (mAP50=0.192, 13 val images) → только YOLO детекции **Результат**: YOLO даёт 10-11 точных bbox на кадр (IoU 0.4-0.6), HSV не используется **10/11 YOLO bbox совпадают с GT** — высокая precision но низк",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/D3%20YOLO%20Priority.md"
+    },
+    {
+      "id": "d4-multi-frame-nms",
+      "title": "D4: Multi-Frame NMS",
+      "group": "attempt",
+      "status": "done",
+      "summary": "**Подход**: YOLO на 30 кадрах (каждый 10-й) → 480 raw → NMS (IoU 0.3) → 65 уникальных **Результат**: 26/29 GT тегов совпадают с pred (IoU >= 0.3), Mean IoU=0.446 **3 ненайденных GT**: GT[17] (3219,1067), GT[21] (2251,510",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/D4%20Multi-Frame%20NMS.md"
+    },
+    {
+      "id": "d5-final-current-best-detection",
+      "title": "D5→Final: Current Best Detection",
+      "group": "attempt",
+      "status": "failed",
+      "summary": "**Конфигурация**: YOLOv8n v1 (conf=0.05, NMS IoU=0.3) + HSV color fallback **Pipeline**: `src/pipeline/price_tag_pipeline.py` **Results per video (с HSV fallback)**: **HSV fallback impact** (see A21 Color Fallback):",
+      "path": "docs/knowledge/raw/docs-wiki/attempts/D5%20Current%20Best%20Detection.md"
+    },
+    {
+      "id": "color-detection",
+      "title": "Color Detection",
+      "group": "component",
+      "status": "researched",
+      "summary": "HSV-based определение цвета ценника: Red: H 0-10 или 170-180 Yellow: H 20-35 Orange: H 10-20 Default: \"red\" **Текущая accuracy**: 54-72% (varies by video) **Method**: Анализировать левую треть кропа (где цветная полоска)",
+      "path": "docs/knowledge/raw/docs-wiki/components/Color%20Detection.md"
+    },
+    {
+      "id": "ollama-vlm",
+      "title": "Ollama VLM",
+      "group": "component",
+      "status": "partial",
+      "summary": "Локальные VLM через Ollama API (localhost:11434) Gemma4:latest — 9.6GB, **ONLY model used for prices** (reads correct kopecks) Gemma3:4b — 3.3GB, **REJECTED** (hallucinates .90 kopecks: 349.90, 149.90 etc.)",
+      "path": "docs/knowledge/raw/docs-wiki/components/Ollama%20VLM.md"
+    },
+    {
+      "id": "qr-decoding",
+      "title": "QR Decoding",
+      "group": "component",
+      "status": "failed",
+      "summary": "QR коды НЕ найдены ни одним декодером: pyzbar: 0 QR на всём видео zxing-cpp: 0 QR на всём видео (scan 299 frames) Проблема: QR коды на ценниках слишком малы (ценник 100-200px, QR ~20-30px)",
+      "path": "docs/knowledge/raw/docs-wiki/components/QR%20Decoding.md"
+    },
+    {
+      "id": "rapidocr",
+      "title": "RapidOCR",
+      "group": "component",
+      "status": "researched",
+      "summary": "ONNX-based PaddleOCR runtime (локальный, без PaddlePaddle) Модели: ch_PP-OCRv4_det + ch_PP-OCRv4_rec (китайский/английский) Скорость: ~0.5s/tag Конфиг: 6x upscale + sharpen kernel, conf≥0.3, rel_x 0.1-0.9 filter",
+      "path": "docs/knowledge/raw/docs-wiki/components/RapidOCR.md"
+    },
+    {
+      "id": "yolo-detection",
+      "title": "YOLO Detection",
+      "group": "component",
+      "status": "failed",
+      "summary": "Модель: YOLOv8n, обученная на GT CSV данных v1: `models/price_tag_yolo.pt` (mAP50=0.192, 43_15 only) — **CURRENTLY USED** v3: `models/price_tag_yolo_v3.pt` (mAP50=0.056, all videos) — **FAILED, REVERTED**",
+      "path": "docs/knowledge/raw/docs-wiki/components/YOLO%20Detection.md"
+    },
+    {
+      "id": "lenta-tech-life-hack-knowledge-graph",
+      "title": "Lenta Tech Life Hack — Knowledge Graph",
+      "group": "overview",
+      "status": "failed",
+      "summary": "Хакатон Лента Tech Life Hack. Дедлайн: **19 мая 15:00**. Задача: детекция ценников + OCR + QR → CSV с 28 полями, >0.95 accuracy. **Все модели локально, без облака.** **Пайплайн**: `src/pipeline/price_tag_pipeline.py` + `",
+      "path": "docs/knowledge/raw/docs-wiki/overview.md"
+    },
+    {
+      "id": "pipeline-v12-final-pipeline-results-summary",
+      "title": "Pipeline v12 → Final Pipeline Results Summary",
+      "group": "summary",
+      "status": "done",
+      "summary": "1. **YOLO v4 trained on all 5 videos** — mAP50: 0.192→0.266, imgsz=1280 2. **Time-aware NMS** — 5s time window prevents merging different tags at same pixel coords 3. **60 frames** (was 40) — more coverage = more detecti",
+      "path": "docs/knowledge/raw/docs-wiki/v12%20Results%20Summary.md"
+    }
+  ],
+  "edges": [
+    {
+      "source": "night-run-master-plan",
+      "target": "a10-qwen2-vl-2b-instruct"
+    },
+    {
+      "source": "night-run-master-plan",
+      "target": "a13-output-format-fix"
+    },
+    {
+      "source": "night-run-master-plan",
+      "target": "a14-sub-crop-vlm-price-name-separate-calls"
+    },
+    {
+      "source": "night-run-master-plan",
+      "target": "a16-multi-frame-vlm-consensus"
+    },
+    {
+      "source": "night-run-master-plan",
+      "target": "yolo-v3-training-result"
+    },
+    {
+      "source": "night-run-master-plan",
+      "target": "a20-final-deployable-pipeline"
+    },
+    {
+      "source": "night-run-master-plan",
+      "target": "a22-price-filters-anti-hallucination"
+    },
+    {
+      "source": "night-run-master-plan",
+      "target": "qr-decoding"
+    },
+    {
+      "source": "night-run-master-plan",
+      "target": "pipeline-v12-final-pipeline-results-summary"
+    },
+    {
+      "source": "yolo-v3-training-on-all-5-videos",
+      "target": "yolo-v3-training-result"
+    },
+    {
+      "source": "a20-final-deployable-pipeline",
+      "target": "pipeline-v12-final-pipeline-results-summary"
+    },
+    {
+      "source": "d5-final-current-best-detection",
+      "target": "a21-hsv-color-fallback-for-detection"
+    },
+    {
+      "source": "color-detection",
+      "target": "a21-hsv-color-fallback-for-detection"
+    },
+    {
+      "source": "color-detection",
+      "target": "d1-hsv-color-detection"
+    },
+    {
+      "source": "ollama-vlm",
+      "target": "a15-results-tiered-vlm"
+    },
+    {
+      "source": "ollama-vlm",
+      "target": "a17-vlm-price-mapping-fix"
+    },
+    {
+      "source": "ollama-vlm",
+      "target": "a22-price-filters-anti-hallucination"
+    },
+    {
+      "source": "ollama-vlm",
+      "target": "a8-ollama-vlm-gemma3-4b-gemma4"
+    },
+    {
+      "source": "rapidocr",
+      "target": "a12-improved-price-logic"
+    },
+    {
+      "source": "rapidocr",
+      "target": "a22-price-filters-anti-hallucination"
+    },
+    {
+      "source": "rapidocr",
+      "target": "a7-rapidocr-onnx-paddleocr"
+    },
+    {
+      "source": "yolo-detection",
+      "target": "yolo-v3-training-result"
+    },
+    {
+      "source": "yolo-detection",
+      "target": "a21-hsv-color-fallback-for-detection"
+    },
+    {
+      "source": "yolo-detection",
+      "target": "d3-yolo-priority-detection"
+    },
+    {
+      "source": "yolo-detection",
+      "target": "d4-multi-frame-nms"
+    },
+    {
+      "source": "yolo-detection",
+      "target": "d5-final-current-best-detection"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "a1-vlm-pipeline-kimi-k2-6-vision"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "a10-qwen2-vl-2b-instruct"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "a11-florence-2-base"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "a12-improved-price-logic"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "a13-output-format-fix"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "a14-sub-crop-vlm-price-name-separate-calls"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "a15-tiered-vlm-strategy"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "a15-results-tiered-vlm"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "a16-multi-frame-vlm-consensus"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "a17-vlm-price-mapping-fix"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "yolo-v3-training-on-all-5-videos"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "yolo-v3-training-result"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "a2-hybrid-pipeline-hsv-detect-vlm-ocr"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "a20-final-deployable-pipeline"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "a21-hsv-color-fallback-for-detection"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "a22-price-filters-anti-hallucination"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "a23-yolo-v4-retrained-on-all-5-videos"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "a24-time-aware-nms"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "a25-60-frames"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "a3-two-stage-pipeline-vlm-detect-vlm-ocr"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "a4-tesseract-ocr"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "a5-easyocr-gpu"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "a6-paddleocr"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "a7-rapidocr-onnx-paddleocr"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "a8-ollama-vlm-gemma3-4b-gemma4"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "a9-fireworks-vlm-kimi-k2p6"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "color-detection"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "d1-hsv-color-detection"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "d2-bbox-expansion"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "d3-yolo-priority-detection"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "d4-multi-frame-nms"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "d5-final-current-best-detection"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "ollama-vlm"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "qr-decoding"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "rapidocr"
+    },
+    {
+      "source": "lenta-tech-life-hack-knowledge-graph",
+      "target": "yolo-detection"
+    }
+  ]
+}

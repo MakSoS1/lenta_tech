@@ -422,6 +422,203 @@ figcaption {
   background: #111;
 }
 
+.knowledge-hero {
+  min-height: 520px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  align-items: center;
+  gap: clamp(24px, 5vw, 64px);
+  padding: clamp(56px, 8vw, 104px) 0 clamp(36px, 6vw, 72px);
+}
+
+.knowledge-hero h1 {
+  max-width: 860px;
+}
+
+.research-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.research-stat-grid article,
+.research-story article,
+.graph-panel,
+.note-panel,
+.note-list button {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.research-stat-grid article {
+  padding: 18px;
+}
+
+.research-stat-grid span,
+.research-story span,
+.note-list small {
+  color: var(--muted);
+  font-weight: 760;
+}
+
+.research-stat-grid strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 38px;
+  font-variant-numeric: tabular-nums;
+}
+
+.research-story {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding-bottom: clamp(44px, 6vw, 72px);
+}
+
+.research-story article {
+  padding: 20px;
+}
+
+.research-story span {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 7px;
+  background: var(--surface-2);
+  color: var(--green-dark);
+}
+
+.research-story h2 {
+  margin-top: 16px;
+  font-size: 24px;
+}
+
+.research-story p,
+.note-panel p,
+.note-list p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.knowledge-layout,
+.note-index {
+  padding: clamp(52px, 8vw, 96px) 0;
+  border-top: 1px solid var(--line);
+}
+
+.knowledge-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  align-items: start;
+  gap: 16px;
+}
+
+.graph-panel,
+.note-panel {
+  padding: 18px;
+}
+
+#knowledge-graph {
+  width: 100%;
+  min-height: 520px;
+  display: block;
+  border-radius: var(--radius);
+  background: #111914;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 14px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.legend i {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 999px;
+}
+
+.legend .done { background: var(--green); }
+.legend .partial { background: var(--amber); }
+.legend .failed { background: var(--red); }
+.legend .researched { background: var(--blue); }
+
+.note-panel {
+  position: sticky;
+  top: 86px;
+}
+
+.note-panel h2 {
+  margin-top: 8px;
+  font-size: 28px;
+}
+
+.note-panel .button {
+  margin-top: 10px;
+}
+
+.note-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.note-list button {
+  width: 100%;
+  min-height: 160px;
+  padding: 16px;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+}
+
+.note-list button:hover,
+.note-list button:focus-visible {
+  outline: 3px solid rgb(22 118 74 / 20%);
+  border-color: #aac5b3;
+}
+
+.note-list strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 18px;
+}
+
+.note-list p {
+  margin: 10px 0 0;
+  font-size: 14px;
+}
+
+.kg-node {
+  cursor: pointer;
+  stroke: #f7f8f4;
+  stroke-width: 2;
+}
+
+.kg-label {
+  fill: #eff7f0;
+  font-size: 13px;
+  font-weight: 760;
+  pointer-events: none;
+}
+
+.kg-edge {
+  stroke: rgb(238 245 239 / 18%);
+  stroke-width: 1.5;
+}
+
 footer {
   justify-content: space-between;
   gap: 16px;
@@ -441,12 +638,20 @@ footer {
 
   .workspace,
   .split,
-  .metrics {
+  .metrics,
+  .knowledge-hero,
+  .knowledge-layout,
+  .research-story,
+  .note-list {
     grid-template-columns: 1fr;
   }
 
   .workspace {
     min-height: auto;
+  }
+
+  .note-panel {
+    position: static;
   }
 }
 
