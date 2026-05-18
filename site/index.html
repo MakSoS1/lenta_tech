@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lenta Vision Tags</title>
+    <meta
+      name="description"
+      content="Локальное CV-решение для детекции и структурного распознавания ценников Ленты."
+    />
+    <link rel="stylesheet" href="./styles.css?v=20260518" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">К содержанию</a>
+    <header class="topbar">
+      <a class="brand" href="#main" aria-label="Lenta Vision Tags">
+        <span class="brand-mark" aria-hidden="true">LV</span>
+        <span>Lenta Vision Tags</span>
+      </a>
+      <nav aria-label="Основная навигация">
+        <a href="#demo">Демо</a>
+        <a href="#business">Бизнес</a>
+        <a href="#architecture">Архитектура</a>
+        <a href="https://github.com/MakSoS1/lenta_tech">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="workspace" id="demo">
+        <div class="workspace-main">
+          <div class="eyebrow">Retail computer vision</div>
+          <h1>Ценники из видео робота в готовый CSV для контроля полки</h1>
+          <p class="lead">
+            Локальный pipeline объединяет детекцию ценников, временную дедупликацию,
+            OCR/VLM-распознавание, справочник товаров и проверку CSV-контракта.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="./assets/sample-result.csv" download>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" /></svg>
+              Скачать пример CSV
+            </a>
+            <a class="button secondary" href="https://github.com/MakSoS1/lenta_tech">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2-.2 4.1-1 4.1-4.7 0-1-.4-2-1.1-2.7.1-.3.5-1.3-.1-2.7 0 0-.9-.3-3 1.1a10.3 10.3 0 0 0-5.4 0C6.9 5.1 6 5.4 6 5.4c-.6 1.4-.2 2.4-.1 2.7A4 4 0 0 0 4.8 11c0 3.6 2.1 4.4 4.1 4.7-.3.3-.6.8-.6 1.6V21" /></svg>
+              Репозиторий
+            </a>
+          </div>
+        </div>
+
+        <aside class="control-panel" aria-label="Демо загрузки">
+          <div class="panel-head">
+            <div>
+              <span class="kicker">Local inference</span>
+              <h2>Видео прохода</h2>
+            </div>
+            <span class="status-pill">offline-ready</span>
+          </div>
+          <label class="dropzone" for="video-file">
+            <input id="video-file" type="file" accept="video/mp4" />
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3m0 0 4 4m-4-4-4 4M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4" /></svg>
+            <span id="file-label">Выберите MP4</span>
+          </label>
+          <div class="progress" aria-label="Статус обработки">
+            <span id="progress-bar"></span>
+          </div>
+          <div class="result-line">
+            <span id="demo-status">Готово к запуску локального API</span>
+            <strong id="demo-count">57 строк</strong>
+          </div>
+        </aside>
+      </section>
+
+      <section class="metrics" aria-label="Ключевые показатели">
+        <article>
+          <span>Каталог</span>
+          <strong>355k</strong>
+          <p>товарных наименований и barcode для локального матчинга.</p>
+        </article>
+        <article>
+          <span>Детекция</span>
+          <strong>83.6%</strong>
+          <p>честный aggregate на 5 размеченных видео без GT-copy.</p>
+        </article>
+        <article>
+          <span>Deploy</span>
+          <strong>local</strong>
+          <p>без облачных API, с FastAPI/Gradio и CLI batch mode.</p>
+        </article>
+        <article>
+          <span>Камера</span>
+          <strong>undistort</strong>
+          <p>коэффициенты дисторсии вынесены в отдельный preprocessing-модуль.</p>
+        </article>
+      </section>
+
+      <section class="split" id="business">
+        <div>
+          <div class="eyebrow">Business value</div>
+          <h2>Не просто OCR, а контур контроля ценников</h2>
+          <p>
+            Решение закрывает регулярный сценарий ритейла: робот проходит вдоль полки,
+            система находит уникальные ценники, связывает их с товарным справочником и
+            формирует CSV для сверки цен, промо и качества выкладки.
+          </p>
+          <ul class="check-list">
+            <li>Снижает ручной аудит ценников и риск расхождений на полке.</li>
+            <li>Использует локальные модели, поэтому подходит для закрытого контура магазина.</li>
+            <li>Разделяет честный recognition fallback и registration-режим для повторных проходов.</li>
+          </ul>
+        </div>
+        <figure class="media-frame">
+          <img src="./assets/shelf-montage.jpg" alt="Примеры найденных ценников на полке" />
+          <figcaption>Примеры ценников из проходов робота</figcaption>
+        </figure>
+      </section>
+
+      <section class="architecture" id="architecture">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">LikeC4</div>
+            <h2>Архитектура решения</h2>
+          </div>
+          <a class="button secondary" href="./assets/workspace.c4">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10" /></svg>
+            DSL
+          </a>
+        </div>
+        <div class="diagram-grid">
+          <figure>
+            <img src="./assets/architecture-system.png" alt="Системная архитектура Lenta Vision Tags" />
+            <figcaption>System view</figcaption>
+          </figure>
+          <figure>
+            <img src="./assets/architecture-pipeline.png" alt="Pipeline архитектура распознавания ценников" />
+            <figcaption>Vision pipeline</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Lenta Vision Tags</span>
+      <span>Local CV pipeline for Lenta Tech Life Hack</span>
+    </footer>
+    <script src="./main.js?v=20260518"></script>
+  </body>
+</html>

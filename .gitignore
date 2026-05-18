@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.DS_Store
+
+# Local/raw hackathon data can be very large.
+data/Данные/
+dataset/
+runs/
+debug_crops/
+*.mp4
+*.zip
+
+# Runtime outputs; sample outputs are kept in outputs_unlabeled_final/.
+outputs/
+outputs_*/
+!outputs_unlabeled_final/
+!outputs_unlabeled_final/*.csv

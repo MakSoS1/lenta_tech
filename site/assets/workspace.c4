@@ -1,0 +1,92 @@
+specification {
+  element person
+  element softwareSystem
+  element container
+  element component
+}
+
+model {
+  person operator 'Сотрудник магазина / жюри' {
+    description 'Загружает видео с робота и получает CSV с найденными ценниками.'
+  }
+
+  softwareSystem lenta 'Lenta Vision Tags' {
+    description 'Локальное CV-решение для детекции и распознавания ценников без облачных API.'
+
+    container web 'GitHub Pages demo' {
+      description 'Публичная продуктовая витрина: бизнес-кейс, архитектура, демо CSV и инструкция запуска.'
+      technology 'HTML/CSS/JS'
+    }
+
+    container api 'FastAPI + Gradio' {
+      description 'Локальный сервис: upload video -> processing -> downloadable CSV.'
+      technology 'FastAPI, Gradio, Uvicorn'
+    }
+
+    container cli 'CLI pipeline' {
+      description 'Повторяемый запуск на файлах MP4 и генерация CSV по схеме задания.'
+      technology 'Python'
+    }
+
+    container cv 'Vision pipeline' {
+      description 'Детекция ценников, time-aware NMS, crop selection, OCR/VLM recognition, catalog enrichment.'
+      technology 'YOLOv8, OpenCV, RapidOCR, Ollama Gemma4'
+
+      component undistort 'Camera undistortion' {
+        description 'Опциональная коррекция дисторсии по коэффициентам камеры из задания.'
+        technology 'OpenCV remap'
+      }
+
+      component detector 'Price tag detector' {
+        description 'YOLO + HSV fallback на sampled frames.'
+        technology 'Ultralytics YOLOv8n'
+      }
+
+      component nms 'Time-aware NMS' {
+        description 'Дедупликация по IoU и временному окну, чтобы не сливать разные физические ценники.'
+        technology 'OpenCV / NumPy'
+      }
+
+      component recognizer 'Structured recognition' {
+        description 'OCR/VLM consensus, price rules, barcode cleanup, QR-derived fields.'
+        technology 'RapidOCR, local Ollama'
+      }
+
+      component catalog 'Product catalog matcher' {
+        description 'Локальный справочник 355k товаров: barcode -> product name.'
+        technology 'UTF-8 CSV'
+      }
+    }
+
+    container data 'Local data assets' {
+      description 'YOLO weights, catalog, sample outputs, schema reference.'
+      technology 'PT/CSV'
+    }
+  }
+
+  operator -> web 'смотрит продукт и скачивает артефакты'
+  operator -> api 'загружает MP4'
+  operator -> cli 'запускает batch inference'
+  web -> data 'показывает примеры'
+  api -> cv 'process_video()'
+  cli -> cv 'process_video()'
+  cv -> data 'читает модель и каталог'
+  detector -> nms 'raw detections'
+  nms -> recognizer 'best crops'
+  undistort -> detector 'optional normalized frames'
+  recognizer -> catalog 'barcode enrichment'
+}
+
+views {
+  view index of lenta {
+    title 'Lenta Vision Tags — system view'
+    include *
+    autoLayout LeftRight
+  }
+
+  view pipeline of cv {
+    title 'Computer vision pipeline'
+    include *
+    autoLayout LeftRight
+  }
+}
