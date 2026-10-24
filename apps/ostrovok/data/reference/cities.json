@@ -1,0 +1,92 @@
+[
+  {
+    "id": "kazan",
+    "name": "Kazan’",
+    "country_code": "RU",
+    "latitude": 55.78874,
+    "longitude": 49.12214,
+    "timezone": "Europe/Moscow",
+    "geonames_id": 551487,
+    "source_file": "raw/geocoding-kazan.json"
+  },
+  {
+    "id": "sochi",
+    "name": "Sochi",
+    "country_code": "RU",
+    "latitude": 43.59699,
+    "longitude": 39.72477,
+    "timezone": "Europe/Moscow",
+    "geonames_id": 491422,
+    "source_file": "raw/geocoding-sochi.json"
+  },
+  {
+    "id": "kaliningrad",
+    "name": "Kaliningrad",
+    "country_code": "RU",
+    "latitude": 54.70639,
+    "longitude": 20.51102,
+    "timezone": "Europe/Kaliningrad",
+    "geonames_id": 554234,
+    "source_file": "raw/geocoding-kaliningrad.json"
+  },
+  {
+    "id": "saint-petersburg",
+    "name": "St Petersburg",
+    "country_code": "RU",
+    "latitude": 59.93863,
+    "longitude": 30.31413,
+    "timezone": "Europe/Moscow",
+    "geonames_id": 498817,
+    "source_file": "raw/geocoding-saint-petersburg.json"
+  },
+  {
+    "id": "yerevan",
+    "name": "Yerevan",
+    "country_code": "AM",
+    "latitude": 40.17765,
+    "longitude": 44.5126,
+    "timezone": "Asia/Yerevan",
+    "geonames_id": 616052,
+    "source_file": "raw/geocoding-yerevan.json"
+  },
+  {
+    "id": "istanbul",
+    "name": "Istanbul",
+    "country_code": "TR",
+    "latitude": 41.01384,
+    "longitude": 28.94966,
+    "timezone": "Europe/Istanbul",
+    "geonames_id": 745044,
+    "source_file": "raw/geocoding-istanbul.json"
+  },
+  {
+    "id": "antalya",
+    "name": "Antalya",
+    "country_code": "TR",
+    "latitude": 36.90812,
+    "longitude": 30.69556,
+    "timezone": "Europe/Istanbul",
+    "geonames_id": 323777,
+    "source_file": "raw/geocoding-antalya.json"
+  },
+  {
+    "id": "hurghada",
+    "name": "Hurghada",
+    "country_code": "EG",
+    "latitude": 27.25738,
+    "longitude": 33.81291,
+    "timezone": "Africa/Cairo",
+    "geonames_id": 361291,
+    "source_file": "raw/geocoding-hurghada.json"
+  },
+  {
+    "id": "moscow",
+    "name": "Moscow",
+    "country_code": "RU",
+    "latitude": 55.75204,
+    "longitude": 37.61781,
+    "timezone": "Europe/Moscow",
+    "geonames_id": 524901,
+    "source_file": "raw/geocoding-moscow.json"
+  }
+]

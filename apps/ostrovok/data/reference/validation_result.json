@@ -1,0 +1,19 @@
+{
+  "validation": "PASS",
+  "raw_sources": 15,
+  "raw_source_bytes": 908511,
+  "cities": 9,
+  "daily_weather_observations": 16434,
+  "monthly_weather_rows": 108,
+  "airport_rows": 12,
+  "hotel_entities": 16,
+  "hotel_city_coverage": {
+    "Q900": 2,
+    "Q1953": 3,
+    "Q656": 3,
+    "Q406": 3,
+    "Q6487": 3,
+    "Q187284": 2
+  },
+  "hotel_caveat": "Reference only; includes historical buildings. Current operating status, price and availability are unverified."
+}

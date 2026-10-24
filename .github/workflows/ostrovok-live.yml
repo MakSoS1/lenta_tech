@@ -1,0 +1,42 @@
+name: Ostrovok free model live checks
+on:
+  push:
+    paths: ['apps/ostrovok/**', '.github/workflows/ostrovok-live.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ostrovok-live-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  free-model:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        model: [deepseek-v4.1-flash-free, glm-5.3-flash-free]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.12.14'
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: '24.10.0'
+      - name: Install locked app and official CLI
+        run: |
+          pip install --require-hashes -r apps/ostrovok/backend/requirements-dev.lock
+          npm ci --prefix apps/ostrovok/opencode --omit=dev --no-audit --no-fund
+      - name: Real free inference and pipeline
+        env:
+          OPENCODE_BIN: ${{ github.workspace }}/apps/ostrovok/opencode/node_modules/.bin/opencode
+        run: python apps/ostrovok/evals/live.py --model opencode/${{ matrix.model }} --report reports/ostrovok/live-${{ matrix.model }}.json
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with:
+          name: live-${{ matrix.model }}-${{ github.run_number }}
+          path: reports/ostrovok/live-*.json
+          retention-days: 14
