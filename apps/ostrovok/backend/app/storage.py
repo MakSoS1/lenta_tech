@@ -99,7 +99,18 @@ class Store:
         ).fetchone()
         if row is None:
             raise HTTPException(404, "Поездка недоступна в текущей сессии.")
-        return json.loads(row["state"])
+        state = json.loads(row["state"])
+        state["service_requests"] = [
+            {key: value[key] for key in ("request_id", "kind", "status", "message")}
+            for value in (
+                json.loads(request["body"])
+                for request in db.execute(
+                    "SELECT body FROM service_requests WHERE trip_id=? AND owner=? ORDER BY created_at,rowid",
+                    (trip_id, owner),
+                )
+            )
+        ]
+        return state
 
     def get(self, trip_id, owner):
         with self.transaction() as db:

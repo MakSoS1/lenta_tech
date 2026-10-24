@@ -227,3 +227,21 @@ def test_timeout_terminates_process_group_and_returns_bounded_failure(
     proc = Path("/proc") / pidfile.read_text()
     # A short-lived orphan zombie is already terminated and cannot perform work.
     assert not proc.exists() or ") Z " in (proc / "stat").read_text()
+
+
+def test_turn_deadline_includes_waiting_for_other_sessions(monkeypatch):
+    import time
+    monkeypatch.setenv('LLM_MODE', 'opencode')
+    monkeypatch.delenv('OPENCODE_MODEL', raising=False)
+    gateway = gateway_class()(timeout_seconds=0.08)
+    async def slow_attempt(model, prompt, remaining):
+        await asyncio.sleep(remaining)
+        return {'patch': {}, 'model': model, 'used': False, 'reason': 'model_timeout'}
+    gateway._attempt = slow_attempt
+    async def concurrent():
+        started = time.monotonic()
+        results = await asyncio.gather(*(gateway.extract('Москва', {}, '2026-10-24') for _ in range(3)))
+        return time.monotonic() - started, results
+    elapsed, results = asyncio.run(concurrent())
+    assert elapsed < 0.16, f'Queue escaped the whole-turn deadline: {elapsed:.3f}s'
+    assert all(not result['used'] and result['reason'] == 'model_timeout' for result in results)

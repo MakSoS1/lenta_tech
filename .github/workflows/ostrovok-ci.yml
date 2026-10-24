@@ -66,6 +66,7 @@ jobs:
           docker compose up -d --build --wait --wait-timeout 180
           python -c "import json,pathlib; pathlib.Path('reports/ostrovok/cold-start.json').write_text(json.dumps({'seconds': $((SECONDS-started)), 'environment':'GitHub ubuntu-24.04', 'llm_mode':'offline'}))"
           test "$(docker compose exec -T app id -u)" = '10001'
+          docker compose exec -T app opencode --version | tee reports/ostrovok/container-opencode-version.txt
           python apps/ostrovok/scripts/http_smoke.py
       - name: Desktop and mobile user journey
         working-directory: apps/ostrovok/e2e

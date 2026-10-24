@@ -101,6 +101,7 @@ export interface TripState {
   };
   warnings: string[];
   locked_component_ids: string[];
+  service_requests?: {request_id: string; kind: string; status: string; message: string}[];
 }
 export interface Capabilities {
   llm: {

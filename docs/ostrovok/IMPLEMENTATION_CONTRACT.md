@@ -27,3 +27,13 @@ Russian, cream/navy/coral, responsive 390px. Left request and editable compact c
 ## Final contract refinements
 
 `pet_requested:boolean` records a pet even when weight is unknown; this blocks comparison until weight is specified or pet is explicitly removed. `return_by:YYYY-MM-DD|null` is an explicit home-arrival deadline and moves with shift_days. `refundable` applies to transport, hotel and transfers. `unresolved_constraints:string[]` persists unsupported hard requirements; unrelated changes never clear them. Only the explicit removal command removes them. `reference_now` is refreshed for each user turn; already resolved dates remain unchanged unless edited. `/health` queries SQLite and returns 503 when storage is unusable.
+
+## Final review fixes (2026-10-24)
+
+An explicitly supplied `patch` (including `{}`) is an authoritative form operation: only its fields are applied, with normal type/date validation and version checks. The accompanying `message` is display copy and is not parsed or sent to the model. Natural-language extraction requires omitting `patch`. Form responses report `llm.used=false`, `llm.reason="explicit_form_patch"`; this is not model inference evidence.
+
+`field_issues:{departure_date?:string}` holds resolvable date questions separately from `unresolved_constraints`. Explicit valid date answers or date form patches resolve only the date question; unrelated hard requirements remain. Pre-fix stored date strings are migrated on the next turn. Unsupported geography remains represented by `unsupported:<name>` in the typed intent route fields and cannot be erased by an incomplete model output or unrelated edit. An explicit route replacement resolves that coverage condition.
+
+TripState includes `service_requests:[{request_id,kind:"early_checkin",status:"requested_demo",message}]`, hydrated from owned durable records on read. POST service-requests returns the same record shape; repeated requests of the same kind for the same owned trip return the original record. This auxiliary request does not change trip version, order, price or consent. It never notifies a supplier. The restored UI displays its recorded demo status.
+
+The model extraction deadline includes semaphore queue wait; queue expiry reports `model_timeout` with `used=false`. Official CLI/free-only allowlist and process cleanup boundaries remain unchanged.

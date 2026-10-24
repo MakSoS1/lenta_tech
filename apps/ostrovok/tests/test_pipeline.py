@@ -66,7 +66,7 @@ def test_full_pipeline_and_actual_event_replay(tmp_path):
     c = create_client(tmp_path)
     t = create_trip(c)
     assert t["status"] == "ready" and 1 <= len(t["plans"]) <= 3
-    assert not t["llm"]["used"] and any("parser" in w.lower() for w in t["warnings"])
+    assert not t["llm"]["used"] and t["llm"]["reason"] == "explicit_form_patch"
     changed = mutate(
         c, t, "messages", message="Теперь завтрак", patch={"meal": "breakfast"}
     ).json()
@@ -239,7 +239,7 @@ def test_injected_model_gets_only_intent_and_valid_patch_is_used(tmp_path):
                 "reason": None,
             }
 
-    t = create_trip(create_client(tmp_path, gateway=Gateway()))
+    t = create_client(tmp_path, gateway=Gateway()).post("/api/trips", json={"message": "Добавь завтрак"}).json()
     assert t["intent"]["meal"] == "breakfast" and t["llm"]["used"]
     assert not any("parser" in w.lower() for w in t["warnings"])
 
@@ -287,3 +287,51 @@ def test_unsupported_hard_constraints_survive_unrelated_form_changes(tmp_path):
         c, changed, "messages", message="Сними неподдерживаемые ограничения"
     ).json()
     assert cleared["unresolved_constraints"] == [] and cleared["status"] == "ready"
+
+
+def test_exact_form_edits_preserve_flight_only_route_and_skip_extraction(tmp_path):
+    class NoExtraction(OfflineGateway):
+        async def extract(self, *args):
+            pytest.fail('Exact form updates must not invoke model extraction')
+
+    c = create_client(tmp_path, gateway=NoExtraction())
+    t = create_trip(c, destinations=['antalya'], nights=7, transport='any')
+    changed = mutate(c, t, 'messages', message='Обновить условия поездки', patch={'nights': 6}).json()
+    assert changed['status'] == 'ready'
+    assert changed['intent']['transport'] == 'any'
+    assert changed['delta']['changed_fields'] == ['nights']
+    shifted = mutate(c, changed, 'messages', message='Сдвинь поездку на два дня позже', patch={'shift_days': 2}).json()
+    assert shifted['status'] == 'ready'
+    assert shifted['intent']['departure_date'] == '2026-11-12'
+    assert shifted['intent']['destinations'] == ['antalya']
+    assert shifted['delta']['changed_fields'] == ['departure_date']
+
+
+@pytest.mark.parametrize('initial_date', ['в ноябре', '31 ноября 2026'])
+@pytest.mark.parametrize('hard_requirement', ['', ', только безвизовое направление'])
+def test_date_answer_resolves_only_date_ambiguity(tmp_path, initial_date, hard_requirement):
+    c = create_client(tmp_path)
+    t = c.post('/api/trips', json={'message': f'Из Москвы в Анталью {initial_date} на 7 ночей до 180 тысяч рублей{hard_requirement}'}).json()
+    assert t['status'] == 'needs_clarification'
+    changed = mutate(c, t, 'messages', message='7 ноября 2026').json()
+    assert changed['intent']['departure_date'] == '2026-11-07'
+    assert changed['status'] == ('needs_clarification' if hard_requirement else 'ready')
+    assert not any('дат' in value for value in changed.get('unresolved_constraints', []))
+    if hard_requirement:
+        assert changed['unresolved_constraints'] and not changed['plans']
+
+
+@pytest.mark.parametrize('model_used', [False, True])
+def test_unsupported_route_survives_incomplete_model_and_unrelated_edits(tmp_path, model_used):
+    class IncompleteGateway(OfflineGateway):
+        async def extract(self, *args):
+            return {'patch': {'origin': 'moscow', 'departure_date': '2026-11-07', 'budget_rub': 180000, 'destinations': []}, 'model': self.primary_model if model_used else None, 'used': model_used, 'reason': None if model_used else 'offline'}
+    c = create_client(tmp_path, gateway=IncompleteGateway())
+    t = c.post('/api/trips', json={'message': 'Из Москвы в Тбилиси 7 ноября до 180 тысяч рублей'}).json()
+    assert t['intent']['destinations'] == ['unsupported:тбилиси']
+    assert not t['plans'] and t['status'] != 'ready'
+    changed = mutate(c, t, 'messages', message='Добавь завтрак').json()
+    assert changed['intent']['destinations'] == ['unsupported:тбилиси']
+    assert not changed['plans']
+    corrected = mutate(c, changed, 'messages', patch={'destinations': ['antalya']}).json()
+    assert corrected['status'] == 'ready'

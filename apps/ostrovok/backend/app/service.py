@@ -150,7 +150,24 @@ class TripService:
             )
 
     async def extract(self, state, message, explicit):
+        # An explicit patch is an exact form operation; display copy is not intent.
+        if explicit is not None:
+            apply_patch(state["intent"], explicit)
+            self.resolve_date_issue(state, explicit)
+            state["llm"] = {
+                "mode": getattr(self.gateway, "mode", "opencode"),
+                "model": None,
+                "used": False,
+                "reason": "explicit_form_patch",
+            }
+            trace(
+                state, "apply_form_patch", "ok",
+                "Применены явно заданные условия формы.",
+            )
+            return deepcopy(explicit), []
         parsed = parse_message(message, state["reference_now"])
+        self.resolve_date_issue(state, parsed["patch"])
+        state.setdefault("field_issues", {}).update(parsed.get("field_issues", {}))
         state.setdefault("unresolved_constraints", [])
         if re.search(r"сними\s+неподдерживаемые\s+ограничения", message, re.I):
             state["unresolved_constraints"] = []
@@ -225,6 +242,21 @@ class TripService:
                 f"Распознаны поля: {', '.join(sorted(patch)) or 'нет'}.",
             )
         patch = deepcopy(patch)
+        # Unsupported explicit geography is an application-owned coverage boundary.
+        # A schema-valid model omission must not turn it into inspiration.
+        for field in ("origin", "destinations"):
+            current = state["intent"].get(field)
+            detected = parsed["patch"].get(field)
+
+            def unsupported(value):
+                values = value if isinstance(value, list) else [value]
+                return any(
+                    isinstance(v, str) and v.startswith("unsupported:")
+                    for v in values
+                )
+
+            if unsupported(detected) or unsupported(current):
+                patch[field] = detected if field in parsed["patch"] else current
         # A model may not remove an existing transport lock without an explicit request.
         if (
             state["intent"].get("lock_transport")
@@ -246,6 +278,24 @@ class TripService:
                 "Применены явно заданные условия формы.",
             )
         return patch, warnings
+
+    @staticmethod
+    def resolve_date_issue(state, patch):
+        issues = state.setdefault("field_issues", {})
+        # Migrate persisted pre-fix date blockers without touching hard conditions.
+        legacy = {
+            "Нужна точная дата отправления вместо месяца.",
+            "Некорректная явно указанная дата или диапазон поездки.",
+        }
+        remaining = []
+        for value in state.get("unresolved_constraints", []):
+            if value in legacy:
+                issues["departure_date"] = value
+            else:
+                remaining.append(value)
+        state["unresolved_constraints"] = remaining
+        if patch.get("departure_date"):
+            issues.pop("departure_date", None)
 
     async def create(self, owner, message, explicit=None):
         now = self.now()
@@ -275,6 +325,7 @@ class TripService:
             },
             "warnings": [],
             "locked_component_ids": [],
+            "service_requests": [],
         }
         patch, warnings = await self.extract(state, message, explicit)
         state["intent"] = apply_patch(base, patch)
@@ -370,11 +421,13 @@ class TripService:
                     "suggestions": ["Из Москвы", "Из Санкт-Петербурга"],
                 }
             )
-        if not i["departure_date"]:
+        if not i["departure_date"] or state.get("field_issues", {}).get("departure_date"):
             out.append(
                 {
                     "key": "departure_date",
-                    "label": "Укажите точную дату отправления.",
+                    "label": state.get("field_issues", {}).get(
+                        "departure_date", "Укажите точную дату отправления."
+                    ),
                     "suggestions": ["10 ноября 2026", "15 ноября 2026"],
                 }
             )
@@ -767,7 +820,15 @@ class TripService:
                 )
             if not selected(state) and not state.get("order"):
                 raise HTTPException(409, "Сначала выберите вариант с отелем.")
+            existing = next(
+                (request for request in state["service_requests"]
+                 if request["kind"] == kind),
+                None,
+            )
+            if existing:
+                return existing
             value = {
+                "kind": kind,
                 "request_id": uid("request"),
                 "status": "requested_demo",
                 "message": "Запрос раннего заселения сохранён в деморежиме. Отель не уведомлён, подтверждение не получено.",

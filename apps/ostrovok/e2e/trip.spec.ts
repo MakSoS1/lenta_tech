@@ -20,9 +20,11 @@ test('creates, compares, edits, quotes, confirms and restores the same server or
  await page.getByRole('region',{name:'Есть куда отправиться'}).screenshot({path:testInfo.outputPath(`comparison-cards-${testInfo.project.name}.png`)});
  await page.getByTestId('plan-card').first().getByRole('button',{name:/Выбрать поездку|Выбрано/}).click();
  await expect(page.getByRole('heading',{name:'Всё по порядку'})).toBeVisible();
+ await expect(page.getByLabel('Транспорт',{exact:true})).toHaveValue('any');
  await page.getByLabel('Ночей').fill('6');
  await page.getByRole('button',{name:'Применить условия'}).click();
  await expect(page.getByRole('heading',{name:'Что изменилось'})).toBeVisible();
+ await expect(page.getByLabel('Транспорт',{exact:true})).toHaveValue('any');
  await page.getByTestId('plan-card').first().getByRole('button',{name:/Выбрать поездку|Выбрано/}).click();
  await page.getByRole('button',{name:'Проверить итоговую цену'}).click();
  const confirm = page.getByRole('button',{name:'Подтвердить демозаказ'});
@@ -41,10 +43,14 @@ test('creates, compares, edits, quotes, confirms and restores the same server or
  await page.getByRole('button',{name:'Удалить сохранённое'}).click();
  await expect(page.getByText('Сохранённые предпочтения удалены.')).toBeVisible();
  await page.getByRole('button',{name:'Запросить раннее заселение'}).click();
- await expect(page.getByRole('button',{name:'Запрос отправлен'})).toBeDisabled();
+ await expect(page.getByRole('button',{name:'Запрос сохранён'})).toBeDisabled();
+ await page.reload();
+ await expect(page.getByRole('button',{name:'Запрос сохранён'})).toBeDisabled();
+ await expect(page.getByText('Запрос раннего заселения сохранён в деморежиме. Отель не уведомлён, подтверждение не получено.')).toBeVisible();
  await page.getByRole('button',{name:'Мои поездки'}).click();
  await page.locator('.history-item').first().click();
  await expect(page.getByTestId('order-id')).toHaveText(orderId);
+ await expect(page.getByRole('button',{name:'Запрос сохранён'})).toBeDisabled();
  await expect(page.getByText('Бронирование и оплата имитируются',{exact:true}).first()).toBeVisible();
  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
  await page.screenshot({path:testInfo.outputPath(`receipt-${testInfo.project.name}.png`),fullPage:true});

@@ -169,3 +169,15 @@ def test_money_candidates_are_not_confused_with_duration_or_date(message):
 def test_unsupported_visa_requirement_is_explicit_but_direct_flight_is_supported():
     assert parse_message("только безвизовое направление", NOW)["unresolved_constraints"]
     assert not parse_message("Только прямой перелёт", NOW)["unresolved_constraints"]
+
+
+@pytest.mark.parametrize('message', ['Обновить условия поездки', 'Сдвинь поездку на два дня позже'])
+def test_trip_word_is_not_a_train_request(message):
+    from app.agent.offline_parser import parse_message
+    patch = parse_message(message, '2026-10-24T12:00:00+03:00')['patch']
+    assert 'transport' not in patch
+
+
+def test_actual_train_inflection_remains_recognized():
+    from app.agent.offline_parser import parse_message
+    assert parse_message('Едем поездом', '2026-10-24T12:00:00+03:00')['patch']['transport'] == 'train'

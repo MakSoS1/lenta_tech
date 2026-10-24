@@ -43,7 +43,7 @@ export default function App() {
   const adopt = useCallback((state: TripState) => {
     setTrip(state);
     localStorage.setItem(STORAGE_KEY, state.trip_id);
-    setService(null);
+    setService(state.service_requests?.find((request) => request.kind === "early_checkin")?.message ?? null);
   }, []);
   useEffect(() => {
     let active = true;

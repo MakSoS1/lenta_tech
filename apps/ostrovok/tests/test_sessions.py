@@ -65,3 +65,18 @@ def test_early_checkin_is_only_a_recorded_demo_request(tmp_path):
     assert r.status_code == 200 and r.json()["status"] == "requested_demo"
     assert "не" in r.json()["message"].lower()
     assert c.get(f"/api/trips/{t['trip_id']}").json()["version"] == t["version"]
+
+
+def test_service_request_restores_after_restart_and_repeats_are_idempotent(tmp_path):
+    c = create_client(tmp_path)
+    t = create_trip(c)
+    url = f"/api/trips/{t['trip_id']}/service-requests"
+    first = c.post(url, json={'kind': 'early_checkin', 'message': 'Раннее прибытие'}).json()
+    restarted = create_client(tmp_path)
+    restarted.cookies.update(c.cookies)
+    restored = restarted.get(f"/api/trips/{t['trip_id']}").json()
+    assert restored['service_requests'] == [first]
+    again = restarted.post(url, json={'kind': 'early_checkin', 'message': 'Повтор'}).json()
+    assert again == first
+    assert restored['version'] == t['version']
+    assert create_client(tmp_path).get(f"/api/trips/{t['trip_id']}").status_code == 404

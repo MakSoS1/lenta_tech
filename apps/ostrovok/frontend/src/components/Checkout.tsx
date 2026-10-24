@@ -59,15 +59,7 @@ export default function Checkout({
                   {Object.entries(offer.details).map(([key, value]) => (
                     <div key={key}>
                       <dt>{detailLabel(key)}</dt>
-                      <dd>
-                        {typeof value === "object"
-                          ? JSON.stringify(value)
-                          : typeof value === "boolean"
-                            ? value
-                              ? "Да"
-                              : "Нет"
-                            : String(value ?? "Неизвестно")}
-                      </dd>
+                      <dd>{detailValue(key, value)}</dd>
                     </div>
                   ))}
                 </dl>
@@ -117,7 +109,7 @@ export default function Checkout({
           >
             {service ? (
               <>
-                <CircleCheck size={16} /> Запрос отправлен
+                <CircleCheck size={16} /> Запрос сохранён
               </>
             ) : (
               "Запросить раннее заселение"
@@ -198,26 +190,31 @@ export default function Checkout({
 }
 function detailLabel(key: string) {
   const labels: Record<string, string> = {
-    mode: "Транспорт",
-    departure_at: "Отправление",
-    arrival_at: "Прибытие",
-    return_departure_at: "Отправление обратно",
-    return_arrival_at: "Прибытие обратно",
-    refundable: "С возвратом",
-    pet_allowed: "Разрешён питомец",
-    max_pet_kg: "Вес питомца до, кг",
-    meal: "Питание",
-    nights: "Ночей",
-    rooms: "Номеров",
-    checkin: "Заселение",
-    checkout: "Выезд",
-    stars: "Звёзды",
-    location: "Расположение",
-    duration_hours: "В пути, ч",
-    early_checkin: "Раннее заселение",
-    baggage: "Багаж",
-    checkin_time: "Время заселения",
-    checkout_time: "Время выезда",
+    origin: "Откуда", destination: "Куда", return_origin: "Откуда обратно", return_destination: "Куда обратно",
+    stops: "Пересадок", mode: "Транспорт", duration_hours: "В пути, ч",
+    outbound_departure: "Отправление", outbound_arrival: "Прибытие", return_departure: "Отправление обратно", return_arrival: "Прибытие обратно",
+    passengers: "Пассажиров", pet_limit_kg: "Вес питомца до, кг", refundable: "С возвратом", baggage_included: "Багаж включён", price_basis: "Что включено в цену",
+    adults: "Взрослых", children_ages: "Возраст детей", room_capacity: "Вместимость номера", checkin_at: "Заселение", checkout_at: "Выезд",
+    nights: "Ночей оплачено", requested_nights: "Ночей запрошено", extra_night: "Дополнительная ночь включена", rooms: "Номеров", capacity: "Мест",
+    meal: "Питание", reception_24h: "Круглосуточная стойка", location: "Расположение", mandatory_fees_included: "Обязательные сборы включены",
+    baggage_buffer_minutes: "Время на багаж, мин", duration_minutes: "Длительность трансфера, мин", hotel_arrival: "Прибытие в отель",
+    return_pickup: "Трансфер обратно", return_terminal_arrival: "Прибытие к терминалу обратно", terminal_buffer_minutes: "Запас до отправления, мин",
+    child_seats: "Детских кресел", private: "Индивидуальный трансфер",
   };
-  return labels[key] ?? key.replaceAll("_", " ");
+  return labels[key] ?? "Дополнительное условие";
+}
+function detailValue(key: string, value: unknown): string {
+  if (value == null) return "Не подтверждено";
+  if (typeof value === "boolean") return value ? "Да" : "Нет";
+  if (Array.isArray(value)) return value.length ? value.join(", ") : "Нет";
+  if (typeof value === "string") {
+    if (/^\d{4}-\d{2}-\d{2}T/.test(value)) return dateTime(value);
+    const names: Record<string, string> = {
+      moscow: "Москва", "saint-petersburg": "Санкт-Петербург", kazan: "Казань", sochi: "Сочи", kaliningrad: "Калининград", yerevan: "Ереван", istanbul: "Стамбул", antalya: "Анталья", hurghada: "Хургада",
+      flight: "Самолёт", train: "Поезд", breakfast: "Завтрак", all_inclusive: "Всё включено", center: "В центре", beach: "У пляжа",
+    };
+    if (value === "any") return key === "meal" ? "Без питания" : "Без предпочтений";
+    return names[value] ?? value;
+  }
+  return String(value);
 }

@@ -214,8 +214,15 @@ class ModelGateway:
             },
             ensure_ascii=False,
         )
-        async with self._semaphore:
-            deadline = time.monotonic() + self.timeout_seconds
+        deadline = time.monotonic() + self.timeout_seconds
+        try:
+            await asyncio.wait_for(
+                self._semaphore.acquire(),
+                timeout=max(0, deadline - time.monotonic()),
+            )
+        except TimeoutError:
+            return _result(model, "model_timeout")
+        try:
             models = [model] + ([FALLBACK_MODEL] if model != FALLBACK_MODEL else [])
             for candidate in models:
                 remaining = deadline - time.monotonic()
@@ -225,6 +232,8 @@ class ModelGateway:
                 if result["used"] or result["reason"] != "model_unavailable":
                     return result
             return result
+        finally:
+            self._semaphore.release()
 
     @staticmethod
     def _configuration(model: str) -> dict:

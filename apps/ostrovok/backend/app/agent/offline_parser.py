@@ -263,6 +263,7 @@ def _dates(text, current, patch, warnings, unresolved):
 def parse_message(message, reference_now):
     text = message.lower().replace("ё", "е")
     patch, warnings, unresolved = {}, [], []
+    date_issues = []
     current = (
         datetime.fromisoformat(reference_now)
         .astimezone(ZoneInfo("Europe/Moscow"))
@@ -341,7 +342,7 @@ def parse_message(message, reference_now):
     )
     if shift:
         patch["shift_days"] = number(shift[1]) * (1 if shift[2] == "позже" else -1)
-    _dates(text, current, patch, warnings, unresolved)
+    _dates(text, current, patch, warnings, date_issues)
     if re.search(r"без\s*долг\w*\s*перелет", text):
         patch["max_travel_hours"] = 6
     duration = re.search(
@@ -353,7 +354,7 @@ def parse_message(message, reference_now):
         patch["warm"] = True
     modes = {}
     for mode, pattern in [
-        ("train", r"\b(?:поезд\w*|жд|ж/д)\b"),
+        ("train", r"\b(?:поезд(?:а|у|ом|е|ы|ов|ам|ами|ах)?|жд|ж/д)\b"),
         ("flight", r"\b(?:самолет\w*|авиа\w*|перелет\w*)\b"),
     ]:
         mentions = list(re.finditer(pattern, text))
@@ -416,4 +417,5 @@ def parse_message(message, reference_now):
         "warnings": warnings,
         "recognized": bool(patch),
         "unresolved_constraints": unresolved,
+        "field_issues": {"departure_date": date_issues[0]} if date_issues else {},
     }
