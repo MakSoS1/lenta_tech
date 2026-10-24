@@ -248,6 +248,17 @@ def _dates(text, current, patch, warnings, unresolved):
             patch.update(
                 departure_date=(current + timedelta(days=days)).isoformat(), nights=2
             )
+        elif re.search(
+            r"\b(?:первого|второго|третьего|четвертого|пятого|шестого|седьмого|"
+            r"восьмого|девятого|десятого|одиннадцатого|двенадцатого|тринадцатого|"
+            r"четырнадцатого|пятнадцатого|шестнадцатого|семнадцатого|"
+            r"восемнадцатого|девятнадцатого|двадцатого|тридцатого)\s*("
+            + MONTH_PATTERN + r")\b", text,
+        ):
+            # An exact written-day shape can be resolved by accepted model output,
+            # but must block stale dates when limited parsing cannot extract it.
+            unresolved.append("Уточните дату отправления цифрами: день указан словами.")
+            return "unparsed_exact_date"
         elif any(re.search(r"\b" + stem, text) for stem in MONTHS):
             warnings.append("Указан месяц: выберите точную дату в форме.")
             unresolved.append("Нужна точная дата отправления вместо месяца.")
@@ -342,7 +353,7 @@ def parse_message(message, reference_now):
     )
     if shift:
         patch["shift_days"] = number(shift[1]) * (1 if shift[2] == "позже" else -1)
-    _dates(text, current, patch, warnings, date_issues)
+    date_issue_kind = _dates(text, current, patch, warnings, date_issues)
     if re.search(r"без\s*долг\w*\s*перелет", text):
         patch["max_travel_hours"] = 6
     duration = re.search(
@@ -418,4 +429,5 @@ def parse_message(message, reference_now):
         "recognized": bool(patch),
         "unresolved_constraints": unresolved,
         "field_issues": {"departure_date": date_issues[0]} if date_issues else {},
+        "date_issue_kind": date_issue_kind,
     }

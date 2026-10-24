@@ -166,7 +166,7 @@ class TripService:
             )
             return deepcopy(explicit), []
         parsed = parse_message(message, state["reference_now"])
-        self.resolve_date_issue(state, parsed["patch"])
+        self.resolve_date_issue(state, {})
         state.setdefault("field_issues", {}).update(parsed.get("field_issues", {}))
         state.setdefault("unresolved_constraints", [])
         if re.search(r"сними\s+неподдерживаемые\s+ограничения", message, re.I):
@@ -277,6 +277,16 @@ class TripService:
                 "ok",
                 "Применены явно заданные условия формы.",
             )
+        if (
+            parsed.get("field_issues", {}).get("departure_date")
+            and parsed.get("date_issue_kind") != "unparsed_exact_date"
+        ):
+            # A model cannot invent a day for a newly ambiguous/invalid date.
+            patch.pop("departure_date", None)
+            patch.pop("return_by", None)
+        else:
+            apply_patch(state["intent"], patch)
+            self.resolve_date_issue(state, patch)
         return patch, warnings
 
     @staticmethod
@@ -337,7 +347,7 @@ class TripService:
             state["assumptions"].append(
                 "Длительность не указана: по умолчанию 7 ночей."
             )
-        self.unlimited_budget(state, patch, message)
+        self.unlimited_budget(state, patch, message if explicit is None else "")
         state["warnings"] = warnings
         self.replan(state, now)
         self.conversation(state, message)
@@ -378,7 +388,7 @@ class TripService:
             if not ("adults" in patch and x.startswith("Число взрослых"))
             and not ("nights" in patch and x.startswith("Длительность"))
         ]
-        self.unlimited_budget(state, patch, message)
+        self.unlimited_budget(state, patch, message if explicit is None else "")
         if state["intent"]["lock_transport"]:
             if not state["locked_component_ids"]:
                 plan = selected(old)

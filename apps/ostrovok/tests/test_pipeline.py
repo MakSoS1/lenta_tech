@@ -335,3 +335,59 @@ def test_unsupported_route_survives_incomplete_model_and_unrelated_edits(tmp_pat
     assert not changed['plans']
     corrected = mutate(c, changed, 'messages', patch={'destinations': ['antalya']}).json()
     assert corrected['status'] == 'ready'
+
+
+def test_form_display_copy_cannot_remove_budget_on_create_or_change(tmp_path):
+    c = create_client(tmp_path)
+    created = c.post('/api/trips', json={
+        'message': 'Бюджет не ограничен',
+        'patch': {'origin': 'moscow', 'destinations': ['antalya'],
+                  'departure_date': '2026-11-07', 'nights': 7},
+    }).json()
+    assert created['status'] == 'needs_clarification'
+    assert not any(x.startswith('Бюджет без ограничения') for x in created['assumptions'])
+    t = create_trip(c, budget_rub=180000, destinations=['antalya'])
+    changed = mutate(c, t, 'messages', message='Бюджет не ограничен', patch={'nights': 6}).json()
+    assert changed['intent']['budget_rub'] == 180000
+    assert changed['delta']['changed_fields'] == ['nights']
+    unlimited = mutate(c, changed, 'messages', message='Условия формы', patch={'budget_rub': None}).json()
+    assert unlimited['intent']['budget_rub'] is None
+    assert unlimited['status'] == 'ready'
+
+
+@pytest.mark.parametrize('hard_requirement', ['', ', только безвизовое направление'])
+def test_model_only_exact_date_resolves_old_blocker_but_not_new_month_ambiguity(tmp_path, hard_requirement):
+    class DateGateway(OfflineGateway):
+        async def extract(self, message, intent, reference_now):
+            if message in ('Седьмого ноября 2026', 'В декабре'):
+                return {'patch': {'departure_date': '2026-12-10' if message == 'В декабре' else '2026-11-07'}, 'model': self.primary_model,
+                        'used': True, 'reason': None}
+            return await super().extract(message, intent, reference_now)
+
+    c = create_client(tmp_path, gateway=DateGateway())
+    t = c.post('/api/trips', json={'message':
+        'Из Москвы в Анталью в ноябре на 7 ночей до 180 тысяч рублей' + hard_requirement}).json()
+    assert t['field_issues'].get('departure_date')
+    corrected = mutate(c, t, 'messages', message='Седьмого ноября 2026').json()
+    assert corrected['llm']['used'] is True
+    assert corrected['intent']['departure_date'] == '2026-11-07'
+    assert not corrected['field_issues'].get('departure_date')
+    assert corrected['status'] == ('needs_clarification' if hard_requirement else 'ready')
+    assert corrected['unresolved_constraints'] == t['unresolved_constraints']
+    ambiguous = mutate(c, corrected, 'messages', message='В декабре').json()
+    assert ambiguous['status'] == 'needs_clarification'
+    assert ambiguous['field_issues'].get('departure_date')
+    assert ambiguous['intent']['departure_date'] == '2026-11-07'
+    assert not ambiguous['plans']
+
+
+def test_offline_unparsed_written_date_blocks_existing_ready_trip(tmp_path):
+    c = create_client(tmp_path)
+    t = create_trip(c, departure_date='2026-11-10')
+    assert t['status'] == 'ready'
+    changed = mutate(c, t, 'messages', message='Седьмого ноября 2026').json()
+    assert changed['status'] == 'needs_clarification'
+    assert changed['field_issues'].get('departure_date')
+    assert not changed['plans']
+    assert changed['intent']['departure_date'] == '2026-11-10'
+    assert any(q['key'] == 'departure_date' for q in changed['questions'])

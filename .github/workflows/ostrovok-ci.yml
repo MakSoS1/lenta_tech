@@ -5,6 +5,9 @@ on:
   pull_request:
     paths: ['apps/ostrovok/**', 'Dockerfile', 'docker-compose.yml', '.github/workflows/ostrovok-ci.yml']
   workflow_dispatch:
+defaults:
+  run:
+    shell: bash
 permissions:
   contents: read
 concurrency:
@@ -66,7 +69,12 @@ jobs:
           docker compose up -d --build --wait --wait-timeout 180
           python -c "import json,pathlib; pathlib.Path('reports/ostrovok/cold-start.json').write_text(json.dumps({'seconds': $((SECONDS-started)), 'environment':'GitHub ubuntu-24.04', 'llm_mode':'offline'}))"
           test "$(docker compose exec -T app id -u)" = '10001'
-          docker compose exec -T app opencode --version | tee reports/ostrovok/container-opencode-version.txt
+          docker compose exec -T \
+            -e XDG_DATA_HOME=/tmp/ostrovok-cli-smoke/data \
+            -e XDG_CONFIG_HOME=/tmp/ostrovok-cli-smoke/config \
+            -e XDG_CACHE_HOME=/tmp/ostrovok-cli-smoke/cache \
+            -e XDG_STATE_HOME=/tmp/ostrovok-cli-smoke/state \
+            app opencode --version | tee reports/ostrovok/container-opencode-version.txt
           python apps/ostrovok/scripts/http_smoke.py
       - name: Desktop and mobile user journey
         working-directory: apps/ostrovok/e2e
