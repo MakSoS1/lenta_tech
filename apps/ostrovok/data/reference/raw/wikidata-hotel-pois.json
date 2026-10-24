@@ -1,0 +1,425 @@
+{
+  "head" : {
+    "vars" : [ "city", "hotel", "hotelLabel", "coord", "website" ]
+  },
+  "results" : {
+    "bindings" : [ {
+      "city" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q900"
+      },
+      "hotel" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q4394388"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(49.13149 55.81542)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://kazanriviera.ru/"
+      },
+      "hotelLabel" : {
+        "xml:lang" : "ru",
+        "type" : "literal",
+        "value" : "Казанская ривьера"
+      }
+    }, {
+      "city" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q900"
+      },
+      "hotel" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q4394388"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(49.129829 55.815474)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://kazanriviera.ru/"
+      },
+      "hotelLabel" : {
+        "xml:lang" : "ru",
+        "type" : "literal",
+        "value" : "Казанская ривьера"
+      }
+    }, {
+      "city" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q900"
+      },
+      "hotel" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q28032816"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(49.11996 55.78785)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.shalyapin-hotel.ru"
+      },
+      "hotelLabel" : {
+        "xml:lang" : "ru",
+        "type" : "literal",
+        "value" : "Гостиница Шаляпин Палас"
+      }
+    }, {
+      "city" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1953"
+      },
+      "hotel" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q16364174"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(44.49946443 40.18132138)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://7visionshotels.com"
+      },
+      "hotelLabel" : {
+        "xml:lang" : "ru",
+        "type" : "literal",
+        "value" : "Гостиница «Двин»"
+      }
+    }, {
+      "city" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1953"
+      },
+      "hotel" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q22344634"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(44.519722222 40.183333333)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://anihotel.com/"
+      },
+      "hotelLabel" : {
+        "xml:lang" : "ru",
+        "type" : "literal",
+        "value" : "Ани Плаза Отель"
+      }
+    }, {
+      "city" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1953"
+      },
+      "hotel" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q25486453"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(44.51135 40.17788)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.marriottarmenia.am/"
+      },
+      "hotelLabel" : {
+        "xml:lang" : "ru",
+        "type" : "literal",
+        "value" : "Армения Марриотт"
+      }
+    }, {
+      "city" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q656"
+      },
+      "hotel" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2633715"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(30.308888888 59.932777777)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.roccofortehotels.com/hotels-and-resorts/hotel-astoria/"
+      },
+      "hotelLabel" : {
+        "xml:lang" : "ru",
+        "type" : "literal",
+        "value" : "Астория"
+      }
+    }, {
+      "city" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q656"
+      },
+      "hotel" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2633715"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(30.308888888 59.932777777)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.roccofortehotels.com/ru/hotels-and-resorts/hotel-astoria/"
+      },
+      "hotelLabel" : {
+        "xml:lang" : "ru",
+        "type" : "literal",
+        "value" : "Астория"
+      }
+    }, {
+      "city" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q656"
+      },
+      "hotel" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2635215"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(30.301666666 59.920833333)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://sadovaya62.ru"
+      },
+      "hotelLabel" : {
+        "xml:lang" : "ru",
+        "type" : "literal",
+        "value" : "Никольский рынок"
+      }
+    }, {
+      "city" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q656"
+      },
+      "hotel" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2894276"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(30.35083 59.93201)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.corinthia.com/en/StPetersburg/home"
+      },
+      "hotelLabel" : {
+        "xml:lang" : "ru",
+        "type" : "literal",
+        "value" : "Невский Палас"
+      }
+    }, {
+      "city" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q406"
+      },
+      "hotel" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q924603"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(28.9735947 41.0309944)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://perapalace.com"
+      },
+      "hotelLabel" : {
+        "xml:lang" : "ru",
+        "type" : "literal",
+        "value" : "Пера Палас (отель)"
+      }
+    }, {
+      "city" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q406"
+      },
+      "hotel" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2656330"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(28.9783478 41.0341797)"
+      },
+      "hotelLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Tokatliyan Hotels"
+      }
+    }, {
+      "city" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q406"
+      },
+      "hotel" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6088564"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(28.97405 41.01583)"
+      },
+      "hotelLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Istanbul 4th Vakıf Han"
+      }
+    }, {
+      "city" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6487"
+      },
+      "hotel" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q111998227"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(30.5942 36.8535)"
+      },
+      "hotelLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Mene Suites"
+      }
+    }, {
+      "city" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6487"
+      },
+      "hotel" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q112027025"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(30.61287 36.85286)"
+      },
+      "hotelLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "The Suites"
+      }
+    }, {
+      "city" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6487"
+      },
+      "hotel" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q112027037"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(30.643871 36.872395)"
+      },
+      "hotelLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Stile Suite Hotel"
+      }
+    }, {
+      "city" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q187284"
+      },
+      "hotel" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q18509281"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(33.825694444 27.15875)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www3.hilton.com/en/hotels/egypt/hilton-hurghada-resort-HRGHRHI/index.html"
+      },
+      "hotelLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Hilton Hurghada Resort"
+      }
+    }, {
+      "city" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q187284"
+      },
+      "hotel" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q30307361"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(33.830405 27.256743)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.hilton.com/en/hotels/hrghitw-hilton-hurghada-plaza/"
+      },
+      "hotelLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Hilton Hurghada Plaza"
+      }
+    }, {
+      "city" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q187284"
+      },
+      "hotel" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q30307361"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(33.82861 27.25711)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.hilton.com/en/hotels/hrghitw-hilton-hurghada-plaza/"
+      },
+      "hotelLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Hilton Hurghada Plaza"
+      }
+    } ]
+  }
+}

@@ -1,0 +1,27 @@
+services:
+  app:
+    build: .
+    image: ostrovok-agent:local
+    platform: linux/amd64
+    ports:
+      - "8080:8080"
+    environment:
+      LLM_MODE: ${LLM_MODE:-opencode}
+      OPENCODE_MODEL: ${OPENCODE_MODEL:-opencode/deepseek-v4.1-flash-free}
+      DB_PATH: /data/ostrovok.sqlite
+    volumes:
+      - trip-data:/data
+    tmpfs:
+      - /tmp:size=256m,mode=1777
+    read_only: true
+    init: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=3)"]
+      interval: 10s
+      timeout: 4s
+      retries: 5
+      start_period: 20s
+volumes:
+  trip-data:

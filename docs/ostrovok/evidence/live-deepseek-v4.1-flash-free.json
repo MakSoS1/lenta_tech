@@ -1,0 +1,21 @@
+{
+  "model": "opencode/deepseek-v4.1-flash-free",
+  "free_only": true,
+  "started_at": "2026-10-24T19:17:16.472993+00:00",
+  "status": "blocked",
+  "steps": [
+    {
+      "step": "new_request",
+      "status": "ready",
+      "used_llm": false
+    }
+  ],
+  "inference": {
+    "mode": "opencode",
+    "model": "opencode/deepseek-v4.1-flash-free",
+    "used": false,
+    "reason": "free_model_unavailable"
+  },
+  "reason": "free_model_unavailable",
+  "duration_seconds": 1.464
+}

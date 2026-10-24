@@ -1,0 +1,445 @@
+id,ident,type,name,latitude_deg,longitude_deg,elevation_ft,continent,country_name,iso_country,region_name,iso_region,local_region,municipality,scheduled_service,gps_code,icao_code,iata_code,local_code,home_link,wikipedia_link,keywords,score,last_updated
+4528,LTBA,large_airport,"İstanbul Atatürk Airport",40.971913,28.823714,163,EU,Turkey,TR,"İstanbul Province",TR-34,34,Istanbul(Bakırköy),0,LTBA,LTBA,ISL,,http://www.ataturkairport.com/eng/,https://en.wikipedia.org/wiki/Istanbul_Atat%C3%BCrk_Airport,"Ataturk, Yeşilköy, Yesilkoy",850,2026-01-29T15:04:27+00:00
+317457,LTFM,large_airport,"İstanbul Airport",41.274874,28.732136,325,EU,Turkey,TR,"İstanbul Province",TR-34,34,Istanbul,1,LTFM,LTFM,IST,,https://www.istairport.com/,https://en.wikipedia.org/wiki/Istanbul_Airport,Arnavutköy,1000,2026-01-29T16:18:53+00:00
+4515,LTAI,large_airport,"Antalya International Airport",36.898701,30.800501,177,AS,Turkey,TR,"Antalya Province",TR-07,07,Antalya,1,LTAI,LTAI,AYT,,http://www.antalya.dhmi.gov.tr/havaalanlari/default.aspx?hv=4,https://en.wikipedia.org/wiki/Antalya_Airport,,51150,2016-05-20T02:42:02+00:00
+4569,LTFJ,large_airport,"Istanbul Sabiha Gökçen International Airport",40.898602,29.3092,312,AS,Turkey,TR,"İstanbul Province",TR-34,34,"Pendik, Istanbul",1,LTFJ,LTFJ,SAW,,http://www.sgairport.com/,https://en.wikipedia.org/wiki/Istanbul_Sabiha_G%C3%B6k%C3%A7en_International_Airport,"Sabiha Gökçen Havalimanı",1275,2023-12-05T19:52:55+00:00
+4533,LTBJ,large_airport,"Adnan Menderes International Airport",38.2924,27.157,412,AS,Turkey,TR,"İzmir Province",TR-35,35,Gaziemir,1,LTBJ,LTBJ,ADB,,http://www.adnanmenderesairport.com,https://en.wikipedia.org/wiki/Adnan_Menderes_Airport,İzmir,1275,2023-12-02T09:03:21+00:00
+4509,LTAC,large_airport,"Esenboğa International Airport",40.128101,32.995098,3125,AS,Turkey,TR,"Ankara Province",TR-06,06,Ankara,1,LTAC,LTAC,ESB,,https://esenbogaairport.com/,https://en.wikipedia.org/wiki/Esenbo%C4%9Fa_International_Airport,,1675,2024-04-29T19:20:44+00:00
+4542,LTBS,large_airport,"Dalaman International Airport",36.7131,28.7925,20,AS,Turkey,TR,"Muğla Province",TR-48,48,Dalaman,1,LTBS,LTBS,DLM,,https://www.dalamanairport.aero/,https://en.wikipedia.org/wiki/Dalaman_Airport,,1000,2026-01-22T01:09:33+00:00
+4567,LTFE,large_airport,"Milas Bodrum International Airport",37.249314,27.66401,21,AS,Turkey,TR,"Muğla Province",TR-48,48,Bodrum,1,LTFE,LTFE,BJV,,,https://en.wikipedia.org/wiki/Milas-Bodrum_Airport,,1275,2026-01-10T01:29:31+00:00
+4523,LTAU,large_airport,"Kayseri Erkilet International Airport",38.770401,35.495399,3463,AS,Turkey,TR,"Kayseri Province",TR-38,38,Kayseri,1,LTAU,LTAU,ASR,,http://www.dhmi.gov.tr/Sayfalar/Havalimani/Kayseri/AnaSayfa.aspx,https://en.wikipedia.org/wiki/Erkilet_Airport,Erkilet,1000,2026-01-14T23:48:57+00:00
+4512,LTAF,small_airport,"Adana Şakirpaşa Airport",36.982201,35.280399,65,AS,Turkey,TR,"Adana Province",TR-01,01,Seyhan,0,LTAF,LTAF,ADA,,https://dhmi.gov.tr/sayfalar/havalimani/adana/anasayfa.aspx,https://en.wikipedia.org/wiki/Adana_%C5%9Eakirpa%C5%9Fa_Airport,"Şakirpaşa, Sakirpasa",150,2026-07-27T13:33:00+00:00
+4553,LTCG,medium_airport,"Trabzon International Airport",40.995098,39.7897,104,AS,Turkey,TR,"Trabzon Province",TR-61,61,Trabzon,1,LTCG,LTCG,TZX,,,https://en.wikipedia.org/wiki/Trabzon_Airport,,750,2021-12-21T21:10:41+00:00
+4527,LTAZ,large_airport,"Nevşehir Kapadokya Airport",38.7719,34.5345,3100,AS,Turkey,TR,"Nevşehir Province",TR-50,50,Nevşehir,1,LTAZ,LTAZ,NAV,,https://www.dhmi.gov.tr/Sayfalar/Havalimani/Kapadokya/AnaSayfa.aspx,https://en.wikipedia.org/wiki/Nev%C5%9Fehir_Kapadokya_Airport,,1000,2026-01-28T17:00:36+00:00
+44487,LTFG,medium_airport,"Gazipaşa-Alanya Airport",36.298832,32.297017,92,AS,Turkey,TR,"Antalya Province",TR-07,07,Gazipaşa,1,LTFG,LTFG,GZP,,http://www.gzpairport.com/,https://en.wikipedia.org/wiki/Gazipa%C5%9Fa_Airport,,500,2026-03-19T03:08:10+00:00
+4516,LTAJ,large_airport,"Gaziantep Oğuzeli International Airport",36.947201,37.478699,2315,AS,Turkey,TR,"Gaziantep Province",TR-27,27,Gaziantep,1,LTAJ,LTAJ,GZT,,,https://en.wikipedia.org/wiki/O%C4%9Fuzeli_Airport,,1000,2026-01-14T23:37:36+00:00
+4549,LTCC,medium_airport,"Diyarbakır Airport",37.893902,40.201,2251,AS,Turkey,TR,"Diyarbakır Province",TR-21,21,Diyarbakır,1,LTCC,LTCC,DIY,,,https://en.wikipedia.org/wiki/Diyarbak%C4%B1r_Airport,,750,2021-11-06T07:04:48+00:00
+4551,LTCE,medium_airport,"Erzurum International Airport",39.956501,41.1702,5763,AS,Turkey,TR,"Erzurum Province",TR-25,25,Erzurum,1,LTCE,LTCE,ERZ,,,https://en.wikipedia.org/wiki/Erzurum_Airport,,750,2021-11-20T16:13:19+00:00
+4513,LTAG,medium_airport,"İncirlik Air Base",37.002102,35.4259,238,AS,Turkey,TR,"Adana Province",TR-01,01,Sarıçam,0,LTAG,LTAG,UAB,,,https://en.wikipedia.org/wiki/Incirlik_Air_Base,ADA,600,2025-05-27T23:29:12+00:00
+4518,LTAN,large_airport,"Konya Airport",37.979,32.561901,3392,AS,Turkey,TR,"Konya Province",TR-42,42,Konya,1,LTAN,LTAN,KYA,,http://www.konya.dhmi.gov.tr/havaalanlari/default.aspx?hv=28,https://en.wikipedia.org/wiki/Konya_Airport,,1000,2026-01-21T17:35:12+00:00
+4568,LTFH,medium_airport,"Samsun-Çarşamba Airport",41.253988,36.567546,18,AS,Turkey,TR,"Samsun Province",TR-55,55,Samsun,1,LTFH,LTFH,SZF,,http://www.carsamba.dhmi.gov.tr/havaalanlari/default.aspx?hv=32,https://en.wikipedia.org/wiki/%C3%87ar%C5%9Famba_Airport,,750,2025-01-08T01:11:43+00:00
+4555,LTCI,medium_airport,"Van Ferit Melen Airport",38.46820068359375,43.332298278808594,5480,AS,Turkey,TR,"Van Province",TR-65,65,Van,1,LTCI,LTCI,VAN,,,https://en.wikipedia.org/wiki/Ferit_Melen_Airport,,750,2008-06-13T14:30:04+00:00
+4521,LTAR,medium_airport,"Sivas Nuri Demirağ Airport",39.813801,36.9035,5239,AS,Turkey,TR,"Sivas Province",TR-58,58,Sivas,1,LTAR,LTAR,VAS,,http://www.sivas.dhmi.gov.tr/havaalanlari/default.aspx?hv=35,https://en.wikipedia.org/wiki/Sivas_Airport,,500,2026-08-12T12:21:22+00:00
+4566,LTFD,large_airport,"Balıkesir Koca Seyit Airport",39.552533,27.010192,50,AS,Turkey,TR,"Balıkesir Province",TR-10,10,Edremit,1,LTFD,LTFD,EDO,,,https://en.wikipedia.org/wiki/Bal%C4%B1kesir_Koca_Seyit_Airport,,1000,2026-01-09T15:29:05+00:00
+4526,LTAY,medium_airport,"Çardak Airport",37.7855987549,29.7012996674,2795,AS,Turkey,TR,"Denizli Province",TR-20,20,Denizli,1,LTAY,LTAY,DNZ,,,https://en.wikipedia.org/wiki/%C3%87ardak_Airport,,750,2010-12-14T17:26:08+00:00
+4532,LTBI,medium_airport,"Eskişehir Air Base",39.7841,30.5821,2581,AS,Turkey,TR,"Eskişehir Province",TR-26,26,Eskişehir,0,LTBI,LTBI,ESK,,,https://en.wikipedia.org/wiki/Eski%C5%9Fehir_Airport,,250,2025-03-03T13:43:17+00:00
+4547,LTBY,large_airport,"Hasan Polatkan Airport",39.811644,30.519268,2588,AS,Turkey,TR,"Eskişehir Province",TR-26,26,Eskişehir,1,LTBY,LTBY,AOE,,https://hph.eskisehir.edu.tr/tr/,https://en.wikipedia.org/wiki/Anadolu_Airport,"Anadolu Airport",1000,2026-01-21T17:14:02+00:00
+44491,LTCS,large_airport,"Şanlıurfa GAP Airport",37.445663,38.895592,2708,AS,Turkey,TR,"Şanlıurfa Province",TR-63,63,Şanlıurfa,1,LTCS,LTCS,GNY,,http://gap.dhmi.gov.tr/havaalanlari/home.aspx?hv=36,https://en.wikipedia.org/wiki/Şanlıurfa_GAP_Airport,,1000,2026-01-14T23:46:20+00:00
+4556,LTCJ,medium_airport,"Batman Airport",37.929001,41.1166,1822,AS,Turkey,TR,"Batman Province",TR-72,72,Batman,1,LTCJ,LTCJ,BAL,,https://www.dhmi.gov.tr/Sayfalar/Havalimani/Batman/AnaSayfa.aspx,https://en.wikipedia.org/wiki/Batman_Airport,,750,2026-01-21T17:06:08+00:00
+4548,LTCA,medium_airport,"Elazığ Airport",38.597974,39.28348,2927,AS,Turkey,TR,"Elazığ Province",TR-23,23,Elazığ,1,LTCA,LTCA,EZS,,,https://en.wikipedia.org/wiki/Elaz%C4%B1%C4%9F_Airport,,750,2021-11-06T06:59:29+00:00
+4550,LTCD,medium_airport,"Erzincan Airport",39.7102012634,39.527000427199994,3783,AS,Turkey,TR,"Erzincan Province",TR-24,24,Erzincan,1,LTCD,LTCD,ERC,,,https://en.wikipedia.org/wiki/Erzincan_Airport,,750,2010-09-05T08:26:09+00:00
+4565,LTFC,medium_airport,"Süleyman Demirel International Airport",37.8554,30.368401,2835,AS,Turkey,TR,"Isparta Province",TR-32,32,Isparta,1,LTFC,LTFC,ISE,,http://www.dhmi.gov.tr/dosyalar/limanvemeydanlar/sdemirel/sdemirel.asp,https://en.wikipedia.org/wiki/S%C3%BCleyman_Demirel_Airport,,750,2021-11-20T16:13:55+00:00
+4552,LTCF,medium_airport,"Kars Airport",40.562198638916016,43.1150016784668,5889,AS,Turkey,TR,"Kars Province",TR-36,36,Kars,1,LTCF,LTCF,KSY,,,https://en.wikipedia.org/wiki/Kars_Airport,,750,2008-10-01T08:27:01+00:00
+4522,LTAT,medium_airport,"Malatya Erhaç Airport",38.435298919699996,38.0909996033,2828,AS,Turkey,TR,"Malatya Province",TR-44,44,Malatya,1,LTAT,LTAT,MLX,,,https://en.wikipedia.org/wiki/Erha%C3%A7_Airport,,750,2010-12-14T17:32:32+00:00
+316329,LTFO,medium_airport,"Rize–Artvin Airport",41.179766,40.848802,16,AS,Turkey,TR,"Rize Province",TR-53,53,Rize,1,LTFO,LTFO,RZV,,,https://en.wikipedia.org/wiki/Rize–Artvin_Airport,,750,2026-08-27T20:07:24+00:00
+4554,TR-0298,closed,"Şanlıurfa Airport",37.094299,38.847099,1483,AS,Turkey,TR,"Şanlıurfa Province",TR-63,63,Şanlıurfa,0,,,,,,https://en.wikipedia.org/wiki/%C5%9Eanl%C4%B1urfa_Airport,"LTCH, SFQ",750,2026-01-14T18:25:15+00:00
+44490,LTBZ,medium_airport,"Zafer Airport",39.111107,30.130405,3327,AS,Turkey,TR,"Kütahya Province",TR-43,43,Altıntaş,1,LTBZ,LTBZ,KZR,,,https://en.wikipedia.org/wiki/Zafer_Airport,,500,2026-08-28T17:04:59+00:00
+4531,LTBH,medium_airport,"Çanakkale Airport",40.1376991272,26.4267997742,23,AS,Turkey,TR,"Çanakkale Province",TR-17,17,Çanakkale,1,LTBH,LTBH,CKZ,,,https://en.wikipedia.org/wiki/%C3%87anakkale_Airport,,500,2011-05-17T15:48:00+00:00
+4562,LTCR,medium_airport,"Mardin Airport",37.223300933800004,40.6316986084,1729,AS,Turkey,TR,"Mardin Province",TR-47,47,Mardin,1,LTCR,LTCR,MQM,,,https://en.wikipedia.org/wiki/Mardin_Airport,,500,2010-12-14T17:33:04+00:00
+44789,LTCB,medium_airport,"Ordu–Giresun Airport",40.966872,38.085995,11,AS,Turkey,TR,"Ordu Province",TR-52,52,Ordu,1,LTCB,LTCB,OGU,OGU,http://www.dhmi.gov.tr/havaalanlari.aspx?hv=54,https://en.wikipedia.org/wiki/Ordu%E2%80%93Giresun_Airport,,500,2021-12-30T08:50:55+00:00
+30418,LTCM,medium_airport,"Sinop Airport",42.018313,35.071774,20,AS,Turkey,TR,"Sinop Province",TR-57,57,Sinop,1,LTCM,LTCM,NOP,,,https://en.wikipedia.org/wiki/Sinop_Airport,SIC,500,2021-10-14T20:43:37+00:00
+316546,LTCV,medium_airport,"Şırnak Şerafettin Elçi Airport",37.3647,42.0582,2038,AS,Turkey,TR,"Şırnak Province",TR-73,73,Şırnak,1,LTCV,LTCV,NKT,,,https://en.wikipedia.org/wiki/%C5%9E%C4%B1rnak_Airport,,500,2015-12-13T16:48:03+00:00
+4541,LTBR,medium_airport,"Bursa Yenişehir Airport",40.255199,29.562599,764,AS,Turkey,TR,"Bursa Province",TR-16,16,Yenişehir,1,LTBR,LTBR,YEI,,,https://en.wikipedia.org/wiki/Yeni%C5%9Fehir_Airport,,500,2024-07-11T10:11:46+00:00
+324731,LTDB,large_airport,"Çukurova International Airport",36.891478,35.071235,35,AS,Turkey,TR,"Mersin Province",TR-33,33,Tarsus,1,LTDB,LTDB,COV,,https://cukurovaairport.aero/,https://en.wikipedia.org/wiki/%C3%87ukurova_International_Airport,"Çukurova International Airport",1000,2026-01-20T19:51:48+00:00
+44484,LTDA,medium_airport,"Hatay Airport",36.36079,36.285589,269,AS,Turkey,TR,"Hatay Province",TR-31,31,Antakya,1,LTDA,LTDA,HTY,,,https://en.wikipedia.org/wiki/Hatay_Airport,"hatay, antakya, samandag",500,2026-03-19T02:58:39+00:00
+4544,LTBU,medium_airport,"Tekirdağ Çorlu Airport",41.138199,27.9191,574,EU,Turkey,TR,"Tekirdağ Province",TR-59,59,Çorlu,1,LTBU,LTBU,TEQ,,,https://en.wikipedia.org/wiki/Tekirda%C4%9F_%C3%87orlu_Airport,,500,2026-01-29T14:42:22+00:00
+44790,LTCT,medium_airport,"Iğdır Airport",39.976627,43.876648,3101,AS,Turkey,TR,"Iğdır Province",TR-76,76,Iğdır,1,LTCT,LTCT,IGD,,http://igdır.dhmi.gov.tr/,https://en.wikipedia.org/wiki/Iğdır_Airport,,500,2021-12-30T08:49:32+00:00
+4557,LTCK,medium_airport,"Muş Airport",38.747798919677734,41.66120147705078,4157,AS,Turkey,TR,"Muş Province",TR-49,49,Muş,1,LTCK,LTCK,MSR,,,https://en.wikipedia.org/wiki/Mu%C5%9F_Airport,,500,2009-06-27T06:59:03+00:00
+4540,LTBQ,medium_airport,"Cengiz Topel Airport",40.735001,30.0833,182,AS,Turkey,TR,"Kocaeli Province",TR-41,41,Kartepe,0,LTBQ,LTBQ,KCO,,,https://en.wikipedia.org/wiki/Cengiz_Topel_Naval_Air_Station,,250,2024-04-07T13:17:25+00:00
+4524,LTAV,medium_airport,"Sivrihisar Airport",39.4515,31.365299,3185,AS,Turkey,TR,"Eskişehir Province",TR-26,26,Sivrihisar,0,LTAV,LTAV,,,,,,250,2026-03-21T15:59:25+00:00
+4534,LTBK,small_airport,"Gaziemir Air Base",38.319099,27.159401,433,AS,Turkey,TR,"İzmir Province",TR-35,35,Gaziemir,0,LTBK,LTBK,,,,https://en.wikipedia.org/wiki/Gaziemir_Air_Base,,50,2026-03-21T16:26:29+00:00
+46279,TR-0040,small_airport,"Manavgat Firefighting Airport",36.736315,31.508438,7,AS,Turkey,TR,"Antalya Province",TR-07,07,Manavgat,0,,,,,,,,50,2026-03-19T03:10:42+00:00
+340313,TR-0079,closed,"Kumköy Blue Sky Airport",36.80834,31.369507,,AS,Turkey,TR,"Antalya Province",TR-07,07,Manavgat,0,,,,,,,,50,2026-03-19T03:07:06+00:00
+355199,LTHA,heliport,"Ufuk Danişmend Polis Heliportu",39.803611,32.844167,2694,AS,Turkey,TR,"Ankara Province",TR-06,06,Gölbaşı,0,LTHA,,,GBS,,https://tr.wikipedia.org/wiki/Ufuk_Dani%C5%9Fmend_Polis_Heliportu,,0,2022-06-27T12:49:45+00:00
+4560,LTCO,medium_airport,"Ağrı Airport",39.655642,43.025742,5462,AS,Turkey,TR,"Ağrı Province",TR-04,04,Ağrı,1,LTCO,LTCO,AJI,,,https://en.wikipedia.org/wiki/A%C4%9Fr%C4%B1_Airport,,750,2021-03-08T13:49:21+00:00
+4529,LTBF,medium_airport,"Balıkesir Airport",39.619301,27.926001,340,AS,Turkey,TR,"Balıkesir Province",TR-10,10,Balıkesir,1,LTBF,LTBF,BZI,,,https://en.wikipedia.org/wiki/Bal%C4%B1kesir_Airport,"Balıkesir Air Base, Balıkesir Central, Balıkesir Merkez",500,2024-07-27T17:14:42+00:00
+44781,LTCU,medium_airport,"Bingöl Airport",38.860131,40.594489,3506,AS,Turkey,TR,"Bingöl Province",TR-12,12,Bingöl,1,LTCU,LTCU,BGG,,,https://en.wikipedia.org/wiki/Bing%C3%B6l_Airport,Çeltiksuyu,500,2026-08-27T20:04:02+00:00
+317863,LTCW,medium_airport,"Hakkari Yüksekova Airport",37.5497,44.2381,6400,AS,Turkey,TR,"Hakkâri Province",TR-30,30,Hakkari,1,LTCW,LTCW,YKO,,,https://en.wikipedia.org/wiki/Hakkari_Y%C3%BCksekova_Airport,,500,2018-05-02T02:27:51+00:00
+30585,LTAS,medium_airport,"Zonguldak Çaycuma Airport",41.506401,32.0886,44,AS,Turkey,TR,"Zonguldak Province",TR-67,67,Zonguldak,1,LTAS,LTAS,ONQ,,,https://en.wikipedia.org/wiki/Zonguldak_Airport,,500,2022-08-04T14:30:09+00:00
+4510,LTAD,medium_airport,"Etimesgut Air Base",39.949798584,32.6885986328,2653,AS,Turkey,TR,"Ankara Province",TR-06,06,Ankara,0,LTAD,LTAD,ANK,,,https://en.wikipedia.org/wiki/Etimesgut_Air_Base,,400,2010-12-09T12:51:32+00:00
+4543,LTBT,medium_airport,"Akhisar Airport / Akhisar Air Base",38.808899,27.8339,263,AS,Turkey,TR,"Manisa Province",TR-45,45,Akhisar,0,LTBT,LTBT,,,,,,250,2026-03-21T16:53:50+00:00
+44785,TR-0021,closed,"Çukurhisar Airport",39.843899,30.968,,AS,Turkey,TR,"Eskişehir Province",TR-26,26,Alpu,0,,,,,,,,250,2026-08-11T18:36:04+00:00
+4530,LTBG,medium_airport,"Bandırma Airport",40.318001,27.977699,170,AS,Turkey,TR,"Balıkesir Province",TR-10,10,Bandırma,0,LTBG,LTBG,BDM,,,https://en.wikipedia.org/wiki/Band%C4%B1rma_Airport,,250,2024-04-07T13:16:30+00:00
+44492,TR-0004,medium_airport,"Temelli Air Base",39.73885726928711,32.378639221191406,2457,AS,Turkey,TR,"Ankara Province",TR-06,06,Polatlı,0,,,,,,,,250,2009-06-27T08:30:13+00:00
+4546,LTBX,medium_airport,"İstanbul Samandıra Army Air Base",40.993,29.216499,400,AS,Turkey,TR,"İstanbul Province",TR-34,34,"Ümraniye, Istanbul",0,LTBX,,,,,https://en.wikipedia.org/wiki/Istanbul_Samand%C4%B1ra_Army_Air_Base,,250,2021-01-27T14:54:49+00:00
+4508,LTAB,small_airport,"Güvercinlik Airport",39.935001,32.740799,2687,AS,Turkey,TR,"Ankara Province",TR-06,06,Ankara,0,LTAB,LTAB,,,,https://en.wikipedia.org/wiki/Ankara_G%C3%BCvercinlik_Army_Air_Base,,150,2026-01-29T17:15:18+00:00
+44695,TR-0009,small_airport,"Çardak Highway Strip",37.828125,29.637863159179688,,AS,Turkey,TR,"Denizli Province",TR-20,20,,0,,,,,,,,50,2009-08-14T02:57:39+00:00
+44744,TR-0011,small_airport,"Diyarbakır Northwest Airport",38.01278305053711,39.95493698120117,,AS,Turkey,TR,"Diyarbakır Province",TR-21,21,,0,,,,,,,,50,2009-08-18T07:48:20+00:00
+44486,TR-0002,small_airport,"Divriği Airport",39.3316650390625,38.091819763183594,3526,AS,Turkey,TR,"Sivas Province",TR-58,58,,0,,,,,,,,50,2009-06-26T17:49:40+00:00
+44488,LTXE,small_airport,"Karain Airport",37.097222,30.648264,1015,AS,Turkey,TR,"Antalya Province",TR-07,07,Antalya,0,,,,LT0701,,,,50,2026-07-03T23:04:51+00:00
+353977,TR-0159,small_airport,"Manavgat Sport Aeroclub",36.750894,31.48139,,AS,Turkey,TR,"Antalya Province",TR-07,07,Antalya,0,,,,,,,,50,2026-03-19T03:10:19+00:00
+29675,LTBD,small_airport,"Aydın Çıldır Airport",37.815389,27.887566,102,AS,Turkey,TR,"Aydin Province",TR-09,09,Aydın,0,LTBD,LTBD,CII,,,https://en.wikipedia.org/wiki/Ayd%C4%B1n_Airport,,50,2023-12-02T09:07:26+00:00
+44797,TR-0033,closed,"Sarımsaklı Airfield",39.273659,26.686949,,AS,Turkey,TR,"Balıkesir Province",TR-10,10,Ayvalık,0,,,,,,,,50,2026-08-11T18:32:02+00:00
+44932,TR-0015,closed,"Boranköy Air Base",38.468946,38.365159,,AS,Turkey,TR,"Malatya Province",TR-44,44,Battalgazi,0,,,,,,,,50,2026-08-12T12:22:57+00:00
+44782,TR-0018,small_airport,"Bolu Airfield",40.748611,31.651667,2441,AS,Turkey,TR,"Bolu Province",TR-14,14,Bolu,0,,,,LT1401,https://ais.ibosoft.net.tr/,,,50,2026-06-30T08:09:28+00:00
+44793,TR-0029,closed,"Niğde Airport",37.846042,34.473324,,AS,Turkey,TR,"Niğde Province",TR-51,51,Bor,0,,,,,,,,50,2026-08-12T19:03:09+00:00
+44694,TR-0008,small_airport,"Bozcaada Airport",39.837845,25.995106,52,AS,Turkey,TR,"Çanakkale Province",TR-17,17,Bozcaada,0,,,,,,,,50,2026-01-29T17:02:37+00:00
+44776,TR-0012,closed,"Alaçatı Airport",38.243198,26.424999,,AS,Turkey,TR,"İzmir Province",TR-35,35,Çeşme,0,,,,,,,,50,2026-08-11T21:28:59+00:00
+44788,TR-0024,closed,"Gemlik Airfield",40.398499,29.0895,24,AS,Turkey,TR,"Bursa Province",TR-16,16,Gemlik,0,,,,,,,,50,2024-07-11T10:13:14+00:00
+6408,LTFK,small_airport,"Gökçeada Airport",40.204498,25.883302,73,AS,Turkey,TR,"Çanakkale Province",TR-17,17,Gökçeada,0,LTFK,LTFK,GKD,,,https://en.wikipedia.org/wiki/G%C3%B6k%C3%A7eada_Airport,"Imbros, İmroz",50,2022-12-15T05:51:53+00:00
+44798,TR-0034,small_airport,"THK İnönü Airfield",39.82181,30.11727,2749,AS,Turkey,TR,"Eskişehir Province",TR-26,26,İnönü,0,,,,,,,,50,2026-03-21T14:29:32+00:00
+4517,TR-0297,closed,"İskenderun Airport",36.5744552612,36.1534194946,25,AS,Turkey,TR,"Hatay Province",TR-31,31,İskenderun,0,,,,,,,"Antakya, Antioch, LTAK, ISK",50,2025-02-25T14:38:03+00:00
+340314,TR-0080,small_airport,"Samsun / Ondokuz Mayis Airport",41.5129,36.1203,5,AS,Turkey,TR,"Samsun Province",TR-55,55,İstiklal,0,LTON,LTON,,,,,"Engiz Airport",50,2025-05-20T12:40:27+00:00
+44796,TR-0032,closed,"Salyazı Airport (Under Construction)",40.225148,39.802251,5448,AS,Turkey,TR,"Gümüşhane Province",TR-29,29,Köse,0,,,,,,https://tr.wikipedia.org/wiki/G%C3%BCm%C3%BC%C5%9Fhane-Bayburt_Havaliman%C4%B1,,50,2026-08-12T15:30:19+00:00
+44933,TR-0037,closed,"Muş West Airport",38.786188,41.469698,,AS,Turkey,TR,"Muş Province",TR-49,49,Muş,0,,,,,,,,50,2026-08-11T21:24:09+00:00
+44795,TR-0031,closed,"Polatlı Airport",39.569801,32.150799,2766,AS,Turkey,TR,"Ankara Province",TR-06,06,Polatlı,0,,,,,,,,50,2025-01-08T14:32:01+00:00
+4564,LTFB,small_airport,"Selçuk Efes Airport",37.950699,27.329,10,AS,Turkey,TR,"İzmir Province",TR-35,35,Selçuk,0,LTFB,LTFB,IZM,,,https://en.wikipedia.org/wiki/Sel%C3%A7uk%E2%80%93Efes_Airport,,50,2025-04-20T12:50:20+00:00
+355574,TR-0213,small_airport,"Mavi Yol Aircampus",36.895324,30.963507,10,AS,Turkey,TR,"Antalya Province",TR-07,07,Serik,0,,,,,https://www.instagram.com/bluewaybelek/,,"Kadriye Airstrip",50,2026-05-31T18:24:23+00:00
+570160,TR-0295,small_airport,"Sivrihisar Aviation Center S.H.M.",39.302492,31.498282,2790,AS,Turkey,TR,"Eskişehir Province",TR-26,26,Sivrihisar,0,,,,,https://shm.aero/tesisler/,https://tr.wikipedia.org/wiki/Sivrihisar_Havac%C4%B1l%C4%B1k_Merkezi_S.H.M.,LT2602,50,2026-07-04T01:55:23+00:00
+44799,TR-0035,closed,"Tatvan Airport",38.541801,42.332401,,AS,Turkey,TR,"Bitlis Province",TR-13,13,Tatvan,0,,,,,,,,50,2026-08-11T21:26:44+00:00
+341971,TR-0089,heliport,"Cikcilli Heliport",36.556,32.0334,614,AS,Turkey,TR,"Antalya Province",TR-07,07,Alanya,0,,,,,,,,0,2021-03-09T23:25:06+00:00
+353969,TR-0026,heliport,"Delphin Heliport",36.865983,30.875364,7,AS,Turkey,TR,"Antalya Province",TR-07,07,Antalya,0,,,,,,,"delphin, helipad, antalya",0,2022-04-12T07:34:13+00:00
+353970,LTHE,heliport,"Süleyman Satır Heliport",36.834114,30.603468,9,AS,Turkey,TR,"Antalya Province",TR-07,07,Antalya,0,LTHE,,,,,,"sahil guvenlik, helipad, heliport, coast guard",0,2022-04-11T14:20:12+00:00
+353971,TR-0156,closed,"Akdeniz Uni. Hospital Helipad",36.89544,30.660369,13,AS,Turkey,TR,"Antalya Province",TR-07,07,Antalya,0,,,,,,,,0,2026-05-31T08:49:13+00:00
+353978,TR-0160,heliport,"Antalya Mermer Heliport",37.08528,30.60972,1083,AS,Turkey,TR,"Antalya Province",TR-07,07,Antalya,0,,,,,,,,0,2022-07-11T06:18:18+00:00
+609038,TR-0318,heliport,"Akseki OGM Helipad",37.03155,31.76231,3100,AS,Turkey,TR,"Antalya Province",TR-07,07,Antalya,0,,,,,,,,0,2026-05-31T08:55:57+00:00
+339014,TR-0075,heliport,"Arsuz Heliport",36.41201,35.88043,,AS,Turkey,TR,"Hatay Province",TR-31,31,Arsuz,0,,,,,,,,0,2021-01-10T13:58:58+00:00
+355257,TR-0201,heliport,"Turgut Özal Medical Center Helipad",38.33887,38.42868,3047,AS,Turkey,TR,"Malatya Province",TR-44,44,Battalgazi,0,,,,,,,,0,2022-06-28T02:32:20+00:00
+355252,TR-0196,heliport,"Turkish Aeronautical Association(THK) Sütlüce Helipad",41.056658,28.948733,3,EU,Turkey,TR,"İstanbul Province",TR-34,34,Beyoğlu,0,,,,,,,,0,2024-05-06T12:01:08+00:00
+355211,TR-0166,heliport,"D-Marin Turgutreis Marina Heliport",37.002792,27.258346,1,AS,Turkey,TR,"Muğla Province",TR-48,48,Bodrum,0,,,,,https://www.d-marin.com/en/marinas/turgutreis/,,,0,2022-07-10T19:51:06+00:00
+355253,TR-0197,heliport,"İSKİ Büyükçekmece Biological Wastewater Treatment Plant Heliport",41.04769,28.5504,42,EU,Turkey,TR,"İstanbul Province",TR-34,34,Büyükçekmece,0,,,,,,,,0,2024-05-06T11:55:29+00:00
+355206,LTHC,heliport,"Çanakkale Şehitleri Abidesi Helipad",40.049517,26.217909,42,AS,Turkey,TR,"Çanakkale Province",TR-17,17,Çanakkale,0,LTHC,,,,,,,0,2022-06-27T13:49:03+00:00
+355207,TR-0162,heliport,"Kıyı Emniyet Gemi Hizmetleri Merkezi Heliport",40.228439,26.425834,,AS,Turkey,TR,"Çanakkale Province",TR-17,17,Çanakkale,0,,,,,,,,0,2022-06-27T14:03:26+00:00
+355247,TR-0191,heliport,"Anafartalar Çanakkale Public Hospital Helipad",40.159019,26.419407,170,AS,Turkey,TR,"Çanakkale Province",TR-17,17,Çanakkale,0,,,,,,,,0,2024-07-11T13:04:59+00:00
+355215,TR-0170,heliport,"AFAD Helipad",39.906437,32.758553,856,AS,Turkey,TR,"Ankara Province",TR-06,06,Çankaya,0,,,,,,,,0,2022-06-27T16:43:37+00:00
+355216,TR-0171,heliport,"Emniyet Genel Müdürlüğü (General Directorate of Security) Helipad",39.901178,32.844827,925,AS,Turkey,TR,"Ankara Province",TR-06,06,Çankaya,0,,,,,,,,0,2022-06-27T16:47:02+00:00
+355219,TR-0174,heliport,"Ankara Şehir Hastanesi Helipad",39.902222,32.757206,863,AS,Turkey,TR,"Ankara Province",TR-06,06,Çankaya,0,,,,,,,,0,2022-06-27T16:57:55+00:00
+355236,TR-0185,heliport,"Turkish Coast Guard Samsun Air Base",41.259586,36.547321,5,AS,Turkey,TR,"Samsun Province",TR-55,55,Çarşamba,0,,,,,,,,0,2022-06-27T19:05:13+00:00
+355254,TR-0198,heliport,"ÇOSB Helipad",41.315069,27.97749,639,EU,Turkey,TR,"İstanbul Province",TR-34,34,Çerkezköy,0,,,,,,,,0,2024-08-02T18:16:38+00:00
+355225,TR-0180,heliport,"Çanakkale Forest Fire Management Center Heliport",40.0822,26.375025,45,AS,Turkey,TR,"Çanakkale Province",TR-17,17,Çınarlı,0,,,,,,,,0,2024-07-11T13:00:45+00:00
+355255,TR-0199,heliport,"Doğuş Didim Marina İşl. Turizm Ticaret Anonim Şirketi Helipad",37.3396,27.259033,29,AS,Turkey,TR,"Aydin Province",TR-09,09,Didim,0,,,,,,,,0,2022-06-28T02:20:48+00:00
+355205,LTHD,heliport,"Orgeneral Eşref Bitlis Askeri Heliportu",37.926728,40.230628,2251,AS,Turkey,TR,"Diyarbakır Province",TR-21,21,Diyarbakır,0,LTHD,,,,,,,0,2026-08-23T17:20:32+00:00
+355354,TR-0209,heliport,"Erdemir Heliport",41.25104,31.40929,20,AS,Turkey,TR,"Zonguldak Province",TR-67,67,Ereğli,0,,,,,,,,0,2022-07-10T14:47:44+00:00
+355246,TR-0190,heliport,"Erguvan Bursa Provincial Health Directorate Heliport",40.226116,29.073486,295,AS,Turkey,TR,"Bursa Province",TR-16,16,Erguvan,0,,,,,,,,0,2022-06-28T01:52:43+00:00
+355209,TR-0164,heliport,"Yılair Havacılık ve Ticaret AŞ ve Helikopter Pisti",40.41513,29.108555,115,AS,Turkey,TR,"Bursa Province",TR-16,16,Gemlik,0,,,,,,,,0,2022-07-10T20:08:19+00:00
+355228,TR-0183,heliport,"LOSEV - LÖSANTE Children and Adults Hospital Helipad",39.833125,32.719136,1159,AS,Turkey,TR,"Ankara Province",TR-06,06,Gölbaşı,0,,,,,,,,0,2022-06-29T14:53:35+00:00
+355208,TR-0163,heliport,"Güroymak Jandarma Helipad",38.567081,42.037394,,AS,Turkey,TR,"Bitlis Province",TR-13,13,Güroymak,0,,,,,,,,0,2022-06-27T14:18:32+00:00
+339011,TR-0074,heliport,"İsdemir (İskenderun Iron and Steel) Heliport",36.71344,36.21417,,AS,Turkey,TR,"Hatay Province",TR-31,31,İskenderun,0,,,,,,,,0,2021-01-10T14:05:21+00:00
+355223,TR-0178,heliport,"İsdemir İskenderun Demir Ve Çelik Anonim Şirketi Helipad",36.713455,36.214113,66,AS,Turkey,TR,"Hatay Province",TR-31,31,İskenderun,0,,,,,,,,0,2022-06-27T17:15:29+00:00
+355204,LTHF,heliport,"DHMİ Atatürk Airport Heliport",40.9817,28.8222,120,EU,Turkey,TR,"İstanbul Province",TR-34,34,İstanbul,0,LTHF,,,,,,,0,2024-05-06T12:09:40+00:00
+509964,TR-0221,heliport,"Kaan Heliport",38.466648,27.437008,,AS,Turkey,TR,"İzmir Province",TR-35,35,Izmir,0,,,,,http://www.kaanair.com/,,"kaan heliport",0,2023-07-02T07:52:07+00:00
+355250,TR-0194,heliport,"İzmir Air Ambulance Center Heliport",38.397187,27.102493,393,AS,Turkey,TR,"İzmir Province",TR-35,35,Karabağlar,0,,,,,,,,0,2024-06-19T09:07:27+00:00
+346113,TR-0090,heliport,"Keşefli Heliport",36.399894,32.179245,80,AS,Turkey,TR,"Antalya Province",TR-07,07,Keşefli,0,,,,,,,"Alanya, Kesefli, Keşaflı",0,2025-10-09T00:36:55+00:00
+337484,TR-0043,heliport,"Titreyengöl Helipad",36.755223,31.446676,6,AS,Turkey,TR,"Antalya Province",TR-07,07,Manavgat,0,,,,,,,"manavgat,titreyengöl",0,2022-04-11T14:17:29+00:00
+355240,TR-0186,heliport,"Marmaris State Hospital Heliport",36.858493,28.258161,16,AS,Turkey,TR,"Muğla Province",TR-48,48,Marmaris,0,,,,,,,,0,2025-01-03T14:18:29+00:00
+44930,TR-0013,closed,"Konya West Airport",37.859693,32.456789,,AS,Turkey,TR,"Konya Province",TR-42,42,Meram,0,,,,,,,,0,2016-06-20T07:17:21+00:00
+355355,TR-0210,heliport,"Gazelle Resort Helipad",40.682794,31.631441,,AS,Turkey,TR,"Bolu Province",TR-14,14,Merkez,0,,,,,,,,0,2022-06-29T14:42:44+00:00
+355359,TR-0212,heliport,"AIBU Helipad",40.715924,31.531502,,AS,Turkey,TR,"Bolu Province",TR-14,14,Merkez,0,,,,,,,,0,2022-06-29T15:06:41+00:00
+346390,TR-0094,heliport,"Bozyazı Forest Depot Helipad",36.093271,32.934434,,AS,Turkey,TR,"Mersin Province",TR-33,33,Mersin,0,,,,,,,"bozyazı, ogm, helikopter, forestry, fire",0,2021-11-04T00:04:51+00:00
+355258,TR-0202,heliport,"Merzifon Karamustafa Paşa Public Hospital Helipad",40.866017,35.437485,2352,AS,Turkey,TR,"Amasya Province",TR-05,05,Merzifon,0,,,,,,,,0,2022-06-28T02:36:33+00:00
+355256,TR-0200,heliport,"Kaplankaya Heliport",37.315101,27.400508,6,AS,Turkey,TR,"Muğla Province",TR-48,48,Milas,0,,,,,,,,0,2022-06-28T02:24:48+00:00
+355244,TR-0188,heliport,"Uludağ Hospital Helipad",40.222192,28.867865,88,AS,Turkey,TR,"Bursa Province",TR-16,16,Nilüfer,0,,,,,,,,0,2022-06-28T01:44:32+00:00
+355249,TR-0193,heliport,"Bursa City Hospital Helipad",40.26975,28.91379,393,AS,Turkey,TR,"Bursa Province",TR-16,16,Nilüfer,0,,,,,,,,0,2022-06-28T02:04:25+00:00
+355235,TR-0184,heliport,"KTÜ Farabi Hospital Helipad",40.993341,39.767285,117,AS,Turkey,TR,"Trabzon Province",TR-61,61,Ortahisar,0,,,,,,,,0,2022-06-27T18:54:27+00:00
+355245,TR-0189,heliport,"Sönmez Airlines Inc. Helipad",40.255134,29.067867,88,AS,Turkey,TR,"Bursa Province",TR-16,16,Osmangazi,0,,,,,https://www.sonmezholding.com.tr/havacilik/,,,0,2022-06-28T01:49:02+00:00
+355248,TR-0192,heliport,"ÖNÖC Central District Helipad",40.19931,29.05428,426,AS,Turkey,TR,"Bursa Province",TR-16,16,Osmangazi,0,,,,,,,,0,2022-06-28T02:01:32+00:00
+355227,TR-0182,heliport,"Denizli Regional Directorate of Forestry Helicopter Heliport",37.734549,29.090766,550,AS,Turkey,TR,"Denizli Province",TR-20,20,Pamukkale,0,,,,,,,,0,2022-06-27T17:39:11+00:00
+355212,TR-0167,heliport,"Kaan Aviation Heliport",41.125585,28.983592,113,EU,Turkey,TR,"İstanbul Province",TR-34,34,Sarıyer,0,,,,,http://www.kaanair.com/,,,0,2025-03-21T11:53:05+00:00
+355243,TR-0187,heliport,"Teos Marina Helipad",38.193784,26.78312,,AS,Turkey,TR,"İzmir Province",TR-35,35,Seferihisar,0,,,,,https://teosmarina.com/,,,0,2022-06-28T01:42:12+00:00
+355251,TR-0195,heliport,"Divan Taksim Palmira Turizm Ticaret Anonim Şirketi Helipad",41.04118,28.98712,223,EU,Turkey,TR,"İstanbul Province",TR-34,34,Şişli,0,,,,,,,,0,2024-05-06T12:06:26+00:00
+44800,TR-0036,closed,"Ünye Airport",41.141201,37.209202,,AS,Turkey,TR,"Ordu Province",TR-52,52,Ünye,0,,,,,,,LTUN,0,2025-05-20T13:39:04+00:00
+355220,TR-0175,heliport,"Erzurum Bölge Eğitim Ve Araştırma Hastanesi Helikopter Pisti",39.889903,41.24,1914,AS,Turkey,TR,"Erzurum Province",TR-25,25,Yakutiye,0,,,,,,,,0,2022-06-27T17:05:42+00:00
+355357,TR-0211,heliport,"Bolu Dagi Helipad",40.735812,31.426059,,AS,Turkey,TR,"Bolu Province",TR-14,14,Yeşilköy,0,,,,,,,,0,2022-06-29T15:02:07+00:00
+4561,LTCP,medium_airport,"Adıyaman Airport",37.7314,38.468899,2216,AS,Turkey,TR,"Adıyaman Province",TR-02,02,Adıyaman,1,LTCP,LTCP,ADF,,,https://en.wikipedia.org/wiki/Ad%C4%B1yaman_Airport,,750,2021-10-07T10:52:35+00:00
+4559,LTCN,medium_airport,"Kahramanmaraş Airport",37.5388259888,36.9535217285,1723,AS,Turkey,TR,"Kahramanmaraş Province",TR-46,46,Kahramanmaraş,1,LTCN,LTCN,KCM,,,https://en.wikipedia.org/wiki/Kahramanmara%C5%9F_Airport,,750,2010-09-05T08:27:27+00:00
+4520,LTAP,medium_airport,"Amasya Merzifon Airport",40.829399,35.521999,1758,AS,Turkey,TR,"Amasya Province",TR-05,05,Amasya,1,LTAP,LTAP,MZH,,http://www.merzifon.dhmi.gov.tr/havaalanlari/default.aspx?hv=15,https://en.wikipedia.org/wiki/Merzifon_Airport,,500,2026-08-27T20:05:10+00:00
+30013,LTAL,medium_airport,"Kastamonu Airport",41.314201,33.795799,3520,AS,Turkey,TR,"Kastamonu Province",TR-37,37,Kastamonu,1,LTAL,LTAL,KFS,,https://www.dhmi.gov.tr/Sayfalar/Havalimani/Kastamonu/AnaSayfa.aspx,https://en.wikipedia.org/wiki/Kastamonu_Airport,,500,2026-08-04T08:22:46+00:00
+4525,LTAW,medium_airport,"Tokat Airport",40.32472,36.39056,1859,AS,Turkey,TR,"Tokat Province",TR-60,60,Tokat,1,LTAW,LTAW,TJK,,,https://en.wikipedia.org/wiki/Tokat_Airport,,500,2024-04-03T11:14:16+00:00
+4514,LTAH,medium_airport,"Afyon Air Base",38.726398,30.601101,3310,AS,Turkey,TR,"Afyonkarahisar Province",TR-03,03,Afyonkarahisar,0,LTAH,LTAH,AFY,,,https://en.wikipedia.org/wiki/Afyon_Airport,Afyonkarahisar,250,2021-03-08T11:15:16+00:00
+4511,LTAE,medium_airport,"Akıncı Air Base",40.078899,32.565601,2767,AS,Turkey,TR,"Ankara Province",TR-06,06,Ankara,0,LTAE,LTAE,,,,https://en.wikipedia.org/wiki/Ak%C4%B1nc%C4%B1_Air_Base,"Akinci, Mürted, Murted",250,2026-01-29T17:19:10+00:00
+4535,LTBL,medium_airport,"Çiğli Airbase",38.513,27.010099,16,AS,Turkey,TR,"İzmir Province",TR-35,35,Çiğli,0,LTBL,,IGL,,,https://en.wikipedia.org/wiki/%C3%87i%C4%9Fli_Air_Base,,250,2024-11-13T06:32:11+00:00
+44792,TR-0028,medium_airport,"Keşan Air Base",40.787068,26.606655,,EU,Turkey,TR,"Edirne Province",TR-22,22,Keşan,0,LTFL,,,,,,,250,2026-01-29T14:42:42+00:00
+4537,LTBN,medium_airport,"Kütahya Airport",39.426701,30.016899,3026,AS,Turkey,TR,"Kütahya Province",TR-43,43,Kütahya,0,LTBN,LTBN,,,,https://en.wikipedia.org/wiki/K%C3%BCtahya_Air_Base,,250,2026-03-21T16:47:59+00:00
+4558,LTCL,medium_airport,"Siirt Airport",37.97890090942383,41.84040069580078,2001,AS,Turkey,TR,"Siirt Province",TR-56,56,Siirt,0,LTCL,LTCL,SXZ,,,https://en.wikipedia.org/wiki/Siirt_Airport,,250,2009-06-27T08:01:51+00:00
+4538,LTBO,medium_airport,"Uşak Airport",38.681499,29.471701,2897,AS,Turkey,TR,"Uşak Province",TR-64,64,Uşak,0,LTBO,LTBO,USQ,,https://www.dhmi.gov.tr/Sayfalar/Havalimani/Usak/AnaSayfa.aspx,https://en.wikipedia.org/wiki/U%C5%9Fak_Airport,,250,2023-11-13T01:47:48+00:00
+4519,LTAO,small_airport,"Malatya Tulga Airport",38.353699,38.253899,3016,AS,Turkey,TR,"Malatya Province",TR-44,44,Malatya,0,LTAO,LTAO,,,,https://tr.wikipedia.org/wiki/Malatya_Tulga_Havaliman%C4%B1,,100,2026-07-27T13:34:41+00:00
+610263,TR-0341,small_airport,"Agricultural Airfield",36.774757,35.239624,,AS,Turkey,TR,"Adana Province",TR-01,01,,0,,,,,,,,50,2026-08-12T19:13:08+00:00
+610235,TR-0337,small_airport,"Diyarbakır Flycest Air Campus",37.900865,39.957275,,AS,Turkey,TR,"Diyarbakır Province",TR-21,21,,0,,,,,https://www.flycest.com.tr/,,,50,2026-08-11T19:02:40+00:00
+525056,LTFN,small_airport,"Isparta/Kilic Airport",37.863665,30.355,2874,AS,Turkey,TR,"Isparta Province",TR-32,32,,0,LTFN,,,,,,,50,2024-04-08T13:02:31+00:00
+545701,TR-0283,small_airport,"KTO Karatay University Airfield",38.095469,32.779033,1005,AS,Turkey,TR,"Konya Province",TR-42,42,,0,,,,LT4201,,,,50,2026-07-03T23:06:11+00:00
+610589,TR-0345,small_airport,"Private Airfield",38.440279,28.456564,,AS,Turkey,TR,"Manisa Province",TR-45,45,,0,,,,,,,,50,2026-08-29T13:09:18+00:00
+545700,TR-0282,small_airport,"Istanbul Aviation Pamukova Airfield",40.487089,30.169232,,AS,Turkey,TR,"Sakarya Province",TR-54,54,,0,,,,,https://www.istanbulhavacilik.com.tr/,,,50,2024-09-07T15:48:22+00:00
+44485,TR-0001,closed,"Akhisar Military Airport",38.976571,27.853267,405,AS,Turkey,TR,"Manisa Province",TR-45,45,Akhisar,0,,,,,,,,50,2026-08-11T21:31:03+00:00
+44778,TR-0014,closed,"Aksaray Airport",38.314704,33.8055,,AS,Turkey,TR,"Aksaray Province",TR-68,68,Aksaray,0,,,,,,,,50,2026-08-27T20:02:45+00:00
+610236,TR-0338,small_airport,"Cappadocia Microlight Airfield",38.6814,34.85724,,AS,Turkey,TR,"Nevşehir Province",TR-50,50,Aktpepe,0,,,,,,,,50,2026-08-11T18:12:50+00:00
+44779,TR-0302,closed,"Alaşehir Airport",38.369999,28.5571,,AS,Turkey,TR,"Manisa Province",TR-45,45,Alaşehir,0,,,,,,,LTBC,50,2025-02-25T14:50:15+00:00
+610224,TR-0326,small_airport,"Private Airfield",38.429052,28.451703,,AS,Turkey,TR,"Manisa Province",TR-45,45,Alaşehir,0,,,,,,,,50,2026-08-29T13:07:36+00:00
+610225,TR-0327,small_airport,"Private Airfield",38.464353,28.363077,,AS,Turkey,TR,"Manisa Province",TR-45,45,Alaşehir,0,,,,,,,,50,2026-08-11T17:41:17+00:00
+516468,TR-0224,small_airport,"Assos Aviation Village Airport",39.49862,26.35856,407,AS,Turkey,TR,"Çanakkale Province",TR-17,17,Ayvacık,0,,,,,,,"Assos Havacılık Köyü",50,2023-12-02T20:32:33+00:00
+610223,TR-0325,small_airport,"Private Airfield",37.965747,29.578931,,AS,Turkey,TR,"Denizli Province",TR-20,20,Baklan,0,,,,,,,,50,2026-08-11T17:36:15+00:00
+315916,TR-0041,small_airport,"Fly Pergamon Sport Airfield",39.092842,27.148651,36,AS,Turkey,TR,"İzmir Province",TR-35,35,Bergama,0,,,,,http://www.flypergamon.com,,"fly, pergamon, bergama, sport, airfield, microlight, ultralight, gyrocopter",50,2017-01-29T14:47:22+00:00
+610237,TR-0339,closed,"Beyşehir Airstrip",37.70736,31.696904,,AS,Turkey,TR,"Konya Province",TR-42,42,Beyşehir,0,,,,,,,,50,2026-08-27T20:02:22+00:00
+4545,LTBV,small_airport,"Bodrum-Imsık Airport",37.140099,27.669701,202,AS,Turkey,TR,"Muğla Province",TR-48,48,Bodrum,0,LTBV,LTBV,BXN,,,https://en.wikipedia.org/wiki/Bodrum-Imsik_Airport,,50,2025-01-08T13:06:14+00:00
+555348,TR-0292,small_airport,"Yıldızlar Sportif Havaalanı",38.331013,27.245631,,AS,Turkey,TR,"İzmir Province",TR-35,35,Buca,0,,,,,,,,50,2024-10-31T09:52:46+00:00
+29743,LTBE,small_airport,"Bursa Yunuseli Airport",40.233243,29.005583,331,AS,Turkey,TR,"Bursa Province",TR-16,16,Bursa,0,LTBE,LTBE,,,,https://tr.wikipedia.org/wiki/Bursa_Yunuseli_Havaliman%C4%B1,BTZ,50,2024-07-11T10:14:30+00:00
+29981,LTBW,small_airport,"İstanbul Hezarfen Airfield",41.1036,28.547701,61,EU,Turkey,TR,"İstanbul Province",TR-34,34,Çatalca,0,LTBW,,,,http://www.hezarfen.com.tr/,https://en.wikipedia.org/wiki/Istanbul_Hezarfen_Airfield,"Istanbul Hezarfen Havaalanı",50,2026-01-29T14:43:10+00:00
+610226,TR-0328,small_airport,"Private Airfield",38.2693,26.376357,,AS,Turkey,TR,"İzmir Province",TR-35,35,Çeşme,0,,,,,,,,50,2026-08-11T17:46:58+00:00
+610232,TR-0334,small_airport,"Agricultural Airfield",36.874224,35.08006,,AS,Turkey,TR,"Adana Province",TR-01,01,Çiçekli,0,,,,,,,,50,2026-08-11T18:02:36+00:00
+4539,LTBP,small_airport,"Yalova Air Base",40.686279,29.37707,6,AS,Turkey,TR,"Yalova Province",TR-77,77,Çiftlikköy,0,LTBP,LTBP,,,,https://tr.wikipedia.org/wiki/Yalova_Hava_%C3%9Css%C3%BC,"Yalova Hava Meydan Komutanlığı",50,2026-03-21T16:51:17+00:00
+4563,LTFA,small_airport,"Kaklıç Airport",38.517601,26.9774,13,AS,Turkey,TR,"İzmir Province",TR-35,35,Çiğli,0,LTFA,,,,,,,50,2023-12-02T09:01:17+00:00
+340312,TR-0078,closed,"Dörtyol Airfield",36.8309,36.2172,,AS,Turkey,TR,"Hatay Province",TR-31,31,Dörtyol,0,,,,,,,,50,2026-03-19T02:59:36+00:00
+29854,TR-0299,closed,"Ereğli Erdemir Airport",41.251399993896,31.410800933838,10,AS,Turkey,TR,"Zonguldak Province",TR-67,67,Eregli,0,,,,,,,"LTAX, LTAX",50,2025-02-25T14:49:06+00:00
+610234,TR-0336,small_airport,"Gölbek Landing Strip (Under Construction)",39.324656,32.867894,,AS,Turkey,TR,"Ankara Province",TR-06,06,Gölbaşı,0,,,,,,,,50,2026-08-11T18:09:02+00:00
+4536,LTBM,small_airport,"Isparta Airport",37.787409,30.588341,3250,AS,Turkey,TR,"Isparta Province",TR-32,32,Isparta,0,LTBM,LTBM,,,,,,50,2026-03-21T16:31:31+00:00
+44787,TR-0023,closed,"Karabiga Airport",40.380798,27.3034,,AS,Turkey,TR,"Çanakkale Province",TR-17,17,Karabiga,0,,,,,,,,50,2024-09-07T16:30:22+00:00
+44791,TR-0027,closed,"Karacabey Hara Airfield",40.156374,28.348111,39,AS,Turkey,TR,"Bursa Province",TR-16,16,Karacabey,0,,,,,,,,50,2024-07-11T10:17:14+00:00
+44780,TR-0016,closed,"Balıkesir Manyas Airfield",40.115021,27.93894,56,AS,Turkey,TR,"Balıkesir Province",TR-10,10,Manyas,0,,,,,,,,50,2024-07-11T10:24:07+00:00
+46278,TR-0039,closed,"Kayseri Hava İkmal Airfield",38.702994,35.504551,3511,AS,Turkey,TR,"Kayseri Province",TR-38,38,Melikgazi,0,,,,,,,,50,2026-08-12T19:02:16+00:00
+610227,TR-0329,small_airport,"Private Airfield",36.809716,28.646597,,AS,Turkey,TR,"Muğla Province",TR-48,48,Ortaca,0,,,,,,,,50,2026-08-11T17:49:37+00:00
+610228,TR-0330,small_airport,"Private Airfield",36.801604,28.64229,,AS,Turkey,TR,"Muğla Province",TR-48,48,Ortaca,0,,,,,,,,50,2026-08-11T17:50:55+00:00
+610264,TR-0342,small_airport,"Pamukkale Pamair Airfield",37.918416,29.107445,,AS,Turkey,TR,"Denizli Province",TR-20,20,Pamukkale,0,,,,,,,,50,2026-08-12T19:24:05+00:00
+610231,TR-0333,small_airport,"Private Airfield",39.482133,32.128322,,AS,Turkey,TR,"Ankara Province",TR-06,06,Polatlı,0,,,,,https://rotatehavacilik.com,,,50,2026-08-11T18:18:55+00:00
+610233,TR-0335,small_airport,"Agricultural Airfield",36.406873,36.529151,,AS,Turkey,TR,"Hatay Province",TR-31,31,Reyhanlı,0,,,,,,,,50,2026-08-11T18:03:59+00:00
+32386,TR-0300,closed,"Samsun Samair Airport",41.278645,36.30518,521,AS,Turkey,TR,"Samsun Province",TR-55,55,Samsun,0,,,,,,,"SSX, LTAQ",50,2026-01-29T17:44:21+00:00
+605928,TR-0309,small_airport,"Gyroantalya Aviation Airfield",36.848673,31.159941,7,AS,Turkey,TR,"Antalya Province",TR-07,07,Serik,0,,,,,,,,50,2026-03-19T03:14:17+00:00
+610532,TR-0344,small_airport,"Private Airfield",36.88025,31.033266,,AS,Turkey,TR,"Antalya Province",TR-07,07,Serik,0,,,,,,,,50,2026-08-27T19:59:12+00:00
+554398,TR-0289,small_airport,"Orhan Ünsal Air Park",39.670069,32.201065,2920,AS,Turkey,TR,"Ankara Province",TR-06,06,Sinhan,0,,,,,,,"Orhan Ünsal Hava Parkı",50,2025-01-08T14:30:28+00:00
+610230,TR-0332,small_airport,"Multi Energy Air Campus",41.067851,27.35635,,EU,Turkey,TR,"Tekirdağ Province",TR-59,59,Süleymanpaşa,0,,,,,,,,50,2026-08-12T20:14:46+00:00
+554567,TR-0291,small_airport,"MANHAT Sportif Havaalanı",38.700849,27.453658,,AS,Turkey,TR,"Manisa Province",TR-45,45,Tekeliler,0,,,,,,,,50,2024-10-27T06:16:16+00:00
+44493,TR-0005,closed,"Tuzla Air Base",40.822643,29.335127,79,AS,Turkey,TR,"İstanbul Province",TR-34,34,"Tuzla, Istanbul",0,,,,,,,,50,2026-08-12T18:58:09+00:00
+44934,TR-0038,small_airport,"Yüksekova Highway Strip",37.5439478243,44.3380093575,,AS,Turkey,TR,"Hakkâri Province",TR-30,30,Yüksekova,0,,,,,,,,50,2009-09-03T03:12:23+00:00
+346115,TR-0092,small_airport,"Kelaynak Aviation Club Airport",36.93968,35.563492,,AS,Turkey,TR,"Adana Province",TR-01,01,Yüreğir,0,,,,,,,kelaynak,50,2026-03-19T03:01:30+00:00
+44523,TR-0006,heliport,"Ankara BB Helipad",39.938958,32.838205,,AS,Turkey,TR,"Ankara Province",TR-06,06,,0,,,,,,,,0,2022-06-29T14:51:56+00:00
+611166,TR-0350,heliport,"Ankara Metropolitian Municipality Saray Sport Facilities Helipad",40.066202,32.941234,,AS,Turkey,TR,"Ankara Province",TR-06,06,,0,,,,,,,,0,2026-10-05T12:06:12+00:00
+611167,TR-0351,heliport,"Aselsan / Akyurt Facilities helipad",40.084167,33.020362,,AS,Turkey,TR,"Ankara Province",TR-06,06,,0,,,,,,,,0,2026-10-05T12:08:06+00:00
+346117,TR-0093,heliport,"Karpuzkaldıran Military Helipad",36.853054,30.796124,,AS,Turkey,TR,"Antalya Province",TR-07,07,,0,,,,,,,,0,2022-07-11T06:17:13+00:00
+598713,TR-0304,closed,"Yenisehir Airfield",40.243117,29.510874,,AS,Turkey,TR,"Bursa Province",TR-16,16,,0,,,,,,,,0,2025-07-02T16:34:00+00:00
+554393,TR-0288,closed,"Gokceada Old Airport",40.208108,25.890265,,AS,Turkey,TR,"Çanakkale Province",TR-17,17,,0,,,,,,,LT86,0,2024-11-07T23:07:52+00:00
+44696,TR-0010,heliport,"Denizli Helipad",37.762107849121094,29.080123901367188,,AS,Turkey,TR,"Denizli Province",TR-20,20,,0,,,,,,,,0,2009-08-14T03:07:22+00:00
+545707,TR-0287,heliport,"Bereket Aviation Helipad",37.79387,28.982782,,AS,Turkey,TR,"Denizli Province",TR-20,20,,0,,,,,,,,0,2024-09-07T17:27:11+00:00
+611164,TR-0348,heliport,"Maraşel Çakmak State Hospital Emergency Department",39.881341,41.265546,,AS,Turkey,TR,"Erzurum Province",TR-25,25,,0,,,,,,,,0,2026-10-05T12:01:29+00:00
+611165,TR-0349,heliport,"BTC BOTAS PT-2 Pump Station Helipad",39.965949,41.56894,,AS,Turkey,TR,"Erzurum Province",TR-25,25,,0,,,,,,,,0,2026-10-05T12:03:35+00:00
+347110,TR-0096,heliport,"Beşaslan Border Helipad",36.199773,36.468372,,AS,Turkey,TR,"Hatay Province",TR-31,31,,0,,,,,,,,0,2021-08-18T05:06:10+00:00
+347189,TR-0099,closed,"Border Post Helipad",36.349089,36.598577,,AS,Turkey,TR,"Hatay Province",TR-31,31,,0,,,,,,,,0,2021-08-23T04:18:08+00:00
+347191,TR-0101,closed,"Borderpost Helipad",36.464096,36.542735,,AS,Turkey,TR,"Hatay Province",TR-31,31,,0,,,,,,,,0,2021-08-23T04:33:40+00:00
+611169,TR-0353,heliport,"Mersin Marina Heliport",36.768068,34.568775,,AS,Turkey,TR,"Mersin Province",TR-33,33,,0,,,,,,,,0,2026-10-05T12:14:43+00:00
+611170,TR-0354,heliport,"Mersin Karaduvar Heliport",36.816858,34.662872,,AS,Turkey,TR,"Mersin Province",TR-33,33,,0,,,,,,,,0,2026-10-05T12:16:31+00:00
+611171,TR-0355,heliport,"Mersin Municipality Heliport",36.852019,34.59425,,AS,Turkey,TR,"Mersin Province",TR-33,33,,0,,,,,,,,0,2026-10-05T12:21:35+00:00
+611172,TR-0356,heliport,"Mersin City Hospital Helipad",36.855457,34.608766,,AS,Turkey,TR,"Mersin Province",TR-33,33,,0,,,,,,,,0,2026-10-05T12:22:37+00:00
+611173,TR-0357,heliport,"Mersin Army House Helipad",36.787627,34.623529,,AS,Turkey,TR,"Mersin Province",TR-33,33,,0,,,,,,,,0,2026-10-05T12:25:23+00:00
+611174,TR-0358,heliport,"Silifke Firefighting Heliport",36.37923,33.886517,,AS,Turkey,TR,"Mersin Province",TR-33,33,,0,,,,,,,,0,2026-10-05T12:32:41+00:00
+611175,TR-0359,heliport,"Taşucu Navy Helipad",36.281425,33.835829,,AS,Turkey,TR,"Mersin Province",TR-33,33,,0,,,,,,,,0,2026-10-05T12:34:19+00:00
+611176,TR-0360,heliport,"Anamur Air Radar Command Heliport",36.03047,32.78227,,AS,Turkey,TR,"Mersin Province",TR-33,33,,0,,,,,,,,0,2026-10-06T21:31:43+00:00
+611177,TR-0361,heliport,"Bozyazi Port Helipad",36.097528,32.936774,,AS,Turkey,TR,"Mersin Province",TR-33,33,,0,,,,,,,,0,2026-10-05T12:37:17+00:00
+611178,TR-0362,heliport,"Mut Ömerağa Firefighting Heliport",36.744381,33.3731,,AS,Turkey,TR,"Mersin Province",TR-33,33,,0,,,,,,,,0,2026-10-05T15:29:53+00:00
+545703,TR-0284,seaplane_base,"Haliç Seaplane Base",41.058313,28.948058,,EU,Turkey,TR,"İstanbul Province",TR-34,34,,0,,,,,,,,0,2025-06-26T17:09:53+00:00
+545704,TR-0285,heliport,"Zorlu Center Helipad",41.066611,29.017986,,EU,Turkey,TR,"İstanbul Province",TR-34,34,,0,,,,,,,,0,2024-11-13T20:59:32+00:00
+545705,TR-0286,heliport,"Acıbadem Altunizade Hospital Helipad",41.018622,29.047339,,AS,Turkey,TR,"İstanbul Province",TR-34,34,,0,,,,,,,,0,2024-09-07T16:57:57+00:00
+545699,TR-0281,closed,"Karamürselbey Airfield",40.701106,29.529638,,AS,Turkey,TR,"Kocaeli Province",TR-41,41,,0,,,,,,,,0,2024-09-07T15:36:10+00:00
+610711,TR-0346,closed,"Yozgat Airport (Under Construction)",39.88939,34.98363,,AS,Turkey,TR,"Yozgat Province",TR-66,66,,0,,,,,,,,0,2026-09-04T20:51:51+00:00
+611168,TR-0352,heliport,"Elmadağ Garrison Command Helipad",39.924884,33.211529,,AS,Turkey,TR,(unassigned),TR-U-A,U-A,,0,,,,,,,,0,2026-10-05T12:11:36+00:00
+341717,TR-0084,heliport,"15 July Camili Helipad",40.853043,30.319881,,AS,Turkey,TR,"Sakarya Province",TR-54,54,Adapazarı,0,,,,,,,,0,2021-03-05T17:01:28+00:00
+341719,TR-0086,heliport,"Sakarya Yenikent Provincial Hospital Helipad",40.848736,30.34586,,AS,Turkey,TR,"Sakarya Province",TR-54,54,Adapazarı,0,,,,,,,,0,2021-03-05T17:08:52+00:00
+341764,TR-0087,heliport,"Kocatepe Afyon Provincial Health Directorate Heliport",38.789281,30.467759,3307,AS,Turkey,TR,"Afyonkarahisar Province",TR-03,03,Afyonkarahisar,0,,,,,,,,0,2026-03-21T14:20:18+00:00
+341765,TR-0088,closed,"Afyonkarahisar Heliport",38.760204,30.551208,3310,AS,Turkey,TR,"Afyonkarahisar Province",TR-03,03,Afyonkarahisar,0,,,,,,,,0,2026-03-21T14:21:22+00:00
+606035,TR-0313,heliport,"Afyonkarahisar State Hospital Heliport",38.78218,30.51303,3297,AS,Turkey,TR,"Afyonkarahisar Province",TR-03,03,Afyonkarahisar,0,,,,,,,,0,2026-03-21T14:18:52+00:00
+347207,TR-0117,heliport,"Öncüpınar Border Post Helipad",36.643055,37.090787,,AS,Turkey,TR,"Kilis Province",TR-79,79,Akçabağlar,0,,,,,,,,0,2021-08-23T06:18:30+00:00
+539741,TR-0280,heliport,"Karaköy Helipad",39.028969,27.917617,,AS,Turkey,TR,"Manisa Province",TR-45,45,Akhisar,0,,,,,,,,0,2024-07-30T15:46:01+00:00
+339010,TR-0073,heliport,"Osmaniye Provincial Hospital Helipad",37.051149,36.183218,,AS,Turkey,TR,"Osmaniye Province",TR-80,80,Akyar,0,,,,,,,,0,2021-01-27T14:33:26+00:00
+609803,TR-0323,heliport,"Soğukpınar OGM Helipad",36.643376,31.867942,1012,AS,Turkey,TR,"Antalya Province",TR-07,07,Alanya,0,,,,,,,,0,2026-07-14T11:28:57+00:00
+349680,TR-0130,heliport,"Ziyaret Garrison Helipad",36.168702,36.360353,,AS,Turkey,TR,"Hatay Province",TR-31,31,Altınözü,0,,,,,,,,0,2024-05-08T19:53:15+00:00
+349682,TR-0132,heliport,"Kıyıgören Garrison Helipad",36.130135,36.36799,,AS,Turkey,TR,"Hatay Province",TR-31,31,Altınözü,0,,,,,,,,0,2021-11-12T14:20:53+00:00
+349683,TR-0133,heliport,"Hacıpaşa helipad",36.069306,36.376533,,AS,Turkey,TR,"Hatay Province",TR-31,31,Altınözü,0,,,,,,,,0,2021-11-12T14:31:42+00:00
+349684,TR-0134,heliport,"Sarıbük Border Post Helipad",35.990792,36.332453,,AS,Turkey,TR,"Hatay Province",TR-31,31,Altınözü,0,,,,,,,,0,2021-11-12T14:40:06+00:00
+349686,TR-0135,heliport,"Sarıbük Garrison Helipad",36.00592,36.315999,,AS,Turkey,TR,"Hatay Province",TR-31,31,Altınözü,0,,,,,,,,0,2021-11-12T14:42:33+00:00
+346114,TR-0091,heliport,"NEBİLER UYEM HELIPORT",36.946246,30.599759,863,AS,Turkey,TR,"Antalya Province",TR-07,07,Antalya,0,,,,,,,"uyem, orman, helipad, antalya, orman havacılık",0,2022-04-12T03:47:04+00:00
+353972,TR-0157,heliport,"Alara Helipad",36.659185,31.665097,75,AS,Turkey,TR,"Antalya Province",TR-07,07,Antalya,0,,,,,,,,0,2022-04-11T14:35:45+00:00
+353975,TR-0158,heliport,"Düzlerçamı Forestry Heliport",36.98472,30.560253,855,AS,Turkey,TR,"Antalya Province",TR-07,07,Antalya,0,,,,,,,,0,2022-04-12T03:43:35+00:00
+609036,TR-0316,heliport,"Antalya Sehir Hastanesi Helipad",36.953355,30.664307,810,AS,Turkey,TR,"Antalya Province",TR-07,07,Antalya,0,,,,,,,,0,2026-05-31T08:52:02+00:00
+609037,TR-0317,heliport,"Antalya Il Saglik Heliport",36.915817,30.648068,225,AS,Turkey,TR,"Antalya Province",TR-07,07,Antalya,0,,,,,,,,0,2026-05-31T08:54:14+00:00
+349738,TR-0139,heliport,"Arslanyazı Garrison Helipad",35.934991,36.178987,,AS,Turkey,TR,"Hatay Province",TR-31,31,Arslanyazı,0,,,,,,,,0,2021-11-14T18:33:24+00:00
+355213,TR-0168,heliport,"Ataşehir Belediyesi Afet Kriz Merkezi Helikopter Pisti",40.993379,29.116689,88,AS,Turkey,TR,"İstanbul Province",TR-34,34,Ataşehir,0,,,,,,,,0,2022-06-27T16:31:19+00:00
+347204,TR-0114,heliport,"Aybastı ""Border Eagles"" Border Post Helipad",36.761004,37.000944,,AS,Turkey,TR,"Kilis Province",TR-79,79,Aybastı,0,,,,,,,,0,2021-08-23T05:45:47+00:00
+349437,TR-0127,heliport,"Medipol Mega University Hospital Heliport",41.05842,28.84335,,EU,Turkey,TR,"İstanbul Province",TR-34,34,"Bağcılar, İstanbul",0,,,,,,,,0,2022-02-24T10:30:54+00:00
+338979,TR-0045,heliport,"Ataköy Marina Helipad",40.97118,28.8695,,EU,Turkey,TR,"İstanbul Province",TR-34,34,"Bakırköy, Istanbul",0,,,,,,,,0,2022-02-24T10:30:29+00:00
+338980,TR-0046,heliport,"Acıbadem International Hospital Helipad",40.95844,28.83587,,EU,Turkey,TR,"İstanbul Province",TR-34,34,"Bakırköy, Istanbul",0,,,,,,,,0,2022-02-24T10:30:19+00:00
+349436,TR-0126,heliport,"Prof. Dr. Murat Dilmener Emergency Hospital Heliport",40.96841,28.80768,98,EU,Turkey,TR,"İstanbul Province",TR-34,34,"Bakırköy, İstanbul",0,,,,,,,,0,2022-02-24T10:30:10+00:00
+350918,TR-0153,heliport,"Bartin Naval Base Heliport",41.68146,32.2381,10,AS,Turkey,TR,"Bartin Province",TR-74,74,Bartin,0,,,,,,,,0,2021-12-22T00:36:13+00:00
+517988,TR-0241,heliport,"Başköy East Border Post Helipad",39.404102,44.155752,,AS,Turkey,TR,"Ağrı Province",TR-04,04,Başköy,0,,,,,,,,0,2023-12-29T04:18:47+00:00
+517990,TR-0242,heliport,"Başköy Border Post Helipad",39.404758,44.123276,,AS,Turkey,TR,"Ağrı Province",TR-04,04,Başköy,0,,,,,,,,0,2023-12-29T04:22:21+00:00
+528204,TR-0267,heliport,"Izmir Shipyard Command Heliport",38.464185,27.132996,,AS,Turkey,TR,"İzmir Province",TR-35,35,Bayraklı,0,,,,,,,,0,2024-06-19T09:06:49+00:00
+534015,TR-0272,heliport,"İzmir City Hospital Heliport",38.485378,27.181771,,AS,Turkey,TR,"İzmir Province",TR-35,35,Bayraklı,0,,,,,,,,0,2024-06-19T09:06:08+00:00
+338984,TR-0050,heliport,"Çırağan Palace Helipad",41.04284,29.01407,,EU,Turkey,TR,"İstanbul Province",TR-34,34,"Beşiktaş, Istanbul",0,,,,,,,,0,2022-02-24T10:31:45+00:00
+338985,TR-0051,heliport,"Boğaziçi University Helipad",41.08468,29.04824,,EU,Turkey,TR,"İstanbul Province",TR-34,34,"Beşiktaş, Istanbul",0,,,,,,,,0,2022-02-24T10:32:53+00:00
+350909,TR-0146,heliport,"Liv Hospital Heliport",41.06037,29.0284,330,EU,Turkey,TR,"İstanbul Province",TR-34,34,"Beşiktaş, Istanbul",0,,,,,,,,0,2022-02-24T10:32:03+00:00
+350911,TR-0147,heliport,"TRT Heliport",41.05694,29.03181,361,EU,Turkey,TR,"İstanbul Province",TR-34,34,"Beşiktaş, Istanbul",0,,,,,,,,0,2022-02-24T10:31:55+00:00
+528580,TR-0271,heliport,"Beşiriye Border Post Helipad",36.664824,37.366687,,AS,Turkey,TR,"Kilis Province",TR-79,79,Beşiriye,0,,,,,,,,0,2024-05-12T14:42:00+00:00
+338991,TR-0057,heliport,"Pasamandira Heliport",41.186167,29.120253,20,AS,Turkey,TR,"İstanbul Province",TR-34,34,"Beykoz, Istanbul",0,,,,,,,,0,2021-12-21T21:34:04+00:00
+350907,TR-0144,heliport,"Sakli Heliport",41.13264,29.30144,39,AS,Turkey,TR,"İstanbul Province",TR-34,34,"Beykoz, Istanbul",0,,,,,,,,0,2021-12-21T21:13:03+00:00
+350908,TR-0145,heliport,"Poyrazköy Heliport",41.20829,29.14207,262,AS,Turkey,TR,"İstanbul Province",TR-34,34,"Beykoz, Istanbul",0,,,,,,,,0,2021-12-21T21:15:55+00:00
+350912,TR-0148,heliport,"Beykoz Rescue and Underwater Command Heliport",41.13878,29.07915,3,AS,Turkey,TR,"İstanbul Province",TR-34,34,"Beykoz, Istanbul",0,,,,,,,,0,2021-12-21T21:32:01+00:00
+600174,TR-0307,heliport,"Murat Erdi Eker State Hospital Heliport",39.84407,32.727795,3999,AS,Turkey,TR,"Ankara Province",TR-06,06,Beytepe,0,,,,,,,,0,2025-08-31T02:34:21+00:00
+351646,TR-0025,heliport,"Bingöl 49th Motor Rifle Brigade Command Heliport",38.87961,40.51455,3615,AS,Turkey,TR,"Bingöl Province",TR-12,12,Bingöl,0,,,,,,,,0,2022-01-19T23:32:25+00:00
+349412,TR-0124,heliport,"Bohsin Borderpost Helipad",36.221112,36.38913,,AS,Turkey,TR,"Hatay Province",TR-31,31,Bohsin,0,,,,,,,,0,2021-11-01T21:02:27+00:00
+517963,TR-0237,heliport,"Bölücek Border Post Helipad",39.402729,44.302781,,AS,Turkey,TR,"Ağrı Province",TR-04,04,Bölücek,0,,,,,,,,0,2023-12-28T19:54:32+00:00
+606038,TR-0315,closed,"Bozüyük State Hospital Heliport",39.89328,30.05645,2526,EU,Turkey,TR,"Bilecik Province",TR-11,11,Bozüyük,0,,,,,,,,0,2026-03-21T15:42:18+00:00
+528199,TR-0265,heliport,"Izmir Gendarmerie Command Heliport",38.404158,27.208571,,AS,Turkey,TR,"İzmir Province",TR-35,35,Buca,0,,,,,,,,0,2024-06-19T09:12:44+00:00
+347203,TR-0113,heliport,"Bulamaçlı Border Post Helipad",36.796234,36.810451,,AS,Turkey,TR,"Kilis Province",TR-79,79,Bulamaçlı,0,,,,,,,,0,2021-08-23T05:31:50+00:00
+609243,TR-0319,heliport,"Yukari Gülderen Border Post Helipad",39.03691,44.110299,,AS,Turkey,TR,"Van Province",TR-65,65,Çaldiran,0,,,,,,,,0,2026-06-12T22:37:41+00:00
+609244,TR-0320,heliport,"Beydogan Border Post Helipad",39.016447,44.156804,,AS,Turkey,TR,"Van Province",TR-65,65,Çaldiran,0,,,,,,,,0,2026-06-12T22:47:55+00:00
+609245,TR-0321,closed,"Sarıçimen Border Post Helipad (Disused)",39.164302,44.098688,,AS,Turkey,TR,"Van Province",TR-65,65,Çaldiran,0,,,,,,,,0,2026-06-12T23:06:20+00:00
+347205,TR-0115,heliport,"Çalkaya Border Post Helipad",36.793147,36.834655,,AS,Turkey,TR,"Kilis Province",TR-79,79,Çalkaya,0,,,,,,,,0,2021-08-23T05:56:49+00:00
+527157,TR-0261,heliport,"Çamaltı 2 Borderpost Helipad",35.880403,36.060548,,AS,Turkey,TR,"Hatay Province",TR-31,31,Çamaltı,0,,,,,,,,0,2024-04-28T19:10:41+00:00
+527158,TR-0262,heliport,"Çamaltı 1 Borderpost Helipad",35.886646,36.065756,,AS,Turkey,TR,"Hatay Province",TR-31,31,Çamaltı,0,,,,,,,,0,2024-04-28T19:13:07+00:00
+528125,TR-0263,heliport,"Çamaltı 3 Borderpost Helipad",35.883551,36.009991,,AS,Turkey,TR,"Hatay Province",TR-31,31,Çamaltı,0,,,,,,,,0,2024-05-08T19:34:36+00:00
+44784,TR-0020,closed,"Çanakkale Çan Airfield",39.98899841308594,27.036800384521484,,AS,Turkey,TR,"Çanakkale Province",TR-17,17,Çan,0,,,,,,,,0,2009-08-21T17:08:42+00:00
+610241,TR-0340,heliport,"Filyos T.P.A.O. Heliport",41.582518,32.061002,,AS,Turkey,TR,"Zonguldak Province",TR-67,67,Çaycuma,0,,,,,,,,0,2026-08-11T19:00:21+00:00
+517994,TR-0244,heliport,"Çetenli Military Base Helipad",39.441761,44.018085,,AS,Turkey,TR,"Ağrı Province",TR-04,04,Çetenli,0,,,,,,,,0,2023-12-29T04:40:20+00:00
+347201,TR-0111,heliport,"Federal Border Guard No. 1 Helipad",36.825974,36.662691,,AS,Turkey,TR,"Hatay Province",TR-31,31,Çınarbaşı,0,,,,,,,,0,2021-08-23T05:19:35+00:00
+347210,TR-0120,closed,"Cobanbeyli Border Crossing Helipad",36.637415,37.474492,,AS,Turkey,TR,"Kilis Province",TR-79,79,Cobanbeyli,0,,,,,,,,0,2021-08-23T07:00:49+00:00
+355218,TR-0173,heliport,"Turkey Air Traffic Control Center Helipad",40.138042,32.99355,947,AS,Turkey,TR,"Ankara Province",TR-06,06,Çubuk,0,,,,,,,,0,2022-06-27T16:53:23+00:00
+517986,TR-0240,heliport,"Dağdelen Border Post Helipad",39.417895,44.212502,,AS,Turkey,TR,"Ağrı Province",TR-04,04,Dağdelen,0,,,,,,,,0,2023-12-29T04:15:44+00:00
+517549,TR-0226,heliport,"Darıca Farabi State Hospital Heliport",40.769994,29.405651,369,AS,Turkey,TR,"Kocaeli Province",TR-41,41,Darıca,0,,,,,https://daricafarabieah.saglik.gov.tr/EN-390168/history.html,,,0,2023-12-21T14:55:30+00:00
+347202,TR-0112,heliport,"Deliosman Border Post Helipad",36.825341,36.735336,,AS,Turkey,TR,"Kilis Province",TR-79,79,Deliosman,0,,,,,,,,0,2021-08-23T05:24:39+00:00
+44783,TR-0019,closed,"Demirhanlı Airfield",41.717014,26.739527,371,AS,Turkey,TR,"Edirne Province",TR-22,22,Demirhanlı,0,,,,,,,"Demirhanlı Havaalanı, Edirne Airport",0,2025-01-15T20:17:38+00:00
+527154,TR-0258,heliport,"Denizgören Border Post Helipad",35.930238,35.957627,,AS,Turkey,TR,"Hatay Province",TR-31,31,Denizgören,0,,,,,,,,0,2024-04-28T18:40:54+00:00
+527156,TR-0260,heliport,"Kel Dagi Helipad",35.950062,35.969099,,AS,Turkey,TR,"Hatay Province",TR-31,31,Denizgören,0,,,,,,,,0,2024-04-28T18:56:30+00:00
+338993,TR-0059,heliport,"Derince Provincial Hospital Helipad",40.76099,29.81412,,AS,Turkey,TR,"Kocaeli Province",TR-41,41,Derince,0,,,,,,,,0,2021-01-10T02:24:12+00:00
+44777,TR-0301,closed,"Kayseri Airport",38.406299591064,35.327800750732,,AS,Turkey,TR,"Kayseri Province",TR-38,38,Develi,0,,,,,,,"LTAM, LTAM",0,2025-02-25T14:50:15+00:00
+355200,LTHB,heliport,"Vali Ünal Erkan Polis Heliportu",37.9381,40.2953,2300,AS,Turkey,TR,"Diyarbakır Province",TR-21,21,Diyarbakır,0,LTHB,,,,,,,0,2022-06-27T13:06:35+00:00
+517155,TR-0225,heliport,"Dicle University Kalp Hospital Heliport",37.924953,40.256214,1967,AS,Turkey,TR,"Diyarbakır Province",TR-21,21,Diyarbakir,0,,,,,,,,0,2025-07-16T14:15:39+00:00
+517896,TR-0230,heliport,"Doğubayazıt Border Post Helipad",39.521493,44.415123,,AS,Turkey,TR,"Ağrı Province",TR-04,04,Doğubayazıt,0,,,,,,,,0,2023-12-27T19:21:16+00:00
+517960,TR-0234,heliport,"Sarıçavuş North Border Post Helipad",39.465163,44.406955,,AS,Turkey,TR,"Ağrı Province",TR-04,04,Doğubayazıt,0,,,,,,,,0,2023-12-28T19:42:08+00:00
+517961,TR-0235,heliport,"Sarıçavuş Border Post Helipad",39.4234,44.405484,,AS,Turkey,TR,"Ağrı Province",TR-04,04,Doğubayazıt,0,,,,,,,,0,2023-12-28T19:44:51+00:00
+355281,TR-0203,heliport,"Düzce Atatürk State Hospital Helliport",40.843369,31.136438,,AS,Turkey,TR,"Sakarya Province",TR-54,54,Düzce,0,,,,,,,,0,2022-06-28T11:10:52+00:00
+347211,TR-0121,heliport,"Dogan Border Post Helipad",36.669873,37.482378,,AS,Turkey,TR,"Kilis Province",TR-79,79,Elbeyli,0,,,,,,,,0,2021-08-23T07:24:08+00:00
+537092,TR-0276,heliport,"Erdek Heliport",40.3916,27.80208,136,AS,Turkey,TR,"Balıkesir Province",TR-10,10,Erdek,0,,,,,,,,0,2024-07-11T10:45:45+00:00
+350915,TR-0151,heliport,"Black Sea Regional Command Heliport",41.28909,31.40395,10,AS,Turkey,TR,"Zonguldak Province",TR-67,67,Ereğli,0,,,,,,,,0,2021-12-21T21:55:21+00:00
+44786,TR-0022,closed,"Eskişehir Kalkanlı Air Base",39.63469696044922,30.740367889404297,,AS,Turkey,TR,"Eskişehir Province",TR-26,26,Eskişehir,0,,,,,,,,0,2009-08-21T09:18:23+00:00
+349438,TR-0128,heliport,"İSPARK Hasdal Heliport",41.09257,28.9228,,EU,Turkey,TR,"İstanbul Province",TR-34,34,"Eyüpsultan, Istanbul",0,,,,,,,,0,2022-02-24T10:31:36+00:00
+338982,TR-0048,heliport,"Istanbul Training and Research Hospital Helipad",41.003,28.93821,,EU,Turkey,TR,"İstanbul Province",TR-34,34,"Fatih, Istanbul",0,,,,,,,,0,2022-02-24T10:31:06+00:00
+338983,TR-0049,heliport,"Samatya Sahil Helipad",41.00203,28.94543,,EU,Turkey,TR,"İstanbul Province",TR-34,34,"Fatih, Istanbul",0,,,,,,,,0,2022-02-24T10:31:22+00:00
+355226,TR-0181,heliport,"Fethiye Forest Management Directorate Heliport",36.665346,29.162051,66,AS,Turkey,TR,"Muğla Province",TR-48,48,Fethiye/Çamköy,0,,,,,,,,0,2022-06-27T17:32:49+00:00
+338996,TR-0062,heliport,"Anadolu Health Center Helipad",40.818157,29.354271,131,AS,Turkey,TR,"Kocaeli Province",TR-41,41,Gebze,0,,,,,,,,0,2026-03-21T20:38:06+00:00
+537099,TR-0279,heliport,"Gelibolu Heliport",40.42737,26.6812,66,AS,Turkey,TR,"Çanakkale Province",TR-17,17,Gelibolu,0,,,,,,,Gallipoli,0,2024-07-11T12:51:06+00:00
+505657,TR-0208,heliport,"Aras Köprüsü Border Post Helipad",39.652929,44.794586,,AS,Turkey,TR,"Iğdır Province",TR-76,76,Gödekli,0,,,,,,,,0,2022-12-21T02:31:52+00:00
+505664,TR-0216,heliport,"Igdir-Dilucu HighWay Border Post Helipad",39.66308,44.793169,,AS,Turkey,TR,"Iğdır Province",TR-76,76,Gödekli,0,,,,,,,,0,2022-12-21T13:59:35+00:00
+505676,TR-0217,heliport,"Gödekli South Border Post Helipad",39.744088,44.656306,,AS,Turkey,TR,"Iğdır Province",TR-76,76,Gödekli,0,,,,,,,,0,2022-12-21T14:10:14+00:00
+505677,TR-0218,heliport,"Gödekli South East Border Post Helipad",39.736188,44.730343,,AS,Turkey,TR,"Iğdır Province",TR-76,76,Gödekli,0,,,,,,,,0,2022-12-21T14:12:14+00:00
+505686,TR-0219,heliport,"Gödekli Military Base 1 Helipad",39.789639,44.603132,,AS,Turkey,TR,"Iğdır Province",TR-76,76,Gödekli,0,,,,,,,,0,2022-12-21T14:25:59+00:00
+505687,TR-0220,heliport,"Gödekli Military Base 2 Helipad",39.790657,44.607757,,AS,Turkey,TR,"Iğdır Province",TR-76,76,Gödekli,0,,,,,,,,0,2022-12-21T14:28:06+00:00
+517892,TR-0227,heliport,"Tarlabaşı Border Post Helipad",39.755485,44.545165,,AS,Turkey,TR,"Iğdır Province",TR-76,76,Gödekli,0,,,,,,,,0,2023-12-27T18:32:39+00:00
+610790,TR-0347,closed,"Golbasi Airfield (Closed)",39.704358,32.754214,,AS,Turkey,TR,"Ankara Province",TR-06,06,Gölbaşı,0,,,,,,,,0,2026-10-06T21:43:48+00:00
+527155,TR-0259,heliport,"Gözlekçiler Border Post Helipad",35.942718,35.994349,,AS,Turkey,TR,"Hatay Province",TR-31,31,Gözlekçiler,0,,,,,,,,0,2024-04-28T18:48:04+00:00
+510077,TR-0223,heliport,"4th Battalion (Frontier Guard) Heliport",39.644556,44.472939,,AS,Turkey,TR,"Ağrı Province",TR-04,04,Güngören,0,,,,,,,,0,2023-12-28T17:38:02+00:00
+517898,TR-0231,heliport,"Güngören North Border Post Heliport",39.603575,44.459772,,AS,Turkey,TR,"Ağrı Province",TR-04,04,Güngören,0,,,,,,,,0,2023-12-28T17:38:58+00:00
+517956,TR-0232,heliport,"Güngören South Border Post Heliport",39.558526,44.411146,,AS,Turkey,TR,"Ağrı Province",TR-04,04,Güngören,0,,,,,,,,0,2023-12-28T18:55:36+00:00
+517957,TR-0233,heliport,"Kartal Yuvasi Heliport",39.546016,44.420818,,AS,Turkey,TR,"Ağrı Province",TR-04,04,Güngören,0,,,,,,,,0,2023-12-28T19:00:43+00:00
+517962,TR-0236,heliport,"Gürbulak Border Post Helipad",39.412175,44.347834,,AS,Turkey,TR,"Ağrı Province",TR-04,04,Gürbulak,0,,,,,,,,0,2023-12-28T19:48:45+00:00
+349740,TR-0141,heliport,"Güveççi Garrisson",35.889869,36.166097,,AS,Turkey,TR,"Hatay Province",TR-31,31,Güveççi,0,,,,,,,,0,2021-11-14T19:17:48+00:00
+518019,TR-0251,heliport,"Hangediği Border Post Helipad",39.213359,44.086458,,AS,Turkey,TR,"Van Province",TR-65,65,Hangediği,0,,,,,,,,0,2023-12-29T14:20:17+00:00
+347190,TR-0100,heliport,"Federal Border Guard No. 19 Helipad",36.354363,36.60863,,AS,Turkey,TR,"Hatay Province",TR-31,31,Hatayhamamı,0,,,,,,,,0,2021-08-23T04:24:42+00:00
+347208,TR-0118,heliport,"Inanli Border Post Helipad",36.675765,37.134519,,AS,Turkey,TR,"Kilis Province",TR-79,79,Inanli,0,,,,,,,,0,2021-08-23T06:27:13+00:00
+347209,TR-0119,heliport,"Inanli Village Border Post Helipad",36.665583,37.166737,,AS,Turkey,TR,"Kilis Province",TR-79,79,Inanli,0,,,,,,,,0,2021-08-23T06:33:44+00:00
+347194,TR-0104,heliport,"Incirli Border Post Helipad",36.533118,36.555966,,AS,Turkey,TR,"Hatay Province",TR-31,31,Incirli,0,,,,,,,,0,2021-08-23T04:46:21+00:00
+347195,TR-0105,heliport,"Federal Border Guard No. 12 Helipad",36.577022,36.578932,,AS,Turkey,TR,"Hatay Province",TR-31,31,Incirli,0,,,,,,,,0,2021-08-23T04:51:00+00:00
+339015,TR-0076,heliport,"İskenderun Heliport",36.59179,36.16022,,AS,Turkey,TR,"Hatay Province",TR-31,31,İskenderun,0,,,,,,,,0,2021-01-10T14:03:16+00:00
+339016,TR-0077,closed,"İskenderun Naval Heliport",36.59217,36.18057,,AS,Turkey,TR,"Hatay Province",TR-31,31,İskenderun,0,,,,,,,,0,2026-10-04T22:18:39+00:00
+606033,TR-0311,heliport,"Isparta Şehit Yunus Emre Provincial Hospital Heliport",37.78714,30.57298,3251,AS,Turkey,TR,"Isparta Province",TR-32,32,Isparta,0,,,,,,,,0,2026-03-21T14:05:26+00:00
+606034,TR-0312,heliport,"Isparta City Hospital Heliport",37.77849,30.56085,3346,AS,Turkey,TR,"Isparta Province",TR-32,32,Isparta,0,,,,,,,,0,2026-03-21T14:07:30+00:00
+355201,TR-0161,heliport,"Wyndham Grand İstanbul Levent Heliport",41.077076,29.012293,443,EU,Turkey,TR,"İstanbul Province",TR-34,34,"İstanbul,Şişli",0,,,,,,,,0,2024-08-02T17:59:31+00:00
+44489,TR-0003,heliport,"Kocaeli Köseköy Heliport",40.762224,30.002355,49,AS,Turkey,TR,"Kocaeli Province",TR-41,41,İzmit,0,,,,,,,"Kocaeli Köseköy Airfield",0,2021-01-10T02:21:36+00:00
+339004,TR-0067,heliport,"Kadirli Provincial Hospital Helipad",37.34517,36.09868,,AS,Turkey,TR,"Osmaniye Province",TR-80,80,Kadirli,0,,,,,,,,0,2021-01-10T09:18:37+00:00
+355282,TR-0204,heliport,"Kahramankazan State Hospital Heliport",40.194759,32.678128,,AS,Turkey,TR,"Ankara Province",TR-06,06,Kahramankazan,0,,,,,,,,0,2022-06-28T11:15:57+00:00
+347196,TR-0106,heliport,"Federal Border Guard No. 11 Helipad",36.635561,36.569454,,AS,Turkey,TR,"Hatay Province",TR-31,31,Kalatepe,0,,,,,,,,0,2021-08-23T04:56:03+00:00
+537089,TR-0275,heliport,"İmralı Island Heliport",40.555917,28.546112,36,AS,Turkey,TR,"Bursa Province",TR-16,16,Karacabey,0,,,,,,,,0,2024-07-11T10:33:30+00:00
+518021,TR-0253,heliport,"Yayuz Sel Border Post Helipad",39.114394,44.133352,,AS,Turkey,TR,"Van Province",TR-65,65,Kaşım,0,,,,,,,,0,2023-12-29T14:34:23+00:00
+518046,TR-0255,heliport,"Kaşım Border Post Helipad",39.081618,44.151245,,AS,Turkey,TR,"Van Province",TR-65,65,Kaşım,0,,,,,,,,0,2023-12-30T02:56:56+00:00
+350914,TR-0150,heliport,"Kefken Coast Guard Heliport",41.17676,30.22468,7,AS,Turkey,TR,"Kocaeli Province",TR-41,41,Kefken,0,,,,,,,,0,2021-12-21T21:45:20+00:00
+349733,TR-0137,heliport,"Kılıçtutan Garrison Helipad",35.962007,36.222106,,AS,Turkey,TR,"Hatay Province",TR-31,31,Kılıçtutan,0,,,,,,,,0,2021-11-14T18:23:30+00:00
+350917,TR-0152,heliport,"Çatalağzı Thermal Power Plant Heliport",41.51946,31.89865,20,AS,Turkey,TR,"Zonguldak Province",TR-67,67,Kilimli,0,,,,,,,,0,2021-12-22T00:34:33+00:00
+528579,TR-0270,heliport,"Kilis Jandarma Helipad",36.729635,37.096004,,AS,Turkey,TR,"Kilis Province",TR-79,79,Kilis,0,,,,,,,,0,2024-05-12T14:33:31+00:00
+338999,TR-0065,closed,"Kırıkkale High Specialization Hospital Helipad",39.86236,33.483787,,AS,Turkey,TR,"Kirikkale Province",TR-71,71,Kırıkkale,0,,,,,,,,0,2021-01-10T02:49:47+00:00
+349732,TR-0136,heliport,"Şanlı Karakolu Border Post Helipad",35.950741,36.279735,,AS,Turkey,TR,"Hatay Province",TR-31,31,Kolcular,0,,,,,,,,0,2021-11-14T18:14:24+00:00
+534016,TR-0273,heliport,"Air Training Command Heliport",38.40172,27.07222,,AS,Turkey,TR,"İzmir Province",TR-35,35,Konak,0,,,,,,,,0,2024-06-19T09:10:11+00:00
+534017,TR-0274,heliport,"NATO Land Allied Command Radio Station Helipad",38.40407,27.17518,,AS,Turkey,TR,"İzmir Province",TR-35,35,Konak,0,,,,,,,,0,2024-06-19T09:15:03+00:00
+347212,TR-0122,heliport,"Konak Border Post Helipad",36.912036,38.210454,,AS,Turkey,TR,"Şanlıurfa Province",TR-63,63,Konak,0,,,,,,,,0,2021-08-23T07:48:21+00:00
+554511,TR-0290,closed,"Kocaeli Köseköy Airfield",40.761217,30.005944,,AS,Turkey,TR,"Kocaeli Province",TR-41,41,Köseköy,0,,,,,,,,0,2024-10-27T01:04:20+00:00
+599026,TR-0305,heliport,"Newant Olympos Health Resort Helipad",36.369341,30.423544,,AS,Turkey,TR,"Antalya Province",TR-07,07,Kumluca,0,,,,,,,,0,2025-07-16T14:09:30+00:00
+606037,TR-0314,heliport,"Kütahya City Hospital Heliport",39.42606,29.95704,3186,AS,Turkey,TR,"Kütahya Province",TR-43,43,Kütahya,0,,,,,,,,0,2026-03-21T14:27:55+00:00
+609802,TR-0322,heliport,"Taşağıl OGM Helipad",36.951899,31.213055,330,AS,Turkey,TR,"Antalya Province",TR-07,07,Manavgat,0,,,,,,,,0,2026-07-14T11:26:19+00:00
+609829,TR-0324,heliport,"Manavgat Selale Depot OGM Helipad",36.798014,31.415602,115,AS,Turkey,TR,"Antalya Province",TR-07,07,Manavgat,0,,,,,,,,0,2026-07-15T23:39:58+00:00
+537097,TR-0277,heliport,"Avşa Island Heliport",40.53559,27.5151,90,AS,Turkey,TR,"Balıkesir Province",TR-10,10,Marmara,0,,,,,,,,0,2024-07-11T12:20:02+00:00
+537098,TR-0278,heliport,"Ekinlik Island Heliport",40.55077,27.48682,52,AS,Turkey,TR,"Balıkesir Province",TR-10,10,Marmara,0,,,,,,,,0,2024-07-11T12:19:42+00:00
+339002,TR-0066,heliport,"Kayseri Provincial Health Directorate Helipad",38.698011,35.536004,,AS,Turkey,TR,"Kayseri Province",TR-38,38,Melikgazi,0,,,,,,,,0,2021-01-10T09:15:52+00:00
+346391,TR-0095,heliport,"Anamur Air Special Camp Command Heliport",36.066834,32.862336,,AS,Turkey,TR,"Mersin Province",TR-33,33,Mersin,0,,,,,,,,0,2021-11-04T00:05:59+00:00
+568880,TR-0294,heliport,"Muğla Education and Research Hospital Heliport",37.16565,28.36756,2372,AS,Turkey,TR,"Muğla Province",TR-48,48,Muğla,0,,,,,,,,0,2025-01-03T14:17:47+00:00
+610467,TR-0343,heliport,"Muş Heliport",38.775307,41.503338,4124,AS,Turkey,TR,"Muş Province",TR-49,49,Muş,0,,,,,,,,0,2026-08-23T17:37:53+00:00
+430017,TR-0215,balloonport,"Nevşehir Heliport",38.66602,34.81896,3645,AS,Turkey,TR,"Nevşehir Province",TR-50,50,Nevşehir,0,,,,,,,,0,2022-09-20T14:14:23+00:00
+355221,TR-0176,heliport,"Sarp Heliport",39.752732,30.63845,787,AS,Turkey,TR,"Eskişehir Province",TR-26,26,Odunpazarı,0,,,,,,,,0,2022-06-27T17:09:13+00:00
+355222,TR-0177,heliport,"Cumhuriyet Parkı Helipad",39.753783,30.492112,805,AS,Turkey,TR,"Eskişehir Province",TR-26,26,Odunpazarı,0,,,,,,,,0,2022-06-27T17:11:45+00:00
+527152,TR-0257,heliport,"Oğulpınar Border Post Helipad",36.259602,36.682967,,AS,Turkey,TR,"Hatay Province",TR-31,31,Oğulpınar,0,,,,,,,,0,2024-04-28T18:24:19+00:00
+347206,TR-0116,heliport,"Öncüpınar Border Crossing Helipads",36.64263,37.087863,,AS,Turkey,TR,"Kilis Province",TR-79,79,Öncüpınar,0,,,,,,,,0,2021-08-23T06:13:27+00:00
+517993,TR-0243,heliport,"Ortaköy Treasury Border Team Outpost Helipad",39.411764,44.090556,,AS,Turkey,TR,"Ağrı Province",TR-04,04,Ortaköy,0,,,,,,,,0,2023-12-29T04:33:02+00:00
+504979,TR-0042,heliport,"Osmancik Municipal Heliport",40.99646,34.77567,1430,AS,Turkey,TR,"Çorum Province",TR-19,19,Osmancik,0,,,,,,,,0,2022-11-20T12:38:05+00:00
+518022,TR-0254,heliport,"Osmanlı Border Post Helipad",39.136533,44.100131,,AS,Turkey,TR,"Van Province",TR-65,65,Osmanlı,0,,,,,,,,0,2023-12-29T14:38:02+00:00
+338998,TR-0064,heliport,"Emsey Hospital Helipad",40.92411,29.28894,,AS,Turkey,TR,"İstanbul Province",TR-34,34,"Pendik, Istanbul",0,,,,,,,,0,2021-01-10T02:37:54+00:00
+44794,TR-0030,closed,"Pınarhisar Airport",41.634998,27.492399,533,AS,Turkey,TR,"Kirklareli Province",TR-39,39,Pınarhisar,0,,,,,,,,0,2025-01-15T20:23:14+00:00
+350851,TR-0142,heliport,"Pınarhisar Gendarmerie Heliport",41.62548,27.50743,564,EU,Turkey,TR,"Kirklareli Province",TR-39,39,Pınarhisar,0,,,,,,,,0,2022-02-24T10:28:58+00:00
+347187,TR-0097,heliport,"Özeker Hd KRK, No. 10 Border Post Helipad",36.237698,36.546378,,AS,Turkey,TR,"Hatay Province",TR-31,31,Reyhanli,0,,,,,,,,0,2021-08-23T03:54:49+00:00
+347188,TR-0098,heliport,"Bükülmez Borderpost Helipad",36.326022,36.658212,,AS,Turkey,TR,"Hatay Province",TR-31,31,Reyhanli,0,,,,,,,,0,2021-08-23T04:06:04+00:00
+355286,TR-0207,heliport,"Yeni State Hospital Heliport",36.243603,36.560386,,AS,Turkey,TR,"Hatay Province",TR-31,31,Reyhanli,0,,,,,,,,0,2022-06-28T11:41:41+00:00
+600484,TR-0308,heliport,"Riva Air Base",41.22097,29.202599,,AS,Turkey,TR,"İstanbul Province",TR-34,34,Riva,0,,,,,,,,0,2025-09-14T09:26:59+00:00
+355914,TR-0214,heliport,"Rize Heliport",41.03832,40.520024,3,AS,Turkey,TR,"Rize Province",TR-53,53,Rize,0,,,,,,,,0,2025-01-08T01:16:05+00:00
+338994,TR-0060,heliport,"Sakarya Heliport",40.75879,30.39025,,AS,Turkey,TR,"Sakarya Province",TR-54,54,Sakarya,0,,,,,,,,0,2021-01-10T02:30:24+00:00
+338995,TR-0061,heliport,"Sakarya University Heliport",40.74318,30.33131,,AS,Turkey,TR,"Sakarya Province",TR-54,54,Sakarya,0,,,,,,,,0,2021-01-10T02:32:31+00:00
+350919,TR-0154,heliport,"Ilkadim Samsun Provincial Health Directorate Heliport",41.27392,36.29902,531,AS,Turkey,TR,"Samsun Province",TR-55,55,Samsun,0,,,,,,,,0,2021-12-22T00:40:25+00:00
+350920,TR-0155,heliport,"Sahil Park Heliport",41.28482,36.34727,16,AS,Turkey,TR,"Samsun Province",TR-55,55,Samsun,0,,,,,,,,0,2021-12-22T00:41:38+00:00
+339009,TR-0072,heliport,"Balcali Hospital Helipad",37.05257,35.36235,,AS,Turkey,TR,"Adana Province",TR-01,01,Sarıçam,0,,,,,,,,0,2021-01-10T09:35:40+00:00
+518020,TR-0252,heliport,"Sarıçimen Border Post Helipad",39.168394,44.112975,,AS,Turkey,TR,"Van Province",TR-65,65,Sarıçimen,0,,,,,,,,0,2023-12-29T14:26:22+00:00
+338986,TR-0052,heliport,"Presidential Heliport",41.130006,29.059866,,EU,Turkey,TR,"İstanbul Province",TR-34,34,"Sarıyer, Istanbul",0,,,,,,,,0,2022-02-24T10:33:02+00:00
+599135,TR-0306,heliport,"'Unknown' Heliport",40.054103,26.206824,24,AS,Turkey,TR,"Çanakkale Province",TR-17,17,Seddulbahir,0,,,,,,,"Sedd el Bahr",0,2025-07-20T18:07:23+00:00
+528202,TR-0266,heliport,"Seferihisar District Gendarmerie Command Helipad",38.203942,26.83637,,AS,Turkey,TR,"İzmir Province",TR-35,35,Seferihisar,0,,,,,,,,0,2024-05-09T08:13:07+00:00
+341718,TR-0085,heliport,"Serdivan Heliport",40.785258,30.366197,,AS,Turkey,TR,"Sakarya Province",TR-54,54,Serdivan,0,,,,,,,,0,2021-03-05T17:06:59+00:00
+355283,TR-0205,heliport,"Şereflikoçhisar State Hospital Heliport",38.955671,33.527948,,AS,Turkey,TR,"Ankara Province",TR-06,06,Şereflikoçhisar,0,,,,,,,,0,2022-06-28T11:22:58+00:00
+598475,TR-0303,heliport,"Serik Bus Station Helipad",36.913157,31.083598,90,AS,Turkey,TR,"Antalya Province",TR-07,07,Serik,0,,,,,,,,0,2026-08-11T18:58:52+00:00
+339005,TR-0068,heliport,"Acibadem Adana Hospital Helipad",36.99531,35.31486,,AS,Turkey,TR,"Adana Province",TR-01,01,Seyhan,0,,,,,,,,0,2021-01-10T09:25:58+00:00
+350913,TR-0149,heliport,"FMV Işık University Helipad",41.16733,29.56668,33,AS,Turkey,TR,"İstanbul Province",TR-34,34,Şile,0,,,,,,,,0,2021-12-21T21:40:16+00:00
+349439,TR-0129,heliport,"Silivri State Hospital Helipad",41.079146,28.251484,7,EU,Turkey,TR,"İstanbul Province",TR-34,34,Silivri,0,,,,,,,,0,2022-02-24T10:28:47+00:00
+355224,TR-0179,heliport,"Lokman Hekim University Helipad",39.956382,32.583486,800,AS,Turkey,TR,"Ankara Province",TR-06,06,Sincan,0,,,,,,,,0,2022-06-27T17:22:40+00:00
+341713,TR-0081,heliport,"Kanyon Eczacıbaşı Helipad",41.078313,29.011714,,EU,Turkey,TR,"İstanbul Province",TR-34,34,Şişli,0,,,,,,,,0,2022-02-24T10:32:33+00:00
+341714,TR-0082,heliport,"ÖzdilekPark River Plaza Helipad",41.077335,29.009588,,EU,Turkey,TR,"İstanbul Province",TR-34,34,Şişli,0,,,,,,,,0,2022-02-24T10:32:21+00:00
+341715,TR-0083,heliport,"ÖzdilekPark Wyndham Grand Istanbul Levent Helipad",41.077345,29.01233,,EU,Turkey,TR,"İstanbul Province",TR-34,34,Şişli,0,,,,,,,,0,2022-02-24T10:32:12+00:00
+355214,TR-0169,heliport,"Point Hotel Barbaros Helipad",41.064316,29.010589,120,EU,Turkey,TR,"İstanbul Province",TR-34,34,Şişli,0,,,,,,,,0,2024-08-02T18:02:10+00:00
+518014,TR-0247,heliport,"Soğuksu North Border Post Helipad",39.354301,44.02641,,AS,Turkey,TR,"Ağrı Province",TR-04,04,Soğuksu,0,,,,,,,,0,2023-12-29T14:06:41+00:00
+518016,TR-0248,heliport,"Gülizar Border Post Helipad",39.337776,44.044495,,AS,Turkey,TR,"Van Province",TR-65,65,Soğuksu,0,,,,,,,,0,2023-12-29T14:05:18+00:00
+518017,TR-0249,heliport,"Uzunyol Border Post Helipad",39.298698,44.052604,,AS,Turkey,TR,"Van Province",TR-65,65,Soğuksu,0,,,,,,,,0,2023-12-29T14:12:14+00:00
+518018,TR-0250,heliport,"Soğuksu Border Post Helipad",39.262662,44.052207,,AS,Turkey,TR,"Van Province",TR-65,65,Soğuksu,0,,,,,,,,0,2023-12-29T14:13:54+00:00
+518011,TR-0245,heliport,"Somkaya Border Post Helipad",39.388524,43.997991,,AS,Turkey,TR,"Ağrı Province",TR-04,04,Somkaya,0,,,,,,,,0,2023-12-29T13:34:02+00:00
+518012,TR-0246,heliport,"Somkaya South Border Post Helipad",39.371833,44.01464,,AS,Turkey,TR,"Ağrı Province",TR-04,04,Somkaya,0,,,,,,,,0,2023-12-29T13:36:32+00:00
+347192,TR-0102,heliport,"Federal Border Guard No. 15 Helipad",36.468229,36.547323,,AS,Turkey,TR,"Hatay Province",TR-31,31,Sucuköy,0,,,,,,,,0,2021-08-23T04:39:45+00:00
+347193,TR-0103,heliport,"Federal Border Guard No. 14 Helipad",36.496051,36.533348,,AS,Turkey,TR,"Hatay Province",TR-31,31,Sucuköy,0,,,,,,,,0,2021-08-23T04:42:58+00:00
+347197,TR-0107,heliport,"Federal Border Guard No. 10 Helipad",36.684507,36.60678,,AS,Turkey,TR,"Hatay Province",TR-31,31,Sugediği,0,,,,,,,,0,2021-08-23T04:59:42+00:00
+347198,TR-0108,heliport,"Federal Border Guard No. 8 Helipad",36.743157,36.604418,,AS,Turkey,TR,"Hatay Province",TR-31,31,Sugediği,0,,,,,,,,0,2021-08-23T05:06:48+00:00
+347199,TR-0109,heliport,"Sugediği Border Post Helipad",36.762655,36.609166,,AS,Turkey,TR,"Hatay Province",TR-31,31,Sugediği,0,,,,,,,,0,2021-08-23T05:09:03+00:00
+347200,TR-0110,heliport,"Federal Border Guard No. 4 Helipad",36.791192,36.640264,,AS,Turkey,TR,"Hatay Province",TR-31,31,Sugediği,0,,,,,,,,0,2021-08-23T05:15:18+00:00
+504978,TR-0007,heliport,"Sungurlu State Hospital Heliport",40.173701,34.400275,2589,AS,Turkey,TR,"Çorum Province",TR-19,19,Sungurlu,0,,,,,,,,0,2022-11-20T12:34:42+00:00
+349411,TR-0123,heliport,"Tayfursökmen Borderpost Helipad",36.230191,36.398137,,AS,Turkey,TR,"Hatay Province",TR-31,31,Tayfursökmen,0,,,,,,,,0,2021-11-01T20:51:28+00:00
+349435,TR-0125,heliport,"Tekirdağ İsmail Fehmi Cumalıoğlu City Hospital Heliport",41.00903,27.52396,558,EU,Turkey,TR,"Tekirdağ Province",TR-59,59,Tekirdağ,0,,,,,,,,0,2022-02-24T10:28:37+00:00
+518048,TR-0256,closed,"Uzunpinar Border Police Station Helipad",39.055696,44.137005,,AS,Turkey,TR,"Van Province",TR-65,65,Temrenli,0,,,,,,,,0,2023-12-30T03:07:16+00:00
+350906,TR-0143,heliport,"Hizirbey Heliport",41.00982,39.71286,36,AS,Turkey,TR,"Trabzon Province",TR-61,61,Trabzon,0,,,,,,,,0,2021-12-21T21:11:06+00:00
+561246,TR-0293,closed,"Tuzla Airstrip",40.825996,29.283028,,AS,Turkey,TR,"İstanbul Province",TR-34,34,Tuzla,0,,,,,,,,0,2024-11-30T23:25:33+00:00
+338992,TR-0058,heliport,"Istanbul Park Heliport",40.95486,29.41437,,AS,Turkey,TR,"İstanbul Province",TR-34,34,"Tuzla, Istanbul",0,,,,,,,,0,2021-01-10T02:25:40+00:00
+338997,TR-0063,heliport,"Sabancı University Helipad",40.89357,29.37775,,AS,Turkey,TR,"İstanbul Province",TR-34,34,"Tuzla, Istanbul",0,,,,,,,,0,2021-01-10T02:36:46+00:00
+349737,TR-0138,heliport,"Üçırmak Garrison Helipad",35.954202,36.196835,,AS,Turkey,TR,"Hatay Province",TR-31,31,"Üçırmak Köyü",0,,,,,,,,0,2021-11-14T18:28:27+00:00
+349739,TR-0140,closed,"Uluyol Border Post Helipad",35.92054,36.168173,,AS,Turkey,TR,"Hatay Province",TR-31,31,Uluyol,0,,,,,,,,0,2024-05-08T19:45:12+00:00
+528126,TR-0264,heliport,"Uluyol Border Post Helipad",35.918576,36.166558,,AS,Turkey,TR,"Hatay Province",TR-31,31,Uluyol,0,,,,,,,,0,2024-05-08T19:44:46+00:00
+355210,TR-0165,heliport,"İsPark Kısıklı Heliport Alanı",41.023192,29.056683,,AS,Turkey,TR,"İstanbul Province",TR-34,34,Üsküdar,0,,,,,https://ispark.istanbul/,,,0,2022-06-27T16:06:04+00:00
+338987,TR-0053,heliport,"Sultan Abdulhamid Hospital Helipad",41.00042,29.02056,,AS,Turkey,TR,"İstanbul Province",TR-34,34,"Üsküdar, Istanbul",0,,,,,,,,0,2021-01-10T02:04:28+00:00
+338988,TR-0054,heliport,"Haydarpaşa Numune Training and Research Hospital Helipad",41.00535,29.02336,,AS,Turkey,TR,"İstanbul Province",TR-34,34,"Üsküdar, Istanbul",0,,,,,,,,0,2021-01-10T02:05:46+00:00
+338989,TR-0055,heliport,"Selimiye 1st Army Command Branch Heliport",41.006532,29.0142,,AS,Turkey,TR,"İstanbul Province",TR-34,34,"Üsküdar, Istanbul",0,,,,,,,,0,2021-01-10T02:07:57+00:00
+338990,TR-0056,heliport,"Çengelköy Heliport",41.05508,29.05583,,AS,Turkey,TR,"İstanbul Province",TR-34,34,"Üsküdar, Istanbul",0,,,,,,,,0,2021-12-21T21:29:25+00:00
+355284,TR-0206,heliport,"Kirikkale University Medical Faculty Hospital Heliport",39.869608,33.451769,,AS,Turkey,TR,"Kirikkale Province",TR-71,71,Yahşihan,0,,,,,,,,0,2022-06-28T11:26:17+00:00
+510076,TR-0222,heliport,"Yenidoğan South Border Post Helipad",39.677538,44.474185,,AS,Turkey,TR,"Iğdır Province",TR-76,76,Yenidoğan,0,,,,,,,,0,2023-12-27T19:09:08+00:00
+517893,TR-0228,heliport,"Yenidoğan North Border Post Helipad",39.722134,44.502979,,AS,Turkey,TR,"Iğdır Province",TR-76,76,Yenidoğan,0,,,,,,,,0,2023-12-27T19:07:59+00:00
+517895,TR-0229,heliport,"Yenidoğan Transmitter Station Helipad",39.765059,44.387695,,AS,Turkey,TR,"Iğdır Province",TR-76,76,Yenidoğan,0,,,,,,,,0,2023-12-27T19:04:25+00:00
+528205,TR-0268,heliport,"Yenifoça 7th Gendarmerie Regiment Command Helipad",38.677884,26.754933,,AS,Turkey,TR,"İzmir Province",TR-35,35,Yenifoça,0,,,,,,,,0,2024-05-09T08:47:17+00:00
+355217,TR-0172,closed,"Vizyon Heliport",39.958307,32.822816,855,AS,Turkey,TR,"Ankara Province",TR-06,06,Yenimahalle,0,,,,,,,,0,2026-10-06T21:42:47+00:00
+517984,TR-0238,heliport,"Yiğityatağı South Border Post Helipad",39.394806,44.276003,,AS,Turkey,TR,"Ağrı Province",TR-04,04,Yiğityatağı,0,,,,,,,,0,2023-12-29T04:00:21+00:00
+517985,TR-0239,heliport,"Yiğityatağı Border Post Helipad",39.407758,44.267467,,AS,Turkey,TR,"Ağrı Province",TR-04,04,Yiğityatağı,0,,,,,,,,0,2023-12-29T04:02:02+00:00
+528578,TR-0269,heliport,"Topraktutan Border Post Helipad",35.815064,36.156135,,AS,Turkey,TR,"Hatay Province",TR-31,31,Yukarıpulluyazı,0,,,,,,,,0,2024-05-12T14:18:20+00:00
+339006,TR-0069,heliport,"Adana 112 Heliport",37.00791,35.34182,,AS,Turkey,TR,"Adana Province",TR-01,01,Yüreğir,0,,,,,,,,0,2021-01-10T09:23:50+00:00
+339007,TR-0070,heliport,"Adana Sağlık Heliport",37.00712,35.34112,,AS,Turkey,TR,"Adana Province",TR-01,01,Yüreğir,0,,,,,,,,0,2021-03-05T16:39:40+00:00
+339008,TR-0071,heliport,"Adana City Training and Research Hospital",37.0299,35.34716,,AS,Turkey,TR,"Adana Province",TR-01,01,Yüreğir,0,,,,,,,,0,2021-01-10T09:30:24+00:00
+338981,TR-0047,heliport,"Zeytinburnu Pier Helipad",40.98072,28.89584,,EU,Turkey,TR,"İstanbul Province",TR-34,34,"Zeytinburnu, Istanbul",0,,,,,,,,0,2022-02-24T10:30:41+00:00
+349681,TR-0131,heliport,"Ziyaret Border Post Heliport",36.164833,36.368056,,AS,Turkey,TR,"Hatay Province",TR-31,31,"Ziyaret, Altınözü",0,,,,,,,,0,2021-11-12T14:16:24+00:00

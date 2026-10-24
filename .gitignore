@@ -18,3 +18,18 @@ outputs/
 outputs_*/
 !outputs_unlabeled_final/
 !outputs_unlabeled_final/*.csv
+
+# Ostrovok application runtime and build artifacts
+node_modules/
+apps/ostrovok/frontend/dist/
+apps/ostrovok/frontend/*.tsbuildinfo
+apps/ostrovok/e2e/test-results/
+apps/ostrovok/e2e/playwright-report/
+var/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+.hypothesis/
+.pytest_cache/
+.superpowers/
+reports/ostrovok/

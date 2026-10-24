@@ -1,0 +1,414 @@
+{
+  "mode": "offline_limited",
+  "not_an_llm_benchmark": true,
+  "fixed_reference_now": "2026-10-24T12:00:00Z",
+  "cases": 40,
+  "passed": 40,
+  "failed": 0,
+  "completed_demo_orders": 27,
+  "latency_scope": "In-process FastAPI + SQLite + acquired local reference snapshot; excludes live network/model",
+  "first_recommendation_p50_seconds": 0.0188,
+  "first_recommendation_p95_seconds": 0.0856,
+  "results": [
+    {
+      "id": "D01",
+      "name": "Москвы → Казань",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.0226,
+      "duration_seconds": 0.0476,
+      "llm_used": false
+    },
+    {
+      "id": "D02",
+      "name": "СПб → Казань",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.0241,
+      "duration_seconds": 0.0472,
+      "llm_used": false
+    },
+    {
+      "id": "D03",
+      "name": "Москвы → Сочи",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.0079,
+      "duration_seconds": 0.0315,
+      "llm_used": false
+    },
+    {
+      "id": "D04",
+      "name": "СПб → Сочи",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.0254,
+      "duration_seconds": 0.0491,
+      "llm_used": false
+    },
+    {
+      "id": "D05",
+      "name": "Москвы → Калининград",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.009,
+      "duration_seconds": 0.0343,
+      "llm_used": false
+    },
+    {
+      "id": "D06",
+      "name": "СПб → Калининград",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.0219,
+      "duration_seconds": 0.0458,
+      "llm_used": false
+    },
+    {
+      "id": "D07",
+      "name": "Москвы → Санкт-Петербург",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.0083,
+      "duration_seconds": 0.0311,
+      "llm_used": false
+    },
+    {
+      "id": "D08",
+      "name": "Москвы → Ереван",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.0258,
+      "duration_seconds": 0.0517,
+      "llm_used": false
+    },
+    {
+      "id": "D09",
+      "name": "Москвы → Стамбул",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.0089,
+      "duration_seconds": 0.0329,
+      "llm_used": false
+    },
+    {
+      "id": "D10",
+      "name": "Москвы → Анталью",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.0205,
+      "duration_seconds": 0.0443,
+      "llm_used": false
+    },
+    {
+      "id": "D11",
+      "name": "Москвы → Хургаду",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.0088,
+      "duration_seconds": 0.0346,
+      "llm_used": false
+    },
+    {
+      "id": "D12",
+      "name": "Warm inspiration",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.0221,
+      "duration_seconds": 0.0459,
+      "llm_used": false
+    },
+    {
+      "id": "D13",
+      "name": "Two children",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.0084,
+      "duration_seconds": 0.1154,
+      "llm_used": false
+    },
+    {
+      "id": "D14",
+      "name": "Pet all components",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.0093,
+      "duration_seconds": 0.0343,
+      "llm_used": false
+    },
+    {
+      "id": "D15",
+      "name": "Breakfast",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.0118,
+      "duration_seconds": 0.0814,
+      "llm_used": false
+    },
+    {
+      "id": "D16",
+      "name": "All inclusive",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.0092,
+      "duration_seconds": 0.0506,
+      "llm_used": false
+    },
+    {
+      "id": "D17",
+      "name": "Refundable whole trip",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.0188,
+      "duration_seconds": 0.044,
+      "llm_used": false
+    },
+    {
+      "id": "D18",
+      "name": "Flight duration",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.0245,
+      "duration_seconds": 0.0484,
+      "llm_used": false
+    },
+    {
+      "id": "D19",
+      "name": "Rail Kazan",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.0113,
+      "duration_seconds": 0.0355,
+      "llm_used": false
+    },
+    {
+      "id": "D20",
+      "name": "Rail Sochi",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.0246,
+      "duration_seconds": 0.0481,
+      "llm_used": false
+    },
+    {
+      "id": "D21",
+      "name": "Missing origin",
+      "passed": true,
+      "expected_status": "needs_clarification",
+      "purchase": false,
+      "first_recommendation_seconds": 0.0049,
+      "duration_seconds": 0.0049,
+      "llm_used": false
+    },
+    {
+      "id": "D22",
+      "name": "Missing day",
+      "passed": true,
+      "expected_status": "needs_clarification",
+      "purchase": false,
+      "first_recommendation_seconds": 0.0055,
+      "duration_seconds": 0.0055,
+      "llm_used": false
+    },
+    {
+      "id": "D23",
+      "name": "Missing budget",
+      "passed": true,
+      "expected_status": "needs_clarification",
+      "purchase": false,
+      "first_recommendation_seconds": 0.0047,
+      "duration_seconds": 0.0047,
+      "llm_used": false
+    },
+    {
+      "id": "D24",
+      "name": "Missing child age",
+      "passed": true,
+      "expected_status": "needs_clarification",
+      "purchase": false,
+      "first_recommendation_seconds": 0.0047,
+      "duration_seconds": 0.0047,
+      "llm_used": false
+    },
+    {
+      "id": "D25",
+      "name": "Missing pet weight",
+      "passed": true,
+      "expected_status": "needs_clarification",
+      "purchase": false,
+      "first_recommendation_seconds": 0.0046,
+      "duration_seconds": 0.0046,
+      "llm_used": false
+    },
+    {
+      "id": "D26",
+      "name": "Unsupported destination",
+      "passed": true,
+      "expected_status": "no_options",
+      "purchase": false,
+      "first_recommendation_seconds": 0.0048,
+      "duration_seconds": 0.0048,
+      "llm_used": false
+    },
+    {
+      "id": "D27",
+      "name": "Outside date window",
+      "passed": true,
+      "expected_status": "no_options",
+      "purchase": false,
+      "first_recommendation_seconds": 0.024,
+      "duration_seconds": 0.024,
+      "llm_used": false
+    },
+    {
+      "id": "D28",
+      "name": "Impossible budget",
+      "passed": true,
+      "expected_status": "no_options",
+      "purchase": false,
+      "first_recommendation_seconds": 0.0071,
+      "duration_seconds": 0.0071,
+      "llm_used": false
+    },
+    {
+      "id": "D29",
+      "name": "Impossible flight time",
+      "passed": true,
+      "expected_status": "no_options",
+      "purchase": false,
+      "first_recommendation_seconds": 0.0067,
+      "duration_seconds": 0.0067,
+      "llm_used": false
+    },
+    {
+      "id": "D30",
+      "name": "Unavailable rail route",
+      "passed": true,
+      "expected_status": "no_options",
+      "purchase": false,
+      "first_recommendation_seconds": 0.0053,
+      "duration_seconds": 0.0053,
+      "llm_used": false
+    },
+    {
+      "id": "D31",
+      "name": "Return coverage",
+      "passed": true,
+      "expected_status": "no_options",
+      "purchase": false,
+      "first_recommendation_seconds": 0.0064,
+      "duration_seconds": 0.0064,
+      "llm_used": false
+    },
+    {
+      "id": "D32",
+      "name": "Negated plane",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.008,
+      "duration_seconds": 0.031,
+      "llm_used": false
+    },
+    {
+      "id": "D33",
+      "name": "Date shift",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.021,
+      "duration_seconds": 0.0557,
+      "llm_used": false
+    },
+    {
+      "id": "D34",
+      "name": "Breakfast not tomorrow",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.0081,
+      "duration_seconds": 0.0538,
+      "llm_used": false
+    },
+    {
+      "id": "D35",
+      "name": "Budget revision",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.0082,
+      "duration_seconds": 0.3967,
+      "llm_used": false
+    },
+    {
+      "id": "D36",
+      "name": "Pet then removal",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.2937,
+      "duration_seconds": 0.7183,
+      "llm_used": false
+    },
+    {
+      "id": "D37",
+      "name": "Keep child age across changes",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.0856,
+      "duration_seconds": 0.3551,
+      "llm_used": false
+    },
+    {
+      "id": "D38",
+      "name": "Remove children",
+      "passed": true,
+      "expected_status": "ready",
+      "purchase": true,
+      "first_recommendation_seconds": 0.0199,
+      "duration_seconds": 0.1044,
+      "llm_used": false
+    },
+    {
+      "id": "D39",
+      "name": "Locked component conflict",
+      "passed": true,
+      "expected_status": "needs_resolution",
+      "purchase": false,
+      "first_recommendation_seconds": 0.0747,
+      "duration_seconds": 0.2024,
+      "llm_used": false
+    },
+    {
+      "id": "D40",
+      "name": "Relative date outside demo",
+      "passed": true,
+      "expected_status": "no_options",
+      "purchase": false,
+      "first_recommendation_seconds": 0.0798,
+      "duration_seconds": 0.0798,
+      "llm_used": false
+    }
+  ]
+}
