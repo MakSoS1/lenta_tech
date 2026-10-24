@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "check": "real_http_full_pipeline",
+  "mode": {
+    "mode": "offline",
+    "model": null,
+    "reason": "offline",
+    "used": false
+  },
+  "total_minor": 12086800,
+  "currency": "RUB",
+  "idempotency": "passed"
+}

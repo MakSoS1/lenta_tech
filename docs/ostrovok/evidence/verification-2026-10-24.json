@@ -1,0 +1,86 @@
+{
+  "verified_at_utc": "2026-10-24T19:19:31Z",
+  "repository": "MakSoS1/lenta_tech",
+  "code_commit": "bc5720d8c3773b46067978c6f244a093b590fcd6",
+  "code_tree": "74cba68f2c431a07d1620e41dc93233685ed2c58",
+  "application_ci": {
+    "run_id": 40124561689,
+    "url": "https://github.com/MakSoS1/lenta_tech/actions/runs/40124561689",
+    "conclusion": "success",
+    "backend_tests": 121,
+    "legacy_tests": 13,
+    "frontend_tests": 10,
+    "browser_journeys": 2,
+    "browser_seconds": 8.4,
+    "cold_start_seconds": 34,
+    "container_cli": "opencode v2.1.4",
+    "http_pipeline": "passed",
+    "restart_persistence": "passed"
+  },
+  "developer_visible_eval": {
+    "passed": 40,
+    "failed": 0,
+    "completed_demo_orders": 27,
+    "mode": "offline_limited",
+    "not_an_llm_benchmark": true
+  },
+  "fresh_data_ci": {
+    "run_id": 40123913358,
+    "url": "https://github.com/MakSoS1/lenta_tech/actions/runs/40123913358",
+    "code_commit": "d7186e6f027fa34706a72901bd5ae9ba5162b0f1",
+    "conclusion": "success",
+    "raw_sources": 14,
+    "raw_source_bytes": 896630,
+    "cities": 9,
+    "daily_weather_observations": 16434,
+    "monthly_weather_rows": 108,
+    "airport_rows": 12,
+    "hotel_entities": 0,
+    "note": "Optional Wikidata fetch is not part of this core refresh; committed snapshot separately includes 16 reference-only hotel entities."
+  },
+  "shipped_snapshot": {
+    "raw_sources": 15,
+    "raw_source_bytes": 908511,
+    "cities": 9,
+    "daily_weather_observations": 16434,
+    "monthly_weather_rows": 108,
+    "airport_rows": 12,
+    "hotel_entities": 16
+  },
+  "live_model_ci": {
+    "run_id": 40124561748,
+    "url": "https://github.com/MakSoS1/lenta_tech/actions/runs/40124561748",
+    "conclusion": "failure",
+    "reports": [
+      {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "job_id": 120963103372,
+        "status": "blocked",
+        "used_llm": false,
+        "reason": "free_model_unavailable",
+        "exit_code": 2,
+        "duration_seconds": 1.464
+      },
+      {
+        "model": "opencode/glm-5.3-flash-free",
+        "job_id": 120963103178,
+        "status": "blocked",
+        "used_llm": false,
+        "reason": "free_model_unavailable",
+        "exit_code": 2,
+        "duration_seconds": 1.499
+      }
+    ]
+  },
+  "review": {
+    "important_findings_addressed": 4,
+    "minor_findings_addressed": 3,
+    "remaining_code_findings_in_review_scope": 0,
+    "external_release_gate": "successful_free_model_inference_not_observed"
+  },
+  "scope_notes": [
+    "All tariffs, inventory, booking and service requests are synthetic/simulated.",
+    "Historical ERA5 air temperature is not a forecast or sea temperature.",
+    "Passing offline checks is not evidence of model quality or independent holdout generalization."
+  ]
+}

@@ -92,4 +92,8 @@ The smoke command prints a scrubbed JSON result and exits `2` if inference is un
 
 ## Automated verification
 
+The first independent GitHub Actions live check on 24 October 2026 also called both models through the official CLI. Both jobs returned `status: blocked`, `used: false`, `reason: free_model_unavailable`, and exit code `2`. Reports were uploaded even on failure: [actual run](https://github.com/MakSoS1/lenta_tech/actions/runs/40123036282). This reproduces lack of usable inference in a second environment; the scrubbed CI result does not establish the precise provider-side cause. Later verification is recorded in [the implementation report](IMPLEMENTATION_REPORT_2026-10-24.md).
+
+DeepSeek is the configured primary, not a measured model-quality winner. A comparative benchmark requires successful real inference and an independent held-out set; neither can be inferred from a successful parser run.
+
 `apps/ostrovok/tests/test_model_gateway.py` runs real local fake executables at the subprocess boundary, without provider traffic. It covers offline behavior, paid-ID rejection, successful patch decoding, credential/identifier isolation, maintenance-model pinning, actual-style HTTP 403 handling, transient free fallback, malformed/unsafe schema output, nonzero reported cost, bounded output, and process-group timeout cleanup. Passing these tests verifies the adapter's behavior; it does not claim successful remote inference.

@@ -1,0 +1,5 @@
+{
+  "status": "passed",
+  "check": "persistence_after_restart",
+  "order_status": "simulated_confirmed"
+}

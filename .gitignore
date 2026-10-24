@@ -32,3 +32,4 @@ var/
 .hypothesis/
 .pytest_cache/
 .superpowers/
+reports/ostrovok/
